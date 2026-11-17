@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "1.0.0",
+  "reviewStatus": "engineering-contract-pending-independent-review",
+  "findingIds": [
+    "F01",
+    "F09",
+    "F10",
+    "F12",
+    "F13"
+  ],
+  "additionalRegimens": {
+    "9997": {
+      "display": "Spironolactone",
+      "doseMg": 25,
+      "frequencyPerDay": 1,
+      "routeCode": "26643006",
+      "doseRangeMg": [
+        12.5,
+        50
+      ]
+    },
+    "11289": {
+      "display": "Warfarin",
+      "doseMg": 5,
+      "frequencyPerDay": 1,
+      "routeCode": "26643006",
+      "doseRangeMg": [
+        1,
+        10
+      ]
+    },
+    "1191": {
+      "display": "Aspirin",
+      "doseMg": 81,
+      "frequencyPerDay": 1,
+      "routeCode": "26643006",
+      "doseRangeMg": [
+        75,
+        325
+      ]
+    },
+    "723": {
+      "display": "Amoxicillin",
+      "doseMg": 500,
+      "frequencyPerDay": 3,
+      "routeCode": "26643006",
+      "doseRangeMg": [
+        250,
+        1000
+      ]
+    },
+    "1100699": {
+      "display": "Linagliptin",
+      "doseMg": 5,
+      "frequencyPerDay": 1,
+      "routeCode": "26643006",
+      "doseRangeMg": [
+        5,
+        5
+      ]
+    }
+  },
+  "regimenScope": "Synthetic adult templates; dose-range checks are contract checks, not universal clinical prescribing limits.",
+  "massUnitMg": {
+    "mg": 1,
+    "g": 1000,
+    "ug": 0.001
+  },
+  "tabletConversion": "Requires an explicit mg-per-tablet product strength. Ingredient coding alone is not strength.",
+  "incompatibleIngredients": [
+    [
+      "29046",
+      "52175"
+    ]
+  ],
+  "renalReplacement": {
+    "from": "6809",
+    "to": "1100699",
+    "diagnosis": "431857002",
+    "rationale": "For adult type-2-diabetes background in true stage-4 CKD, select linagliptin 5 mg daily; no renal adjustment is needed. The intentional spironolactone problem is unchanged."
+  },
+  "dispenseLedger": "Every unique completed fill consumes cumulative quantity of one explicit authorization; initial allowance plus repeats. Partial fills consume quantity, source copies do not. Renewals have distinct authorizations; cancellation/expiry is time bounded.",
+  "sources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dfe327e8-f6ab-41e5-bdef-d520118cd83a",
+    "https://pubchem.ncbi.nlm.nih.gov/summary/summary.cgi?cid=10096344",
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=72b16a5c-825f-4f3f-a8b3-b723e4242da7",
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9949448f-c3b9-44ee-94ed-c1aca8c90f39",
+    "https://hl7.org/fhir/R4/medicationrequest-definitions.html#MedicationRequest.dispenseRequest.numberOfRepeatsAllowed"
+  ]
+}

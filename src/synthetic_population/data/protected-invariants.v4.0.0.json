@@ -1,0 +1,56 @@
+{
+  "catalogVersion": "4.0.0",
+  "frozenBeforeImplementation": true,
+  "rules": [
+    {
+      "id": "SECURITY-HTEST",
+      "formula": "every applicable resource has exactly one HTEST coding",
+      "severity": "error"
+    },
+    {
+      "id": "SECURITY-BUCKET",
+      "formula": "every applicable resource has exactly one information-bucket coding",
+      "severity": "error"
+    },
+    {
+      "id": "SECURITY-CONFIDENTIALITY",
+      "formula": "confidentiality is absent or exactly one of R/V and never N",
+      "severity": "error"
+    },
+    {
+      "id": "MOBILITY-V",
+      "formula": "V resources have zero ordinary-mobility projection leakage",
+      "severity": "error"
+    },
+    {
+      "id": "NOISE-BUDGET",
+      "formula": "at most two problem IDs per patient and tagged clinical density <= configured maximum",
+      "severity": "error"
+    },
+    {
+      "id": "REFERENCES",
+      "formula": "literal reference closure and unique fullUrls/resource IDs per source",
+      "severity": "error"
+    },
+    {
+      "id": "DETERMINISM",
+      "formula": "same v4 spec seed and profile context produce byte-identical artifacts",
+      "severity": "error"
+    },
+    {
+      "id": "OUTPUT-HYGIENE",
+      "formula": "generated data remains ignored and source Bundles live only under fhir-server-load",
+      "severity": "error"
+    },
+    {
+      "id": "CLINICAL-REVIEW",
+      "formula": "clinicalReviewStatus remains pending at technical handoff",
+      "severity": "error"
+    },
+    {
+      "id": "COMPACT-BASELINE",
+      "formula": "certificator bundle v1.6.1 SHA-256 remains 625eead8e3dac1b5d29f29a501984e127c51bdaf980afc3e291e720ad5344a04",
+      "severity": "error"
+    }
+  ]
+}

@@ -1,0 +1,1935 @@
+{
+  "catalogVersion": "4.2.2",
+  "status": "provisional-pending-designated-clinical-review",
+  "systemDefaults": {
+    "condition": "http://snomed.info/sct",
+    "observation": "http://loinc.org",
+    "medication": "http://www.nlm.nih.gov/research/umls/rxnorm"
+  },
+  "historicalEncounterReasons": [
+    {
+      "system": "http://snomed.info/sct",
+      "code": "185349003",
+      "display": "Encounter for check up",
+      "family": "historical-check-up"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "49727002",
+      "display": "Cough",
+      "family": "historical-cough"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "195662009",
+      "display": "Acute upper respiratory infection",
+      "family": "historical-respiratory-infection"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "34014006",
+      "display": "Viral disease",
+      "family": "historical-viral-illness"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "161891005",
+      "display": "Backache",
+      "family": "historical-backache"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "386661006",
+      "display": "Fever",
+      "family": "historical-fever"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "21522001",
+      "display": "Abdominal pain",
+      "family": "historical-abdominal-pain"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "125666000",
+      "display": "Burn",
+      "family": "historical-minor-injury"
+    }
+  ],
+  "archetypes": {
+    "generally-healthy": [
+      {
+        "id": "preventive-no-test",
+        "historyDays": 60,
+        "eventSpacingDays": [
+          0,
+          14,
+          30
+        ],
+        "secondaryBranches": [
+          "counselling",
+          "no-follow-up",
+          "seasonal-prevention"
+        ],
+        "events": [
+          {
+            "role": "encounter",
+            "family": "preventive-visit",
+            "system": "http://snomed.info/sct",
+            "code": "185349003",
+            "display": "Encounter for check up",
+            "setting": "community"
+          },
+          {
+            "role": "assessment",
+            "family": "healthy-assessment",
+            "system": "http://snomed.info/sct",
+            "code": "160245001",
+            "display": "No current problems or disability",
+            "setting": "community"
+          },
+          {
+            "role": "follow-up",
+            "family": "preventive-follow-up",
+            "system": "http://snomed.info/sct",
+            "code": "185349003",
+            "display": "Encounter for check up",
+            "setting": "community"
+          }
+        ]
+      },
+      {
+        "id": "preventive-screening",
+        "historyDays": 120,
+        "eventSpacingDays": [
+          0,
+          1,
+          30
+        ],
+        "secondaryBranches": [
+          "lipid-screen",
+          "glucose-screen",
+          "blood-pressure"
+        ],
+        "events": [
+          {
+            "role": "encounter",
+            "family": "preventive-visit",
+            "system": "http://snomed.info/sct",
+            "code": "185349003",
+            "display": "Encounter for check up",
+            "setting": "community"
+          },
+          {
+            "role": "order",
+            "family": "preventive-screen-order",
+            "system": "http://loinc.org",
+            "code": "24331-1",
+            "display": "Lipid panel",
+            "setting": "community"
+          },
+          {
+            "role": "result",
+            "family": "cholesterol",
+            "system": "http://loinc.org",
+            "code": "2093-3",
+            "display": "Cholesterol [Mass/volume] in Serum or Plasma",
+            "setting": "community"
+          }
+        ]
+      },
+      {
+        "id": "respiratory-self-limited",
+        "historyDays": 45,
+        "eventSpacingDays": [
+          0,
+          1,
+          14
+        ],
+        "secondaryBranches": [
+          "no-test",
+          "targeted-test",
+          "symptomatic-care"
+        ],
+        "events": [
+          {
+            "role": "encounter",
+            "family": "respiratory-acute",
+            "system": "http://snomed.info/sct",
+            "code": "49727002",
+            "display": "Cough",
+            "setting": "community"
+          },
+          {
+            "role": "condition",
+            "family": "upper-respiratory-infection",
+            "system": "http://snomed.info/sct",
+            "code": "195662009",
+            "display": "Acute upper respiratory infection",
+            "setting": "community"
+          },
+          {
+            "role": "condition",
+            "family": "resolved-respiratory",
+            "system": "http://snomed.info/sct",
+            "code": "195662009",
+            "display": "Acute upper respiratory infection",
+            "setting": "community",
+            "status": "resolved"
+          }
+        ]
+      },
+      {
+        "id": "gastrointestinal-self-limited",
+        "historyDays": 50,
+        "eventSpacingDays": [
+          0,
+          1,
+          10
+        ],
+        "secondaryBranches": [
+          "hydration",
+          "no-test",
+          "stool-test"
+        ],
+        "events": [
+          {
+            "role": "encounter",
+            "family": "gastrointestinal-acute",
+            "system": "http://snomed.info/sct",
+            "code": "21522001",
+            "display": "Abdominal pain",
+            "setting": "community"
+          },
+          {
+            "role": "condition",
+            "family": "gastroenteritis",
+            "system": "http://snomed.info/sct",
+            "code": "25374005",
+            "display": "Gastroenteritis",
+            "setting": "community"
+          },
+          {
+            "role": "condition",
+            "family": "resolved-gastrointestinal",
+            "system": "http://snomed.info/sct",
+            "code": "25374005",
+            "display": "Gastroenteritis",
+            "setting": "community",
+            "status": "resolved"
+          }
+        ]
+      },
+      {
+        "id": "minor-injury",
+        "historyDays": 90,
+        "eventSpacingDays": [
+          0,
+          0,
+          14
+        ],
+        "secondaryBranches": [
+          "burn-care",
+          "sprain-care",
+          "wound-review"
+        ],
+        "events": [
+          {
+            "role": "emergency-encounter",
+            "family": "minor-injury",
+            "system": "http://snomed.info/sct",
+            "code": "125666000",
+            "display": "Burn",
+            "setting": "regional-emergency"
+          },
+          {
+            "role": "condition",
+            "family": "minor-injury",
+            "system": "http://snomed.info/sct",
+            "code": "125666000",
+            "display": "Burn",
+            "setting": "regional-emergency"
+          },
+          {
+            "role": "follow-up",
+            "family": "injury-review",
+            "system": "http://snomed.info/sct",
+            "code": "185389009",
+            "display": "Follow-up visit",
+            "setting": "community"
+          }
+        ]
+      },
+      {
+        "id": "emergency-evaluation",
+        "historyDays": 120,
+        "eventSpacingDays": [
+          0,
+          0,
+          7
+        ],
+        "secondaryBranches": [
+          "discharge-home",
+          "targeted-observation",
+          "community-review"
+        ],
+        "events": [
+          {
+            "role": "emergency-encounter",
+            "family": "emergency-evaluation",
+            "system": "http://snomed.info/sct",
+            "code": "50849002",
+            "display": "Emergency care",
+            "setting": "tertiary-emergency"
+          },
+          {
+            "role": "assessment",
+            "family": "acute-symptom",
+            "system": "http://snomed.info/sct",
+            "code": "386661006",
+            "display": "Fever",
+            "setting": "tertiary-emergency"
+          },
+          {
+            "role": "follow-up",
+            "family": "post-emergency-review",
+            "system": "http://snomed.info/sct",
+            "code": "185389009",
+            "display": "Follow-up visit",
+            "setting": "community"
+          }
+        ]
+      }
+    ],
+    "chronic-care": [
+      {
+        "id": "hypertension-stable",
+        "historyDays": 900,
+        "eventSpacingDays": [
+          0,
+          400,
+          800
+        ],
+        "secondaryBranches": [
+          "home-monitoring",
+          "annual-review",
+          "lipid-risk"
+        ],
+        "events": [
+          {
+            "role": "condition",
+            "family": "hypertension",
+            "system": "http://snomed.info/sct",
+            "code": "38341003",
+            "display": "Hypertensive disorder",
+            "setting": "community"
+          },
+          {
+            "role": "result",
+            "family": "systolic-blood-pressure",
+            "system": "http://loinc.org",
+            "code": "8480-6",
+            "display": "Systolic blood pressure",
+            "setting": "community"
+          },
+          {
+            "role": "follow-up",
+            "family": "hypertension-review",
+            "system": "http://snomed.info/sct",
+            "code": "390906007",
+            "display": "Follow-up encounter",
+            "setting": "community"
+          }
+        ]
+      },
+      {
+        "id": "diabetes-stable",
+        "historyDays": 950,
+        "eventSpacingDays": [
+          0,
+          610,
+          790
+        ],
+        "secondaryBranches": [
+          "hba1c-stable",
+          "diet-review",
+          "retinal-referral"
+        ],
+        "events": [
+          {
+            "role": "condition",
+            "family": "type-2-diabetes",
+            "system": "http://snomed.info/sct",
+            "code": "44054006",
+            "display": "Type 2 diabetes mellitus",
+            "setting": "community"
+          },
+          {
+            "role": "result",
+            "family": "hba1c",
+            "system": "http://loinc.org",
+            "code": "4548-4",
+            "display": "Hemoglobin A1c/Hemoglobin.total in Blood",
+            "setting": "community"
+          },
+          {
+            "role": "follow-up",
+            "family": "diabetes-review",
+            "system": "http://snomed.info/sct",
+            "code": "390906007",
+            "display": "Follow-up encounter",
+            "setting": "community-specialty"
+          }
+        ]
+      },
+      {
+        "id": "renal-monitoring",
+        "historyDays": 1000,
+        "eventSpacingDays": [
+          0,
+          430,
+          860
+        ],
+        "secondaryBranches": [
+          "creatinine-repeat",
+          "potassium-repeat",
+          "nephrology-review"
+        ],
+        "events": [
+          {
+            "role": "condition",
+            "family": "chronic-kidney-disease",
+            "system": "http://snomed.info/sct",
+            "code": "709044004",
+            "display": "Chronic kidney disease",
+            "setting": "community"
+          },
+          {
+            "role": "result",
+            "family": "creatinine",
+            "system": "http://loinc.org",
+            "code": "2160-0",
+            "display": "Creatinine [Mass/volume] in Serum or Plasma",
+            "setting": "community"
+          },
+          {
+            "role": "follow-up",
+            "family": "renal-specialty-review",
+            "system": "http://snomed.info/sct",
+            "code": "390906007",
+            "display": "Follow-up encounter",
+            "setting": "tertiary-ambulatory"
+          }
+        ]
+      },
+      {
+        "id": "medication-adjustment",
+        "historyDays": 900,
+        "eventSpacingDays": [
+          0,
+          380,
+          780
+        ],
+        "secondaryBranches": [
+          "dose-increase",
+          "dose-decrease",
+          "switch-class"
+        ],
+        "events": [
+          {
+            "role": "condition",
+            "family": "hypertension",
+            "system": "http://snomed.info/sct",
+            "code": "38341003",
+            "display": "Hypertensive disorder",
+            "setting": "community"
+          },
+          {
+            "role": "prescription",
+            "family": "lisinopril",
+            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code": "29046",
+            "display": "Lisinopril",
+            "setting": "community"
+          },
+          {
+            "role": "result",
+            "family": "potassium",
+            "system": "http://loinc.org",
+            "code": "6298-4",
+            "display": "Potassium [Moles/volume] in Blood",
+            "setting": "community"
+          }
+        ]
+      },
+      {
+        "id": "specialty-referral",
+        "historyDays": 880,
+        "eventSpacingDays": [
+          0,
+          360,
+          760
+        ],
+        "secondaryBranches": [
+          "cardiology",
+          "nephrology",
+          "endocrinology"
+        ],
+        "events": [
+          {
+            "role": "condition",
+            "family": "hypertension",
+            "system": "http://snomed.info/sct",
+            "code": "38341003",
+            "display": "Hypertensive disorder",
+            "setting": "community"
+          },
+          {
+            "role": "referral",
+            "family": "specialty-referral",
+            "system": "http://snomed.info/sct",
+            "code": "306206005",
+            "display": "Referral to specialist",
+            "setting": "community"
+          },
+          {
+            "role": "follow-up",
+            "family": "specialty-assessment",
+            "system": "http://snomed.info/sct",
+            "code": "390906007",
+            "display": "Follow-up encounter",
+            "setting": "tertiary-ambulatory"
+          }
+        ]
+      },
+      {
+        "id": "mixed-cardiometabolic",
+        "historyDays": 1050,
+        "eventSpacingDays": [
+          0,
+          440,
+          900
+        ],
+        "secondaryBranches": [
+          "lipid-monitoring",
+          "renal-monitoring",
+          "medication-review"
+        ],
+        "events": [
+          {
+            "role": "condition",
+            "family": "type-2-diabetes",
+            "system": "http://snomed.info/sct",
+            "code": "44054006",
+            "display": "Type 2 diabetes mellitus",
+            "setting": "community"
+          },
+          {
+            "role": "condition",
+            "family": "hypertension",
+            "system": "http://snomed.info/sct",
+            "code": "38341003",
+            "display": "Hypertensive disorder",
+            "setting": "community"
+          },
+          {
+            "role": "result",
+            "family": "hba1c",
+            "system": "http://loinc.org",
+            "code": "4548-4",
+            "display": "Hemoglobin A1c/Hemoglobin.total in Blood",
+            "setting": "community"
+          }
+        ]
+      }
+    ],
+    "pediatric": [
+      {
+        "id": "infant-well-child",
+        "historyDays": 120,
+        "eventSpacingDays": [
+          0,
+          30,
+          90
+        ],
+        "secondaryBranches": [
+          "feeding-review",
+          "routine-vaccine",
+          "growth-repeat"
+        ],
+        "events": [
+          {
+            "role": "encounter",
+            "family": "infant-well-child",
+            "system": "http://snomed.info/sct",
+            "code": "410620009",
+            "display": "Well child visit",
+            "setting": "community"
+          },
+          {
+            "role": "growth-measurement",
+            "family": "body-weight",
+            "system": "http://loinc.org",
+            "code": "29463-7",
+            "display": "Body weight",
+            "setting": "community"
+          },
+          {
+            "role": "immunization",
+            "family": "hepatitis-b-vaccine",
+            "system": "http://snomed.info/sct",
+            "code": "871822003",
+            "display": "Hepatitis B vaccine",
+            "setting": "community"
+          }
+        ]
+      },
+      {
+        "id": "child-well-child",
+        "historyDays": 850,
+        "eventSpacingDays": [
+          0,
+          370,
+          740
+        ],
+        "secondaryBranches": [
+          "growth-repeat",
+          "routine-vaccine",
+          "development-review"
+        ],
+        "events": [
+          {
+            "role": "encounter",
+            "family": "child-well-child",
+            "system": "http://snomed.info/sct",
+            "code": "410620009",
+            "display": "Well child visit",
+            "setting": "community"
+          },
+          {
+            "role": "growth-measurement",
+            "family": "body-height",
+            "system": "http://loinc.org",
+            "code": "8302-2",
+            "display": "Body height",
+            "setting": "community"
+          },
+          {
+            "role": "immunization",
+            "family": "mmr-vaccine",
+            "system": "http://snomed.info/sct",
+            "code": "871839001",
+            "display": "Measles, mumps and rubella vaccine",
+            "setting": "community"
+          }
+        ]
+      },
+      {
+        "id": "adolescent-preventive",
+        "historyDays": 900,
+        "eventSpacingDays": [
+          0,
+          400,
+          800
+        ],
+        "secondaryBranches": [
+          "bmi-review",
+          "blood-pressure",
+          "routine-vaccine"
+        ],
+        "events": [
+          {
+            "role": "encounter",
+            "family": "adolescent-preventive",
+            "system": "http://snomed.info/sct",
+            "code": "185349003",
+            "display": "Encounter for check up",
+            "setting": "community"
+          },
+          {
+            "role": "growth-measurement",
+            "family": "bmi",
+            "system": "http://loinc.org",
+            "code": "39156-5",
+            "display": "Body mass index",
+            "setting": "community"
+          },
+          {
+            "role": "immunization",
+            "family": "dtap-vaccine",
+            "system": "http://snomed.info/sct",
+            "code": "871831003",
+            "display": "Diphtheria, tetanus and pertussis vaccine",
+            "setting": "community"
+          }
+        ]
+      },
+      {
+        "id": "respiratory-acute",
+        "historyDays": 80,
+        "eventSpacingDays": [
+          0,
+          1,
+          14
+        ],
+        "secondaryBranches": [
+          "no-test",
+          "oxygen-saturation",
+          "community-review"
+        ],
+        "events": [
+          {
+            "role": "encounter",
+            "family": "pediatric-respiratory",
+            "system": "http://snomed.info/sct",
+            "code": "49727002",
+            "display": "Cough",
+            "setting": "community"
+          },
+          {
+            "role": "condition",
+            "family": "upper-respiratory-infection",
+            "system": "http://snomed.info/sct",
+            "code": "195662009",
+            "display": "Acute upper respiratory infection",
+            "setting": "community"
+          },
+          {
+            "role": "condition",
+            "family": "resolved-respiratory",
+            "system": "http://snomed.info/sct",
+            "code": "195662009",
+            "display": "Acute upper respiratory infection",
+            "setting": "community",
+            "status": "resolved"
+          }
+        ]
+      },
+      {
+        "id": "gastrointestinal-acute",
+        "historyDays": 75,
+        "eventSpacingDays": [
+          0,
+          1,
+          10
+        ],
+        "secondaryBranches": [
+          "hydration",
+          "no-test",
+          "weight-review"
+        ],
+        "events": [
+          {
+            "role": "encounter",
+            "family": "pediatric-gastrointestinal",
+            "system": "http://snomed.info/sct",
+            "code": "21522001",
+            "display": "Abdominal pain",
+            "setting": "community"
+          },
+          {
+            "role": "condition",
+            "family": "gastroenteritis",
+            "system": "http://snomed.info/sct",
+            "code": "25374005",
+            "display": "Gastroenteritis",
+            "setting": "community"
+          },
+          {
+            "role": "condition",
+            "family": "resolved-gastrointestinal",
+            "system": "http://snomed.info/sct",
+            "code": "25374005",
+            "display": "Gastroenteritis",
+            "setting": "community",
+            "status": "resolved"
+          }
+        ]
+      },
+      {
+        "id": "minor-injury",
+        "historyDays": 90,
+        "eventSpacingDays": [
+          0,
+          0,
+          14
+        ],
+        "secondaryBranches": [
+          "wound-care",
+          "sprain-care",
+          "community-review"
+        ],
+        "events": [
+          {
+            "role": "emergency-encounter",
+            "family": "pediatric-minor-injury",
+            "system": "http://snomed.info/sct",
+            "code": "125666000",
+            "display": "Burn",
+            "setting": "regional-emergency"
+          },
+          {
+            "role": "condition",
+            "family": "minor-injury",
+            "system": "http://snomed.info/sct",
+            "code": "125666000",
+            "display": "Burn",
+            "setting": "regional-emergency"
+          },
+          {
+            "role": "follow-up",
+            "family": "injury-review",
+            "system": "http://snomed.info/sct",
+            "code": "185389009",
+            "display": "Follow-up visit",
+            "setting": "community"
+          }
+        ]
+      }
+    ],
+    "medication-intensive": [
+      {
+        "id": "reconciliation-stable",
+        "historyDays": 900,
+        "eventSpacingDays": [
+          0,
+          390,
+          790
+        ],
+        "secondaryBranches": [
+          "two-drug-review",
+          "adherence-review",
+          "stable-dose"
+        ],
+        "events": [
+          {
+            "role": "prescription",
+            "family": "lisinopril",
+            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code": "29046",
+            "display": "Lisinopril",
+            "setting": "community"
+          },
+          {
+            "role": "medication-review",
+            "family": "medication-reconciliation",
+            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code": "29046",
+            "display": "Lisinopril",
+            "setting": "community",
+            "workflowAction": "430193006",
+            "status": "active"
+          },
+          {
+            "role": "result",
+            "family": "potassium",
+            "system": "http://loinc.org",
+            "code": "6298-4",
+            "display": "Potassium [Moles/volume] in Blood",
+            "setting": "community"
+          }
+        ]
+      },
+      {
+        "id": "dose-change",
+        "historyDays": 950,
+        "eventSpacingDays": [
+          0,
+          400,
+          820
+        ],
+        "secondaryBranches": [
+          "dose-increase",
+          "dose-decrease",
+          "switch-class"
+        ],
+        "events": [
+          {
+            "role": "prescription",
+            "family": "lisinopril-low-dose",
+            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code": "29046",
+            "display": "Lisinopril",
+            "setting": "community"
+          },
+          {
+            "role": "prescription",
+            "family": "lisinopril-high-dose",
+            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code": "29046",
+            "display": "Lisinopril",
+            "setting": "community",
+            "lifecycle": "supersedes"
+          },
+          {
+            "role": "result",
+            "family": "potassium",
+            "system": "http://loinc.org",
+            "code": "6298-4",
+            "display": "Potassium [Moles/volume] in Blood",
+            "setting": "community"
+          }
+        ]
+      },
+      {
+        "id": "dispense-follow-up",
+        "historyDays": 900,
+        "eventSpacingDays": [
+          0,
+          1,
+          45
+        ],
+        "secondaryBranches": [
+          "on-time-refill",
+          "late-refill",
+          "pharmacist-review"
+        ],
+        "events": [
+          {
+            "role": "prescription",
+            "family": "metformin",
+            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code": "6809",
+            "display": "Metformin",
+            "setting": "community"
+          },
+          {
+            "role": "dispense",
+            "family": "metformin-dispense",
+            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code": "6809",
+            "display": "Metformin",
+            "setting": "pharmacy"
+          },
+          {
+            "role": "follow-up",
+            "family": "dispense-review",
+            "system": "http://snomed.info/sct",
+            "code": "390906007",
+            "display": "Follow-up encounter",
+            "setting": "community"
+          }
+        ]
+      },
+      {
+        "id": "monitoring-result",
+        "historyDays": 980,
+        "eventSpacingDays": [
+          0,
+          420,
+          850
+        ],
+        "secondaryBranches": [
+          "renal-monitor",
+          "glucose-monitor",
+          "cbc-monitor"
+        ],
+        "events": [
+          {
+            "role": "prescription",
+            "family": "lisinopril",
+            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code": "29046",
+            "display": "Lisinopril",
+            "setting": "community"
+          },
+          {
+            "role": "result",
+            "family": "creatinine",
+            "system": "http://loinc.org",
+            "code": "2160-0",
+            "display": "Creatinine [Mass/volume] in Serum or Plasma",
+            "setting": "community"
+          },
+          {
+            "role": "result",
+            "family": "potassium",
+            "system": "http://loinc.org",
+            "code": "6298-4",
+            "display": "Potassium [Moles/volume] in Blood",
+            "setting": "community"
+          }
+        ]
+      },
+      {
+        "id": "temporary-stop",
+        "historyDays": 930,
+        "eventSpacingDays": [
+          0,
+          390,
+          810
+        ],
+        "secondaryBranches": [
+          "acute-illness-hold",
+          "procedure-hold",
+          "adverse-effect-hold"
+        ],
+        "events": [
+          {
+            "role": "prescription",
+            "family": "lisinopril-active",
+            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code": "29046",
+            "display": "Lisinopril",
+            "setting": "community"
+          },
+          {
+            "role": "medication-review",
+            "family": "temporary-medication-stop",
+            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code": "29046",
+            "display": "Lisinopril",
+            "setting": "community",
+            "lifecycle": "stopped",
+            "workflowAction": "182840001",
+            "status": "stopped"
+          },
+          {
+            "role": "prescription",
+            "family": "lisinopril-restart",
+            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code": "29046",
+            "display": "Lisinopril",
+            "setting": "community",
+            "lifecycle": "active"
+          }
+        ]
+      },
+      {
+        "id": "polypharmacy-review",
+        "historyDays": 1000,
+        "eventSpacingDays": [
+          0,
+          430,
+          870
+        ],
+        "secondaryBranches": [
+          "deprescribing",
+          "interaction-review",
+          "adherence-review"
+        ],
+        "events": [
+          {
+            "role": "prescription",
+            "family": "metformin",
+            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code": "6809",
+            "display": "Metformin",
+            "setting": "community"
+          },
+          {
+            "role": "prescription",
+            "family": "atorvastatin",
+            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code": "83367",
+            "display": "Atorvastatin",
+            "setting": "community"
+          },
+          {
+            "role": "medication-review",
+            "family": "polypharmacy-review",
+            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code": "83367",
+            "display": "Atorvastatin",
+            "setting": "community",
+            "workflowAction": "430193006",
+            "status": "active"
+          }
+        ]
+      }
+    ],
+    "womens-health": [
+      {
+        "id": "preventive-risk-assessment",
+        "historyDays": 200,
+        "eventSpacingDays": [
+          0,
+          1,
+          60
+        ],
+        "secondaryBranches": [
+          "family-history",
+          "average-risk",
+          "lifestyle-review"
+        ],
+        "events": [
+          {
+            "role": "encounter",
+            "family": "womens-preventive",
+            "system": "http://snomed.info/sct",
+            "code": "185349003",
+            "display": "Encounter for check up",
+            "setting": "community"
+          },
+          {
+            "role": "assessment",
+            "family": "risk-assessment",
+            "system": "http://snomed.info/sct",
+            "code": "225337009",
+            "display": "Risk assessment",
+            "setting": "community"
+          },
+          {
+            "role": "follow-up",
+            "family": "preventive-follow-up",
+            "system": "http://snomed.info/sct",
+            "code": "390906007",
+            "display": "Follow-up encounter",
+            "setting": "community"
+          }
+        ]
+      },
+      {
+        "id": "age-eligible-screening",
+        "historyDays": 400,
+        "eventSpacingDays": [
+          0,
+          14,
+          35
+        ],
+        "secondaryBranches": [
+          "mammography",
+          "cervical-screen",
+          "result-review"
+        ],
+        "events": [
+          {
+            "role": "assessment",
+            "family": "screening-eligibility",
+            "system": "http://snomed.info/sct",
+            "code": "225337009",
+            "display": "Risk assessment",
+            "setting": "community"
+          },
+          {
+            "role": "order",
+            "family": "breast-screening",
+            "system": "http://snomed.info/sct",
+            "code": "71651007",
+            "display": "Mammography",
+            "setting": "community"
+          },
+          {
+            "role": "result",
+            "family": "screening-result",
+            "system": "http://loinc.org",
+            "code": "24606-6",
+            "display": "Mammogram",
+            "setting": "tertiary-ambulatory"
+          }
+        ]
+      },
+      {
+        "id": "gynecologic-symptom",
+        "historyDays": 180,
+        "eventSpacingDays": [
+          0,
+          7,
+          45
+        ],
+        "secondaryBranches": [
+          "pain-review",
+          "bleeding-review",
+          "ultrasound-referral"
+        ],
+        "events": [
+          {
+            "role": "encounter",
+            "family": "gynecologic-symptom",
+            "system": "http://snomed.info/sct",
+            "code": "266599000",
+            "display": "Dysmenorrhea",
+            "setting": "community"
+          },
+          {
+            "role": "condition",
+            "family": "dysmenorrhea",
+            "system": "http://snomed.info/sct",
+            "code": "266599000",
+            "display": "Dysmenorrhea",
+            "setting": "community"
+          },
+          {
+            "role": "follow-up",
+            "family": "gynecology-review",
+            "system": "http://snomed.info/sct",
+            "code": "390906007",
+            "display": "Follow-up encounter",
+            "setting": "community-specialty"
+          }
+        ]
+      },
+      {
+        "id": "reproductive-follow-up",
+        "historyDays": 300,
+        "eventSpacingDays": [
+          0,
+          30,
+          120
+        ],
+        "secondaryBranches": [
+          "contraception-review",
+          "preconception-review",
+          "nonpregnant-follow-up"
+        ],
+        "events": [
+          {
+            "role": "encounter",
+            "family": "reproductive-care",
+            "system": "http://snomed.info/sct",
+            "code": "184099003",
+            "display": "Patient-related encounter",
+            "setting": "community"
+          },
+          {
+            "role": "assessment",
+            "family": "reproductive-assessment",
+            "system": "http://snomed.info/sct",
+            "code": "225337009",
+            "display": "Risk assessment",
+            "setting": "community"
+          },
+          {
+            "role": "follow-up",
+            "family": "reproductive-follow-up",
+            "system": "http://snomed.info/sct",
+            "code": "390906007",
+            "display": "Follow-up encounter",
+            "setting": "community-specialty"
+          }
+        ]
+      },
+      {
+        "id": "breast-symptom",
+        "historyDays": 240,
+        "eventSpacingDays": [
+          0,
+          10,
+          70
+        ],
+        "secondaryBranches": [
+          "clinical-exam",
+          "imaging-referral",
+          "benign-follow-up"
+        ],
+        "events": [
+          {
+            "role": "encounter",
+            "family": "breast-symptom",
+            "system": "http://snomed.info/sct",
+            "code": "89164003",
+            "display": "Breast lump",
+            "setting": "community"
+          },
+          {
+            "role": "condition",
+            "family": "breast-lump",
+            "system": "http://snomed.info/sct",
+            "code": "89164003",
+            "display": "Breast lump",
+            "setting": "community"
+          },
+          {
+            "role": "referral",
+            "family": "breast-imaging-referral",
+            "system": "http://snomed.info/sct",
+            "code": "306206005",
+            "display": "Referral to specialist",
+            "setting": "community"
+          }
+        ]
+      },
+      {
+        "id": "ordinary-injury",
+        "historyDays": 130,
+        "eventSpacingDays": [
+          0,
+          0,
+          21
+        ],
+        "secondaryBranches": [
+          "minor-burn",
+          "sprain",
+          "wound-review"
+        ],
+        "events": [
+          {
+            "role": "emergency-encounter",
+            "family": "ordinary-injury",
+            "system": "http://snomed.info/sct",
+            "code": "125666000",
+            "display": "Burn",
+            "setting": "regional-emergency"
+          },
+          {
+            "role": "condition",
+            "family": "minor-injury",
+            "system": "http://snomed.info/sct",
+            "code": "125666000",
+            "display": "Burn",
+            "setting": "regional-emergency"
+          },
+          {
+            "role": "follow-up",
+            "family": "injury-review",
+            "system": "http://snomed.info/sct",
+            "code": "185389009",
+            "display": "Follow-up visit",
+            "setting": "community"
+          }
+        ]
+      }
+    ],
+    "perioperative-surgical": [
+      {
+        "id": "emergency-appendectomy",
+        "historyDays": 180,
+        "eventSpacingDays": [
+          0,
+          1,
+          10
+        ],
+        "secondaryBranches": [
+          "laparoscopic",
+          "open",
+          "short-stay"
+        ],
+        "events": [
+          {
+            "role": "emergency-encounter",
+            "family": "appendicitis",
+            "system": "http://snomed.info/sct",
+            "code": "74400008",
+            "display": "Appendicitis",
+            "setting": "tertiary-emergency"
+          },
+          {
+            "role": "procedure",
+            "family": "appendectomy",
+            "system": "http://snomed.info/sct",
+            "code": "80146002",
+            "display": "Appendectomy",
+            "setting": "operating-room"
+          },
+          {
+            "role": "follow-up",
+            "family": "postoperative-review",
+            "system": "http://snomed.info/sct",
+            "code": "185389009",
+            "display": "Follow-up visit",
+            "setting": "community"
+          }
+        ]
+      },
+      {
+        "id": "elective-procedure",
+        "historyDays": 220,
+        "eventSpacingDays": [
+          0,
+          30,
+          60
+        ],
+        "secondaryBranches": [
+          "cholecystectomy",
+          "hernia-repair",
+          "day-surgery"
+        ],
+        "events": [
+          {
+            "role": "referral",
+            "family": "elective-surgery-referral",
+            "system": "http://snomed.info/sct",
+            "code": "306206005",
+            "display": "Referral to specialist",
+            "setting": "community"
+          },
+          {
+            "role": "procedure",
+            "family": "cholecystectomy",
+            "system": "http://snomed.info/sct",
+            "code": "38102005",
+            "display": "Cholecystectomy",
+            "setting": "operating-room"
+          },
+          {
+            "role": "follow-up",
+            "family": "postoperative-review",
+            "system": "http://snomed.info/sct",
+            "code": "185389009",
+            "display": "Follow-up visit",
+            "setting": "tertiary-ambulatory"
+          }
+        ]
+      },
+      {
+        "id": "short-admission",
+        "historyDays": 200,
+        "eventSpacingDays": [
+          0,
+          1,
+          14
+        ],
+        "secondaryBranches": [
+          "day-procedure",
+          "overnight-stay",
+          "regional-follow-up"
+        ],
+        "events": [
+          {
+            "role": "inpatient-encounter",
+            "family": "short-admission",
+            "system": "http://snomed.info/sct",
+            "code": "32485007",
+            "display": "Hospital admission",
+            "setting": "regional-inpatient"
+          },
+          {
+            "role": "procedure",
+            "family": "cataract-extraction",
+            "system": "http://snomed.info/sct",
+            "code": "54885007",
+            "display": "Cataract extraction",
+            "setting": "day-procedure"
+          },
+          {
+            "role": "follow-up",
+            "family": "postoperative-review",
+            "system": "http://snomed.info/sct",
+            "code": "185389009",
+            "display": "Follow-up visit",
+            "setting": "regional-ambulatory"
+          }
+        ]
+      },
+      {
+        "id": "postoperative-review",
+        "historyDays": 250,
+        "eventSpacingDays": [
+          0,
+          45,
+          75
+        ],
+        "secondaryBranches": [
+          "wound-review",
+          "medication-review",
+          "functional-review"
+        ],
+        "events": [
+          {
+            "role": "referral",
+            "family": "surgery-referral",
+            "system": "http://snomed.info/sct",
+            "code": "306206005",
+            "display": "Referral to specialist",
+            "setting": "community"
+          },
+          {
+            "role": "procedure",
+            "family": "hernia-repair",
+            "system": "http://snomed.info/sct",
+            "code": "387713003",
+            "display": "Surgical procedure",
+            "setting": "operating-room"
+          },
+          {
+            "role": "follow-up",
+            "family": "postoperative-review",
+            "system": "http://snomed.info/sct",
+            "code": "185389009",
+            "display": "Follow-up visit",
+            "setting": "community"
+          }
+        ]
+      },
+      {
+        "id": "procedure-with-medication",
+        "historyDays": 230,
+        "eventSpacingDays": [
+          0,
+          20,
+          50
+        ],
+        "secondaryBranches": [
+          "anesthesia",
+          "analgesia",
+          "antibiotic-prophylaxis"
+        ],
+        "events": [
+          {
+            "role": "order",
+            "family": "procedure-order",
+            "system": "http://snomed.info/sct",
+            "code": "387713003",
+            "display": "Surgical procedure",
+            "setting": "tertiary-ambulatory"
+          },
+          {
+            "role": "procedure",
+            "family": "hernia-repair",
+            "system": "http://snomed.info/sct",
+            "code": "387713003",
+            "display": "Surgical procedure",
+            "setting": "operating-room"
+          },
+          {
+            "role": "medication-administration",
+            "family": "perioperative-medication",
+            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code": "161",
+            "display": "Acetaminophen",
+            "setting": "tertiary-inpatient",
+            "timingAfterPreviousHours": {
+              "minimum": 2,
+              "maximum": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "referred-surgery",
+        "historyDays": 280,
+        "eventSpacingDays": [
+          0,
+          60,
+          100
+        ],
+        "secondaryBranches": [
+          "external-summary",
+          "regional-referral",
+          "community-follow-up"
+        ],
+        "events": [
+          {
+            "role": "referral",
+            "family": "surgery-referral",
+            "system": "http://snomed.info/sct",
+            "code": "306206005",
+            "display": "Referral to specialist",
+            "setting": "community"
+          },
+          {
+            "role": "procedure",
+            "family": "cataract-extraction",
+            "system": "http://snomed.info/sct",
+            "code": "54885007",
+            "display": "Cataract extraction",
+            "setting": "day-procedure"
+          },
+          {
+            "role": "follow-up",
+            "family": "postoperative-review",
+            "system": "http://snomed.info/sct",
+            "code": "185389009",
+            "display": "Follow-up visit",
+            "setting": "community"
+          }
+        ]
+      }
+    ],
+    "oncology": [
+      {
+        "id": "solid-tumor-systemic",
+        "historyDays": 1100,
+        "eventSpacingDays": [
+          0,
+          420,
+          900
+        ],
+        "secondaryBranches": [
+          "toxicity-monitor",
+          "supportive-care",
+          "response-review"
+        ],
+        "events": [
+          {
+            "role": "condition",
+            "family": "breast-cancer",
+            "system": "http://snomed.info/sct",
+            "code": "254837009",
+            "display": "Malignant neoplasm of breast",
+            "setting": "oncology-center"
+          },
+          {
+            "role": "oncology-treatment",
+            "family": "chemotherapy",
+            "system": "http://snomed.info/sct",
+            "code": "367336001",
+            "display": "Chemotherapy",
+            "setting": "oncology-center"
+          },
+          {
+            "role": "result",
+            "family": "hemoglobin",
+            "system": "http://loinc.org",
+            "code": "718-7",
+            "display": "Hemoglobin [Mass/volume] in Blood",
+            "setting": "oncology-center"
+          }
+        ]
+      },
+      {
+        "id": "solid-tumor-surgical",
+        "historyDays": 1050,
+        "eventSpacingDays": [
+          0,
+          380,
+          850
+        ],
+        "secondaryBranches": [
+          "colon-surgery",
+          "pathology-review",
+          "surveillance"
+        ],
+        "events": [
+          {
+            "role": "condition",
+            "family": "colon-cancer",
+            "system": "http://snomed.info/sct",
+            "code": "363406005",
+            "display": "Malignant tumor of colon",
+            "setting": "tertiary-ambulatory"
+          },
+          {
+            "role": "procedure",
+            "family": "oncologic-surgery",
+            "system": "http://snomed.info/sct",
+            "code": "387713003",
+            "display": "Surgical procedure",
+            "setting": "operating-room"
+          },
+          {
+            "role": "follow-up",
+            "family": "oncology-surveillance",
+            "system": "http://snomed.info/sct",
+            "code": "390906007",
+            "display": "Follow-up encounter",
+            "setting": "oncology-center"
+          }
+        ]
+      },
+      {
+        "id": "hematologic-treatment",
+        "historyDays": 1150,
+        "eventSpacingDays": [
+          0,
+          430,
+          940
+        ],
+        "secondaryBranches": [
+          "cbc-monitoring",
+          "transfusion-support",
+          "response-review"
+        ],
+        "events": [
+          {
+            "role": "condition",
+            "family": "leukemia",
+            "system": "http://snomed.info/sct",
+            "code": "93143009",
+            "display": "Leukemia",
+            "setting": "hematology-center"
+          },
+          {
+            "role": "oncology-treatment",
+            "family": "systemic-therapy",
+            "system": "http://snomed.info/sct",
+            "code": "367336001",
+            "display": "Chemotherapy",
+            "setting": "hematology-center"
+          },
+          {
+            "role": "result",
+            "family": "hemoglobin",
+            "system": "http://loinc.org",
+            "code": "718-7",
+            "display": "Hemoglobin [Mass/volume] in Blood",
+            "setting": "hematology-center"
+          }
+        ]
+      },
+      {
+        "id": "toxicity-monitoring",
+        "historyDays": 1000,
+        "eventSpacingDays": [
+          0,
+          390,
+          830
+        ],
+        "secondaryBranches": [
+          "renal-toxicity",
+          "hepatic-toxicity",
+          "hematologic-toxicity"
+        ],
+        "events": [
+          {
+            "role": "condition",
+            "family": "breast-cancer",
+            "system": "http://snomed.info/sct",
+            "code": "254837009",
+            "display": "Malignant neoplasm of breast",
+            "setting": "oncology-center"
+          },
+          {
+            "role": "oncology-treatment",
+            "family": "chemotherapy",
+            "system": "http://snomed.info/sct",
+            "code": "367336001",
+            "display": "Chemotherapy",
+            "setting": "oncology-center"
+          },
+          {
+            "role": "result",
+            "family": "creatinine",
+            "system": "http://loinc.org",
+            "code": "2160-0",
+            "display": "Creatinine [Mass/volume] in Serum or Plasma",
+            "setting": "oncology-center"
+          }
+        ]
+      },
+      {
+        "id": "supportive-care",
+        "historyDays": 1080,
+        "eventSpacingDays": [
+          0,
+          410,
+          880
+        ],
+        "secondaryBranches": [
+          "pain-control",
+          "antiemetic-support",
+          "anemia-support"
+        ],
+        "events": [
+          {
+            "role": "condition",
+            "family": "colon-cancer",
+            "system": "http://snomed.info/sct",
+            "code": "363406005",
+            "display": "Malignant tumor of colon",
+            "setting": "oncology-center"
+          },
+          {
+            "role": "oncology-treatment",
+            "family": "supportive-care",
+            "system": "http://snomed.info/sct",
+            "code": "385763009",
+            "display": "Hospice care management",
+            "setting": "oncology-center"
+          },
+          {
+            "role": "follow-up",
+            "family": "supportive-review",
+            "system": "http://snomed.info/sct",
+            "code": "390906007",
+            "display": "Follow-up encounter",
+            "setting": "community"
+          }
+        ]
+      },
+      {
+        "id": "surveillance",
+        "historyDays": 1200,
+        "eventSpacingDays": [
+          0,
+          500,
+          1000
+        ],
+        "secondaryBranches": [
+          "imaging-surveillance",
+          "lab-surveillance",
+          "community-shared-care"
+        ],
+        "events": [
+          {
+            "role": "condition",
+            "family": "breast-cancer",
+            "system": "http://snomed.info/sct",
+            "code": "254837009",
+            "display": "Malignant neoplasm of breast",
+            "setting": "oncology-center",
+            "status": "resolved"
+          },
+          {
+            "role": "result",
+            "family": "surveillance-result",
+            "system": "http://loinc.org",
+            "code": "24606-6",
+            "display": "Mammogram",
+            "setting": "oncology-center"
+          },
+          {
+            "role": "follow-up",
+            "family": "oncology-surveillance",
+            "system": "http://snomed.info/sct",
+            "code": "390906007",
+            "display": "Follow-up encounter",
+            "setting": "community"
+          }
+        ]
+      }
+    ],
+    "rare-complex": [
+      {
+        "id": "multi-system-inflammatory",
+        "historyDays": 1200,
+        "eventSpacingDays": [
+          0,
+          500,
+          1000
+        ],
+        "secondaryBranches": [
+          "renal-monitoring",
+          "rheumatology-review",
+          "medication-monitoring"
+        ],
+        "events": [
+          {
+            "role": "condition",
+            "family": "systemic-lupus",
+            "system": "http://snomed.info/sct",
+            "code": "55464009",
+            "display": "Systemic lupus erythematosus",
+            "setting": "tertiary-ambulatory"
+          },
+          {
+            "role": "result",
+            "family": "creatinine",
+            "system": "http://loinc.org",
+            "code": "2160-0",
+            "display": "Creatinine [Mass/volume] in Serum or Plasma",
+            "setting": "community"
+          },
+          {
+            "role": "follow-up",
+            "family": "rheumatology-review",
+            "system": "http://snomed.info/sct",
+            "code": "390906007",
+            "display": "Follow-up encounter",
+            "setting": "tertiary-ambulatory"
+          }
+        ]
+      },
+      {
+        "id": "neuromuscular-support",
+        "historyDays": 1250,
+        "eventSpacingDays": [
+          0,
+          520,
+          1050
+        ],
+        "secondaryBranches": [
+          "respiratory-support",
+          "mobility-support",
+          "neurology-review"
+        ],
+        "events": [
+          {
+            "role": "condition",
+            "family": "motor-neuron-disease",
+            "system": "http://snomed.info/sct",
+            "code": "193093009",
+            "display": "Motor neuron disease",
+            "setting": "tertiary-ambulatory"
+          },
+          {
+            "role": "assessment",
+            "family": "respiratory-function",
+            "system": "http://loinc.org",
+            "code": "19868-9",
+            "display": "Forced vital capacity [Volume] Respiratory system",
+            "setting": "tertiary-ambulatory"
+          },
+          {
+            "role": "follow-up",
+            "family": "neurology-review",
+            "system": "http://snomed.info/sct",
+            "code": "390906007",
+            "display": "Follow-up encounter",
+            "setting": "regional-ambulatory"
+          }
+        ]
+      },
+      {
+        "id": "complex-renal",
+        "historyDays": 1300,
+        "eventSpacingDays": [
+          0,
+          550,
+          1100
+        ],
+        "secondaryBranches": [
+          "potassium-monitor",
+          "nephrology-review",
+          "medication-review"
+        ],
+        "events": [
+          {
+            "role": "condition",
+            "family": "chronic-kidney-disease",
+            "system": "http://snomed.info/sct",
+            "code": "709044004",
+            "display": "Chronic kidney disease",
+            "setting": "community"
+          },
+          {
+            "role": "result",
+            "family": "creatinine",
+            "system": "http://loinc.org",
+            "code": "2160-0",
+            "display": "Creatinine [Mass/volume] in Serum or Plasma",
+            "setting": "community"
+          },
+          {
+            "role": "follow-up",
+            "family": "nephrology-review",
+            "system": "http://snomed.info/sct",
+            "code": "390906007",
+            "display": "Follow-up encounter",
+            "setting": "tertiary-ambulatory"
+          }
+        ]
+      },
+      {
+        "id": "rare-metabolic",
+        "historyDays": 1220,
+        "eventSpacingDays": [
+          0,
+          510,
+          1020
+        ],
+        "secondaryBranches": [
+          "glucose-monitor",
+          "dietetic-review",
+          "specialty-follow-up"
+        ],
+        "events": [
+          {
+            "role": "condition",
+            "family": "metabolic-disease",
+            "system": "http://snomed.info/sct",
+            "code": "75934005",
+            "display": "Metabolic disease",
+            "setting": "community-specialty"
+          },
+          {
+            "role": "result",
+            "family": "glucose",
+            "system": "http://loinc.org",
+            "code": "2345-7",
+            "display": "Glucose [Mass/volume] in Serum or Plasma",
+            "setting": "community"
+          },
+          {
+            "role": "follow-up",
+            "family": "metabolic-review",
+            "system": "http://snomed.info/sct",
+            "code": "390906007",
+            "display": "Follow-up encounter",
+            "setting": "regional-ambulatory"
+          }
+        ]
+      }
+    ]
+  }
+}

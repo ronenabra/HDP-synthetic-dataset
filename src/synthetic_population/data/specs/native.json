@@ -1,0 +1,170 @@
+{
+  "schemaVersion": "2.0.0",
+  "datasetFamily": "synthetic-population",
+  "datasetVersion": "4.0.0",
+  "populationSize": 1000,
+  "seed": 20260812,
+  "timelineAnchor": "2026-01-01T00:00:00Z",
+  "fhirVersion": "4.0.1",
+  "hdpPackage": "il.hdp.fhir.r4#0.6.0",
+  "ilCorePackage": "il.core.fhir.r4#0.22.0",
+  "generator": {
+    "adapter": "native",
+    "strictPartialPerOrganization": true,
+    "serialization": "json-pretty-2-final-newline"
+  },
+  "organizations": [
+    {
+      "id": "hmo",
+      "name": "HDP Synthetic HMO",
+      "kind": "hmo"
+    },
+    {
+      "id": "hospital-a",
+      "name": "HDP Synthetic Tertiary Hospital",
+      "kind": "tertiary-hospital"
+    },
+    {
+      "id": "hospital-b",
+      "name": "HDP Synthetic Regional Hospital",
+      "kind": "regional-hospital"
+    }
+  ],
+  "identity": {
+    "cohortIdentifierSystem": "urn:hdp-test-bundle:synthetic-cohort-id",
+    "testIdentifierSystem": "http://fhir.health.gov.il/identifier/il-hdp-test-id",
+    "strongIdentifierPrefix": "urn:hdp-test-bundle:synthetic",
+    "anchorPatients": [
+      {
+        "cohortId": "cohort-000001",
+        "testId": "1",
+        "given": "Israel",
+        "family": "Israelov"
+      },
+      {
+        "cohortId": "cohort-000002",
+        "testId": "2",
+        "given": "Israela",
+        "family": "Israelov"
+      }
+    ]
+  },
+  "metadata": {
+    "datasetTagSystem": "urn:hdp-test-bundle:synthetic-dataset",
+    "sourceTagSystem": "urn:hdp-test-bundle:synthetic-source",
+    "problemMarkerSystem": "urn:hdp-test-bundle:synthetic-problem",
+    "problemKindSystem": "urn:hdp-test-bundle:synthetic-problem-kind",
+    "problemIdSystem": "urn:hdp-test-bundle:synthetic-problem-id",
+    "bucketSystem": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+    "actReasonSystem": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+    "confidentialitySystem": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+    "clinicalSensitivitySystem": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "testReasonCode": "HTEST",
+    "allowedConfidentialityCodes": [
+      "R",
+      "V"
+    ],
+    "forbiddenConfidentialityCodes": [
+      "N"
+    ]
+  },
+  "sensitivity": {
+    "catalog": "data/sensitivity-rules.v3.0.0.json",
+    "factCohorts": {
+      "adult-hiv-positive": 8,
+      "minor-hiv-positive": 4,
+      "adult-hiv-negative": 8,
+      "mental-health-diagnosis": 12,
+      "protected-domestic-violence-indicator": 4,
+      "ordinary-injury": 8
+    }
+  },
+  "terminology": {
+    "catalog": "data/terminology.v2.3.0.json"
+  },
+  "archetypes": {
+    "catalog": "data/archetypes.v2.0.0.json"
+  },
+  "sourceModels": {
+    "catalog": "data/source-models.v2.0.0.json"
+  },
+  "clinicalDistributions": {
+    "catalog": "data/clinical-distributions.v2.1.1.json"
+  },
+  "clinicalRealism": {
+    "catalog": "data/clinical-realism.v4.0.2.json"
+  },
+  "identityPolicy": {
+    "catalog": "data/identity-policy.v3.1.0.json"
+  },
+  "remediation": {
+    "pathwayTemplateCatalog": "native_generator/data/pathway-templates.v4.2.2.json",
+    "capturePolicyCatalog": "data/source-capture.v4.2.2.json",
+    "clinicalContentCatalog": "data/clinical-content.v4.5.1.json",
+    "protectedInvariantCatalog": "data/protected-invariants.v4.0.0.json",
+    "variabilityPolicyCatalog": "data/variability-policy.v4.2.0.json",
+    "scenarioTimingCatalog": "data/scenario-timing.v4.0.0.json",
+    "referenceContext": "data/reference-context.json"
+  },
+  "problems": {
+    "catalogVersion": "3.0.0",
+    "allocationPolicyVersion": "4.2.0-nested-cohorts",
+    "patientsWithOne": 100,
+    "patientsWithSecond": 20,
+    "crossSourceClinicalPatients": 30,
+    "maxPatientProblemIds": 2,
+    "maxTaggedClinicalRate": 0.025,
+    "kinds": [
+      "conflicting-diagnosis",
+      "discordant-lab",
+      "timestamp-order",
+      "semantically-wrong-code",
+      "unit-mismatch",
+      "stale-demographics",
+      "probable-duplicate",
+      "cross-source-clinical-risk"
+    ]
+  },
+  "demographics": {
+    "nameVariationRate": 0.3,
+    "addressVariationRate": 0.25,
+    "telecomVariationRate": 0.15,
+    "telephonePrefix": "+972-55-000",
+    "namesCatalog": "data/names.v2.0.0.json",
+    "genderDistribution": {
+      "female": 0.515,
+      "male": 0.485
+    },
+    "pediatricAgeBands": {
+      "infant": 15,
+      "child": 85,
+      "adolescent": 50
+    }
+  },
+  "geography": {
+    "catalog": "data/localities.v1.0.0.json",
+    "requiredDistricts": [
+      "Jerusalem",
+      "North",
+      "Haifa",
+      "Center",
+      "Tel Aviv",
+      "South",
+      "Judea and Samaria"
+    ]
+  },
+  "storage": {
+    "minimumFreeReserveGiB": 10,
+    "projectedFinalMultiplier": 3,
+    "fixedValidatorOverheadGiB": 2,
+    "monitorEveryPatients": 100,
+    "monitorEveryBytes": 1073741824,
+    "fallbackBytesPerPatient": 262144
+  },
+  "validation": {
+    "canonicalMode": "exhaustive",
+    "knownTransitionAllowlist": [],
+    "clinicalReviewStatus": "pending",
+    "envelopeStrategy": "patient-mini-bundles-v1"
+  }
+}

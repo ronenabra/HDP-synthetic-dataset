@@ -1,0 +1,396 @@
+{
+  "nativeGeneratorRevision": "d2af10e548257c5df286d49338986beea2dd1b9d",
+  "nativeGeneratorSha256": "e8156dd56ac915ea005dfa0d1a3b9afa6630516796cb8f1ccf3b3bcd4b2bbbaf",
+  "populations": {
+    "1000": {
+      "bundles": [
+        {
+          "bytes": 56146596,
+          "nativeGeneratorSha256": "23368ecd7d78d8d626944f40981be3ef07099b3840e727a5aaeeb031a4b723af",
+          "path": "fhir-server-load/hmo.source.transaction.json",
+          "projectedSha256": "5203a3c791fe8c6c9d421d3aa04bdde3353bfbeae362cf0f35129c7d8da69bd8",
+          "resourceCount": 11815,
+          "sha256": "1ecbbc2bb2892147e310795e2f987a846b5696eaacb4c2033a860c0e1a78fe18",
+          "source": "hmo"
+        },
+        {
+          "bytes": 17774571,
+          "nativeGeneratorSha256": "b8a87b1f6093e73a78cc4ec8beb630bcccd95dd41dcae1bc0d96935624a5e90a",
+          "path": "fhir-server-load/hospital-a.source.transaction.json",
+          "projectedSha256": "7500bfeac9c9cade8c1d659c8d07b6d566b44d193c67b03983bee8116008681b",
+          "resourceCount": 4024,
+          "sha256": "4cc751b576cd54a9ac13021053c611c792efdd7467e0106da43a9121d15f3ec4",
+          "source": "hospital-a"
+        },
+        {
+          "bytes": 14158530,
+          "nativeGeneratorSha256": "57dff3996b533dda6a318de8174b814c8252057eca349dae04aa0705c9c8598b",
+          "path": "fhir-server-load/hospital-b.source.transaction.json",
+          "projectedSha256": "adc1a2062bad7ec00b569a92c92c301be87019dd7ed094d9bf7f7ae37a873615",
+          "resourceCount": 3340,
+          "sha256": "305a70b9b2279497c85ec7ea92143ab9837eb62c92e0a6904e52af4879561c5f",
+          "source": "hospital-b"
+        }
+      ],
+      "datasetVersion": "4.2.2-r4-1000-normal",
+      "nativeSpec": {
+        "archetypes": {
+          "catalog": "tools/synthetic_population/data/archetypes.v2.0.0.json"
+        },
+        "clinicalDistributions": {
+          "catalog": "tools/synthetic_population/data/clinical-distributions.v2.1.1.json"
+        },
+        "clinicalRealism": {
+          "catalog": "tools/synthetic_population/data/clinical-realism.v4.0.2.json"
+        },
+        "datasetFamily": "synthetic-population",
+        "datasetVersion": "4.2.1-s14-1000-normal",
+        "demographics": {
+          "addressVariationRate": 0.25,
+          "genderDistribution": {
+            "female": 0.515,
+            "male": 0.485
+          },
+          "lifecyclePolicyCatalog": "tools/synthetic_population/data/demographic-lifecycle.v1.0.0.json",
+          "nameVariationRate": 0.3,
+          "namesCatalog": "tools/synthetic_population/data/names.v2.0.0.json",
+          "pediatricAgeBands": {
+            "adolescent": 50,
+            "child": 85,
+            "infant": 15
+          },
+          "telecomVariationRate": 0.15,
+          "telephonePrefix": "+972-55-000"
+        },
+        "fhirVersion": "4.0.1",
+        "generator": {
+          "adapter": "native",
+          "serialization": "json-pretty-2-final-newline",
+          "strictPartialPerOrganization": true
+        },
+        "geography": {
+          "catalog": "tools/synthetic_population/data/localities.v1.0.0.json",
+          "requiredDistricts": [
+            "Jerusalem",
+            "North",
+            "Haifa",
+            "Center",
+            "Tel Aviv",
+            "South",
+            "Judea and Samaria"
+          ]
+        },
+        "hdpPackage": "il.hdp.fhir.r4#0.6.0",
+        "identity": {
+          "anchorPatients": [
+            {
+              "cohortId": "cohort-000001",
+              "family": "Israelov",
+              "given": "Israel",
+              "testId": "1"
+            },
+            {
+              "cohortId": "cohort-000002",
+              "family": "Israelov",
+              "given": "Israela",
+              "testId": "2"
+            }
+          ],
+          "cohortIdentifierSystem": "urn:hdp-test-bundle:synthetic-cohort-id",
+          "strongIdentifierPrefix": "urn:hdp-test-bundle:synthetic",
+          "testIdentifierSystem": "http://fhir.health.gov.il/identifier/il-hdp-test-id"
+        },
+        "identityPolicy": {
+          "catalog": "tools/synthetic_population/data/identity-policy.v3.0.0.json"
+        },
+        "ilCorePackage": "il.core.fhir.r4#0.22.0",
+        "metadata": {
+          "actReasonSystem": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+          "allowedConfidentialityCodes": [
+            "R",
+            "V"
+          ],
+          "bucketSystem": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+          "clinicalSensitivitySystem": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "confidentialitySystem": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+          "datasetTagSystem": "urn:hdp-test-bundle:synthetic-dataset",
+          "forbiddenConfidentialityCodes": [
+            "N"
+          ],
+          "problemIdSystem": "urn:hdp-test-bundle:synthetic-problem-id",
+          "problemKindSystem": "urn:hdp-test-bundle:synthetic-problem-kind",
+          "problemMarkerSystem": "urn:hdp-test-bundle:synthetic-problem",
+          "sourceTagSystem": "urn:hdp-test-bundle:synthetic-source",
+          "testReasonCode": "HTEST"
+        },
+        "organizations": [
+          {
+            "id": "hmo",
+            "kind": "hmo",
+            "name": "HDP Synthetic HMO"
+          },
+          {
+            "id": "hospital-a",
+            "kind": "tertiary-hospital",
+            "name": "HDP Synthetic Tertiary Hospital"
+          },
+          {
+            "id": "hospital-b",
+            "kind": "regional-hospital",
+            "name": "HDP Synthetic Regional Hospital"
+          }
+        ],
+        "populationSize": 1000,
+        "problems": {
+          "allocationPolicyVersion": "4.2.0-nested-cohorts",
+          "catalogVersion": "3.0.0",
+          "crossSourceClinicalPatients": 30,
+          "kinds": [
+            "conflicting-diagnosis",
+            "discordant-lab",
+            "timestamp-order",
+            "semantically-wrong-code",
+            "unit-mismatch",
+            "stale-demographics",
+            "probable-duplicate",
+            "cross-source-clinical-risk"
+          ],
+          "maxPatientProblemIds": 2,
+          "maxTaggedClinicalRate": 0.025,
+          "patientsWithOne": 100,
+          "patientsWithSecond": 20
+        },
+        "remediation": {
+          "capturePolicyCatalog": "tools/synthetic_population/data/source-capture.v4.2.2.json",
+          "clinicalContentCatalog": "tools/synthetic_population/data/clinical-content.v4.5.1.json",
+          "pathwayTemplateCatalog": "tools/synthetic_population/data/pathway-templates.v4.2.2.json",
+          "scenarioTimingCatalog": "tools/synthetic_population/data/scenario-timing.v4.0.0.json"
+        },
+        "schemaVersion": "2.0.0",
+        "seed": 20260812,
+        "sensitivity": {
+          "catalog": "tools/synthetic_population/data/sensitivity-rules.v3.0.0.json",
+          "factCohorts": {
+            "adult-hiv-negative": 8,
+            "adult-hiv-positive": 8,
+            "mental-health-diagnosis": 12,
+            "minor-hiv-positive": 4,
+            "ordinary-injury": 8,
+            "protected-domestic-violence-indicator": 4
+          }
+        },
+        "sourceModels": {
+          "catalog": "tools/synthetic_population/data/source-models.v2.0.0.json"
+        },
+        "storage": {
+          "minimumFreeReserveGiB": 10
+        },
+        "terminology": {
+          "catalog": "tools/synthetic_population/data/terminology.v2.4.0.json"
+        },
+        "timelineAnchor": "2026-01-01T00:00:00Z"
+      },
+      "repairs": {
+        "path": "data/accepted-edits-1000.json",
+        "sha256": "10cc8388df33f11e8173f57cdf5638a563fafe0c4d49d890100a395049bd949e",
+        "targets": 514
+      }
+    },
+    "10000": {
+      "bundles": [
+        {
+          "bytes": 557415097,
+          "nativeGeneratorSha256": "2d49be7f9b27215518ce05dcd4b535dfbc2320b3db8fae03ac4ed2b2ae1a9cfb",
+          "path": "fhir-server-load/hmo.source.transaction.json",
+          "projectedSha256": "331d6ff013dc0d8eae55f94e38898a60a25f1b749b17ee1ffc3cf76c29c716fd",
+          "resourceCount": 117447,
+          "sha256": "b510540915bbc8b697ec4660eaa0e9d8915544091c082f098e6914e59c086ea0",
+          "source": "hmo"
+        },
+        {
+          "bytes": 176712846,
+          "nativeGeneratorSha256": "72af4594141c11b526ef060cb34a297eeec1a34fde266538884457096776f3af",
+          "path": "fhir-server-load/hospital-a.source.transaction.json",
+          "projectedSha256": "fb1b32f071cf9af31ae835e89412f3dd34e2876965545bf7d630a230cffd9aee",
+          "resourceCount": 40357,
+          "sha256": "31ba6839a5e2c9db909d2bb2def078b12046b5c042e76644599425ba4baf7ea8",
+          "source": "hospital-a"
+        },
+        {
+          "bytes": 138548958,
+          "nativeGeneratorSha256": "b0535dbeca7dc6f0b5c025a7f4ac482d59df0a99df5730f6d8d3ea136ac48352",
+          "path": "fhir-server-load/hospital-b.source.transaction.json",
+          "projectedSha256": "3ea3e8f77abaaedc6f89f354405883fc40ce0fa27087beba50e9c05f8d151e0a",
+          "resourceCount": 32721,
+          "sha256": "c9a787d47bfad48ad57a7abe30b797cd9111636774394bc2b5eb618a701c0bbb",
+          "source": "hospital-b"
+        }
+      ],
+      "datasetVersion": "4.2.2-r4-10000-normal",
+      "nativeSpec": {
+        "archetypes": {
+          "catalog": "tools/synthetic_population/data/archetypes.v2.0.0.json"
+        },
+        "clinicalDistributions": {
+          "catalog": "tools/synthetic_population/data/clinical-distributions.v2.1.1.json"
+        },
+        "clinicalRealism": {
+          "catalog": "tools/synthetic_population/data/clinical-realism.v4.0.2.json"
+        },
+        "datasetFamily": "synthetic-population",
+        "datasetVersion": "4.2.1-s15-10000-normal",
+        "demographics": {
+          "addressVariationRate": 0.25,
+          "genderDistribution": {
+            "female": 0.515,
+            "male": 0.485
+          },
+          "lifecyclePolicyCatalog": "tools/synthetic_population/data/demographic-lifecycle.v1.0.0.json",
+          "nameVariationRate": 0.3,
+          "namesCatalog": "tools/synthetic_population/data/names.v2.0.0.json",
+          "pediatricAgeBands": {
+            "adolescent": 50,
+            "child": 85,
+            "infant": 15
+          },
+          "telecomVariationRate": 0.15,
+          "telephonePrefix": "+972-55-000"
+        },
+        "fhirVersion": "4.0.1",
+        "generator": {
+          "adapter": "native",
+          "serialization": "json-pretty-2-final-newline",
+          "strictPartialPerOrganization": true
+        },
+        "geography": {
+          "catalog": "tools/synthetic_population/data/localities.v1.0.0.json",
+          "requiredDistricts": [
+            "Jerusalem",
+            "North",
+            "Haifa",
+            "Center",
+            "Tel Aviv",
+            "South",
+            "Judea and Samaria"
+          ]
+        },
+        "hdpPackage": "il.hdp.fhir.r4#0.6.0",
+        "identity": {
+          "anchorPatients": [
+            {
+              "cohortId": "cohort-000001",
+              "family": "Israelov",
+              "given": "Israel",
+              "testId": "1"
+            },
+            {
+              "cohortId": "cohort-000002",
+              "family": "Israelov",
+              "given": "Israela",
+              "testId": "2"
+            }
+          ],
+          "cohortIdentifierSystem": "urn:hdp-test-bundle:synthetic-cohort-id",
+          "strongIdentifierPrefix": "urn:hdp-test-bundle:synthetic",
+          "testIdentifierSystem": "http://fhir.health.gov.il/identifier/il-hdp-test-id"
+        },
+        "identityPolicy": {
+          "catalog": "tools/synthetic_population/data/identity-policy.v3.0.0.json"
+        },
+        "ilCorePackage": "il.core.fhir.r4#0.22.0",
+        "metadata": {
+          "actReasonSystem": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+          "allowedConfidentialityCodes": [
+            "R",
+            "V"
+          ],
+          "bucketSystem": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+          "clinicalSensitivitySystem": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "confidentialitySystem": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+          "datasetTagSystem": "urn:hdp-test-bundle:synthetic-dataset",
+          "forbiddenConfidentialityCodes": [
+            "N"
+          ],
+          "problemIdSystem": "urn:hdp-test-bundle:synthetic-problem-id",
+          "problemKindSystem": "urn:hdp-test-bundle:synthetic-problem-kind",
+          "problemMarkerSystem": "urn:hdp-test-bundle:synthetic-problem",
+          "sourceTagSystem": "urn:hdp-test-bundle:synthetic-source",
+          "testReasonCode": "HTEST"
+        },
+        "organizations": [
+          {
+            "id": "hmo",
+            "kind": "hmo",
+            "name": "HDP Synthetic HMO"
+          },
+          {
+            "id": "hospital-a",
+            "kind": "tertiary-hospital",
+            "name": "HDP Synthetic Tertiary Hospital"
+          },
+          {
+            "id": "hospital-b",
+            "kind": "regional-hospital",
+            "name": "HDP Synthetic Regional Hospital"
+          }
+        ],
+        "populationSize": 10000,
+        "problems": {
+          "allocationPolicyVersion": "4.2.0-nested-cohorts",
+          "catalogVersion": "3.0.0",
+          "crossSourceClinicalPatients": 300,
+          "kinds": [
+            "conflicting-diagnosis",
+            "discordant-lab",
+            "timestamp-order",
+            "semantically-wrong-code",
+            "unit-mismatch",
+            "stale-demographics",
+            "probable-duplicate",
+            "cross-source-clinical-risk"
+          ],
+          "maxPatientProblemIds": 2,
+          "maxTaggedClinicalRate": 0.025,
+          "patientsWithOne": 1000,
+          "patientsWithSecond": 200
+        },
+        "remediation": {
+          "capturePolicyCatalog": "tools/synthetic_population/data/source-capture.v4.2.2.json",
+          "clinicalContentCatalog": "tools/synthetic_population/data/clinical-content.v4.5.1.json",
+          "pathwayTemplateCatalog": "tools/synthetic_population/data/pathway-templates.v4.2.2.json",
+          "scenarioTimingCatalog": "tools/synthetic_population/data/scenario-timing.v4.0.0.json"
+        },
+        "schemaVersion": "2.0.0",
+        "seed": 20260812,
+        "sensitivity": {
+          "catalog": "tools/synthetic_population/data/sensitivity-rules.v3.0.0.json",
+          "factCohorts": {
+            "adult-hiv-negative": 80,
+            "adult-hiv-positive": 80,
+            "mental-health-diagnosis": 120,
+            "minor-hiv-positive": 40,
+            "ordinary-injury": 80,
+            "protected-domestic-violence-indicator": 40
+          }
+        },
+        "sourceModels": {
+          "catalog": "tools/synthetic_population/data/source-models.v2.0.0.json"
+        },
+        "storage": {
+          "minimumFreeReserveGiB": 10
+        },
+        "terminology": {
+          "catalog": "tools/synthetic_population/data/terminology.v2.4.0.json"
+        },
+        "timelineAnchor": "2026-01-01T00:00:00Z"
+      },
+      "repairs": {
+        "path": "data/accepted-edits-10000.json",
+        "sha256": "3acb1fe060aeee072a4ded82063d3e27ae03c6fc116751cd38f88202dc21792b",
+        "targets": 5246
+      }
+    }
+  },
+  "releaseId": "4.2.2-2026-10-10",
+  "serialization": "utf8-json-sorted-keys-indent2-final-newline"
+}

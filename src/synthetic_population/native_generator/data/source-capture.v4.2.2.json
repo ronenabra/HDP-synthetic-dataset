@@ -1,0 +1,313 @@
+{
+  "catalogVersion": "4.2.2",
+  "status": "provisional-pending-designated-clinical-review; non-owner hospital capture requires a care relationship",
+  "sources": {
+    "hmo": {
+      "careSettings": [
+        "community",
+        "community-specialty",
+        "pharmacy"
+      ],
+      "performedRoles": [
+        "encounter",
+        "condition",
+        "assessment",
+        "order",
+        "collection",
+        "result",
+        "prescription",
+        "dispense",
+        "medication-review",
+        "immunization",
+        "growth-measurement",
+        "follow-up",
+        "referral"
+      ],
+      "authoredRoles": [
+        "order",
+        "prescription",
+        "referral"
+      ],
+      "receivedRoles": [
+        "result",
+        "procedure",
+        "discharge",
+        "oncology-treatment"
+      ],
+      "summaryRoles": [
+        "inpatient-encounter",
+        "emergency-encounter",
+        "assessment",
+        "follow-up"
+      ],
+      "referralOnlyRoles": [],
+      "metadataOnlyRoles": [],
+      "mandatoryFields": [
+        "meta.profile",
+        "meta.security",
+        "identifier",
+        "subject-or-patient"
+      ],
+      "optionalFields": [
+        "note",
+        "text",
+        "supportingInfo"
+      ],
+      "referenceBehavior": "source-local-references-only",
+      "provenanceBehavior": "received-and-summarized-require-explicit-source",
+      "enabledDispositions": [
+        "performed",
+        "authored",
+        "received",
+        "summarized",
+        "absent"
+      ],
+      "expectedCanonicalZeroDispositions": [
+        "referral-only",
+        "metadata-only"
+      ],
+      "documentationLagMinutes": 30,
+      "omissionPercent": 18
+    },
+    "hospital-a": {
+      "careSettings": [
+        "tertiary-emergency",
+        "tertiary-inpatient",
+        "tertiary-ambulatory",
+        "operating-room",
+        "oncology-center"
+      ],
+      "performedRoles": [
+        "encounter",
+        "emergency-encounter",
+        "inpatient-encounter",
+        "condition",
+        "assessment",
+        "order",
+        "collection",
+        "result",
+        "procedure",
+        "oncology-treatment",
+        "medication-administration",
+        "follow-up",
+        "discharge"
+      ],
+      "authoredRoles": [
+        "order"
+      ],
+      "receivedRoles": [
+        "prescription",
+        "result",
+        "medication-review"
+      ],
+      "summaryRoles": [
+        "dispense",
+        "growth-measurement",
+        "immunization",
+        "assessment",
+        "follow-up"
+      ],
+      "referralOnlyRoles": [
+        "referral"
+      ],
+      "metadataOnlyRoles": [],
+      "mandatoryFields": [
+        "meta.profile",
+        "meta.security",
+        "identifier",
+        "subject-or-patient"
+      ],
+      "optionalFields": [
+        "note",
+        "text",
+        "supportingInfo"
+      ],
+      "referenceBehavior": "source-local-references-only",
+      "provenanceBehavior": "received-and-summarized-require-explicit-source",
+      "enabledDispositions": [
+        "performed",
+        "authored",
+        "received",
+        "summarized",
+        "referral-only",
+        "absent"
+      ],
+      "expectedCanonicalZeroDispositions": [
+        "metadata-only"
+      ],
+      "documentationLagMinutes": 90,
+      "omissionPercent": 25
+    },
+    "hospital-b": {
+      "careSettings": [
+        "regional-emergency",
+        "regional-inpatient",
+        "regional-ambulatory",
+        "day-procedure",
+        "hematology-center"
+      ],
+      "performedRoles": [
+        "encounter",
+        "emergency-encounter",
+        "inpatient-encounter",
+        "condition",
+        "assessment",
+        "order",
+        "collection",
+        "result",
+        "procedure",
+        "oncology-treatment",
+        "medication-administration",
+        "follow-up",
+        "discharge"
+      ],
+      "authoredRoles": [
+        "order"
+      ],
+      "receivedRoles": [
+        "prescription",
+        "result",
+        "medication-review"
+      ],
+      "summaryRoles": [
+        "dispense",
+        "growth-measurement",
+        "immunization"
+      ],
+      "referralOnlyRoles": [
+        "referral"
+      ],
+      "metadataOnlyRoles": [],
+      "mandatoryFields": [
+        "meta.profile",
+        "meta.security",
+        "identifier",
+        "subject-or-patient"
+      ],
+      "optionalFields": [
+        "note",
+        "text",
+        "supportingInfo"
+      ],
+      "referenceBehavior": "source-local-references-only",
+      "provenanceBehavior": "received-and-summarized-require-explicit-source",
+      "enabledDispositions": [
+        "performed",
+        "authored",
+        "received",
+        "summarized",
+        "referral-only",
+        "absent"
+      ],
+      "expectedCanonicalZeroDispositions": [
+        "metadata-only"
+      ],
+      "documentationLagMinutes": 180,
+      "omissionPercent": 30
+    }
+  },
+  "coverageFixtures": [
+    {
+      "source": "hmo",
+      "disposition": "performed",
+      "eventRole": "condition",
+      "careSetting": "community"
+    },
+    {
+      "source": "hmo",
+      "disposition": "authored",
+      "eventRole": "order",
+      "careSetting": "community"
+    },
+    {
+      "source": "hmo",
+      "disposition": "received",
+      "eventRole": "result",
+      "careSetting": "regional-ambulatory"
+    },
+    {
+      "source": "hmo",
+      "disposition": "summarized",
+      "eventRole": "emergency-encounter",
+      "careSetting": "regional-emergency"
+    },
+    {
+      "source": "hmo",
+      "disposition": "absent",
+      "eventRole": "condition",
+      "careSetting": "oncology-center"
+    },
+    {
+      "source": "hospital-a",
+      "disposition": "performed",
+      "eventRole": "condition",
+      "careSetting": "oncology-center"
+    },
+    {
+      "source": "hospital-a",
+      "disposition": "authored",
+      "eventRole": "order",
+      "careSetting": "tertiary-ambulatory"
+    },
+    {
+      "source": "hospital-a",
+      "disposition": "received",
+      "eventRole": "prescription",
+      "careSetting": "community"
+    },
+    {
+      "source": "hospital-a",
+      "disposition": "summarized",
+      "eventRole": "dispense",
+      "careSetting": "pharmacy"
+    },
+    {
+      "source": "hospital-a",
+      "disposition": "referral-only",
+      "eventRole": "referral",
+      "careSetting": "community"
+    },
+    {
+      "source": "hospital-a",
+      "disposition": "absent",
+      "eventRole": "condition",
+      "careSetting": "community"
+    },
+    {
+      "source": "hospital-b",
+      "disposition": "performed",
+      "eventRole": "condition",
+      "careSetting": "regional-ambulatory"
+    },
+    {
+      "source": "hospital-b",
+      "disposition": "authored",
+      "eventRole": "order",
+      "careSetting": "regional-ambulatory"
+    },
+    {
+      "source": "hospital-b",
+      "disposition": "received",
+      "eventRole": "prescription",
+      "careSetting": "community"
+    },
+    {
+      "source": "hospital-b",
+      "disposition": "summarized",
+      "eventRole": "dispense",
+      "careSetting": "pharmacy"
+    },
+    {
+      "source": "hospital-b",
+      "disposition": "referral-only",
+      "eventRole": "referral",
+      "careSetting": "community"
+    },
+    {
+      "source": "hospital-b",
+      "disposition": "absent",
+      "eventRole": "condition",
+      "careSetting": "community"
+    }
+  ]
+}

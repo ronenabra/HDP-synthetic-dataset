@@ -1,0 +1,1717 @@
+{
+  "catalogVersion": "4.5.1",
+  "status": "reviewed-synthetic-content",
+  "modelDefinitions": {
+    "quantitative-observation": {
+      "version": "LOINC release version not asserted in generated R4 Coding",
+      "aliases": [],
+      "fhirResourceTypes": [
+        "Observation"
+      ],
+      "profiles": [
+        "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-observation-lab",
+        "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-vital-signs",
+        "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-bp",
+        "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-observation"
+      ],
+      "paths": [
+        "Observation.code",
+        "Observation.valueQuantity",
+        "Observation.referenceRange",
+        "Observation.interpretation"
+      ],
+      "eligibility": {
+        "minimumAgeDays": 0,
+        "maximumAgeDays": null,
+        "sexes": [
+          "female",
+          "male",
+          "other",
+          "unknown"
+        ],
+        "pathways": [
+          "reviewed-template-or-targeted-background"
+        ]
+      },
+      "contraindications": [
+        "value without a reviewed unit/range",
+        "event before birth"
+      ],
+      "indications": [
+        "reviewed pathway monitoring",
+        "bounded ordinary background branch"
+      ],
+      "compatibleRoles": [
+        "assessment",
+        "result",
+        "growth-measurement"
+      ],
+      "valueModel": {
+        "kind": "bounded-continuous",
+        "precisionDecimalPlaces": 2,
+        "rangeSource": "row-low-high",
+        "bloodPressurePair": {
+          "normalSystolic": [
+            100,
+            135
+          ],
+          "normalDiastolic": [
+            65,
+            85
+          ],
+          "mildHigh": [
+            145,
+            93
+          ],
+          "childSystolic": [
+            95,
+            115
+          ],
+          "childDiastolic": [
+            60,
+            75
+          ],
+          "childMaximumAgeYears": 12
+        },
+        "syntheticGrowthAnchors": [
+          {
+            "ageYears": 0,
+            "heightCm": 50,
+            "weightKg": 3.5
+          },
+          {
+            "ageYears": 1,
+            "heightCm": 75,
+            "weightKg": 10
+          },
+          {
+            "ageYears": 5,
+            "heightCm": 110,
+            "weightKg": 18
+          },
+          {
+            "ageYears": 12,
+            "heightCm": 150,
+            "weightKg": 42
+          },
+          {
+            "ageYears": 18,
+            "heightCm": 170,
+            "weightKg": 65
+          }
+        ],
+        "ageApplicability": {
+          "39156-5": {
+            "policyVersion": "1.0.0",
+            "rules": [
+              {
+                "id": "adult-reference-range",
+                "minimumAgeYears": 20,
+                "maximumAgeYears": null,
+                "referenceRangeHandling": "required",
+                "interpretationHandling": "required",
+                "ordinaryDistributionGuardApplicable": true,
+                "requiresDerivedPair": false,
+                "requiresPositiveFiniteValue": true
+              },
+              {
+                "id": "pediatric-derived-only",
+                "minimumAgeYears": 0,
+                "maximumAgeYears": 20,
+                "referenceRangeHandling": "omit",
+                "interpretationHandling": "omit",
+                "ordinaryDistributionGuardApplicable": false,
+                "requiresDerivedPair": true,
+                "requiresPositiveFiniteValue": true
+              }
+            ],
+            "sourceEvidence": [
+              {
+                "title": "CDC About Body Mass Index",
+                "url": "https://www.cdc.gov/bmi/about/index.html",
+                "claim": "Adult BMI categories use the adult calculator for people aged 20 years and older; children and teens aged 2 through 19 use BMI-for-age.",
+                "accessed": "2026-09-22"
+              },
+              {
+                "title": "CDC Child and Teen BMI Calculator",
+                "url": "https://www.cdc.gov/bmi/child-teen-calculator/index.html",
+                "claim": "Child and teen BMI is interpreted with sex-specific BMI-for-age percentiles for ages 2 through 19.",
+                "accessed": "2026-09-22"
+              },
+              {
+                "title": "WHO Body mass index-for-age",
+                "url": "https://www.who.int/toolkits/child-growth-standards/standards/body-mass-index-for-age-bmi-for-age",
+                "claim": "WHO publishes BMI-for-age standards from birth through age 5, including sex-specific charts and tables.",
+                "accessed": "2026-09-22"
+              }
+            ],
+            "reviewStatus": "provisional-pending-designated-clinical-review",
+            "pediatricDisposition": "Derive BMI from same-date height and weight and retain unit, positivity, finiteness, and pair checks. Do not emit or judge the adult reference range or interpretation without a loaded pediatric age/sex reference catalog."
+          }
+        }
+      },
+      "interpretationRules": [
+        "L below low",
+        "N inclusive low-to-high",
+        "H above high"
+      ],
+      "repeatGroup": "same-analyte-clinical-date",
+      "correlationGroup": "pathway-declared-only",
+      "captureExpectations": [
+        "performed",
+        "received",
+        "summarized",
+        "absent"
+      ],
+      "provenance": "reviewed-v4-clinical-content",
+      "reviewedStatus": "provisional-pending-designated-clinical-review",
+      "uncertainty": "Synthetic fixture range; not production clinical guidance",
+      "clinicalReviewQuestion": "Are unit, range, age applicability, and pathway indication appropriate for certification fixtures?",
+      "contentClass": "ordinary-patient-content"
+    },
+    "medication-concept": {
+      "version": "RxNorm release version not asserted in generated R4 Coding",
+      "aliases": [],
+      "fhirResourceTypes": [
+        "MedicationRequest",
+        "MedicationDispense",
+        "MedicationStatement",
+        "MedicationAdministration"
+      ],
+      "profiles": [
+        "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-medication-request",
+        "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-medication-dispense",
+        "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-medication-statement",
+        "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-medication-administration"
+      ],
+      "paths": [
+        "MedicationRequest.medicationCodeableConcept",
+        "MedicationDispense.medicationCodeableConcept",
+        "MedicationStatement.medicationCodeableConcept",
+        "MedicationAdministration.medicationCodeableConcept"
+      ],
+      "eligibility": {
+        "minimumAgeDays": 0,
+        "maximumAgeDays": null,
+        "sexes": [
+          "female",
+          "male",
+          "other",
+          "unknown"
+        ],
+        "pathways": [
+          "compatible-reviewed-indication"
+        ]
+      },
+      "contraindications": [
+        "unlinked medication use",
+        "contradictory lifecycle without an intentional problem"
+      ],
+      "indications": [
+        "condition-linked treatment",
+        "medication reconciliation",
+        "procedure context"
+      ],
+      "compatibleRoles": [
+        "prescription",
+        "dispense",
+        "medication-review",
+        "medication-administration"
+      ],
+      "valueModel": {
+        "kind": "coded-medication-lifecycle",
+        "precisionDecimalPlaces": null,
+        "rangeSource": null,
+        "regimens": {
+          "29046": {
+            "doseMg": 10,
+            "frequencyPerDay": 1,
+            "routeCode": "26643006"
+          },
+          "6809": {
+            "doseMg": 500,
+            "frequencyPerDay": 1,
+            "routeCode": "26643006"
+          },
+          "83367": {
+            "doseMg": 20,
+            "frequencyPerDay": 1,
+            "routeCode": "26643006"
+          },
+          "161": {
+            "doseMg": 500,
+            "frequencyPerDay": 1,
+            "routeCode": "26643006"
+          },
+          "17767": {
+            "doseMg": 5,
+            "frequencyPerDay": 1,
+            "routeCode": "26643006"
+          },
+          "10582": {
+            "doseMg": 0.05,
+            "frequencyPerDay": 1,
+            "routeCode": "26643006"
+          },
+          "7646": {
+            "doseMg": 20,
+            "frequencyPerDay": 1,
+            "routeCode": "26643006"
+          },
+          "52175": {
+            "doseMg": 50,
+            "frequencyPerDay": 1,
+            "routeCode": "26643006"
+          }
+        }
+      },
+      "interpretationRules": [
+        "lifecycle status and dose chronology are evaluated separately"
+      ],
+      "repeatGroup": "same-ingredient-lifecycle",
+      "correlationGroup": "indication-and-monitoring",
+      "captureExpectations": [
+        "performed",
+        "authored",
+        "received",
+        "summarized",
+        "absent"
+      ],
+      "provenance": "reviewed-v4-clinical-content",
+      "reviewedStatus": "provisional-pending-designated-clinical-review",
+      "uncertainty": "Ingredient-level fixture concept; not prescribing guidance",
+      "clinicalReviewQuestion": "Is each ingredient restricted to clinically compatible pathway roles?",
+      "contentClass": "ordinary-patient-content"
+    },
+    "pediatric-immunization": {
+      "version": "SNOMED CT edition/version not asserted in generated R4 Coding",
+      "aliases": [],
+      "fhirResourceTypes": [
+        "Immunization"
+      ],
+      "profiles": [
+        "http://fhir.health.gov.il/StructureDefinition/il-core-immunization"
+      ],
+      "paths": [
+        "Immunization.vaccineCode"
+      ],
+      "eligibility": {
+        "minimumAgeDays": "row-minimum",
+        "maximumAgeDays": null,
+        "sexes": [
+          "female",
+          "male",
+          "other",
+          "unknown"
+        ],
+        "pathways": [
+          "pediatric"
+        ]
+      },
+      "contraindications": [
+        "administration before configured minimum age",
+        "placeholder/allergen-extract concept"
+      ],
+      "indications": [
+        "reviewed Israeli routine pediatric fixture schedule"
+      ],
+      "compatibleRoles": [
+        "immunization"
+      ],
+      "valueModel": {
+        "kind": "coded-administration-event",
+        "precisionDecimalPlaces": null,
+        "rangeSource": null
+      },
+      "interpretationRules": [
+        "occurrence date must be age eligible"
+      ],
+      "repeatGroup": "age-conditioned-vaccine-schedule",
+      "correlationGroup": "pediatric-age-band",
+      "captureExpectations": [
+        "performed",
+        "summarized",
+        "absent"
+      ],
+      "provenance": "reviewed-Israeli-schedule-SNOMED-product",
+      "reviewedStatus": "provisional-pending-designated-clinical-review",
+      "uncertainty": "Certification fixture schedule; designated clinical review remains pending",
+      "clinicalReviewQuestion": "Do concept and minimum-age mappings reflect the current project-reviewed Israeli source?",
+      "contentClass": "ordinary-patient-content"
+    },
+    "coded-pathway-event": {
+      "version": "terminology release version not asserted in generated R4 Coding",
+      "aliases": [],
+      "fhirResourceTypes": [
+        "derived-from-event-role"
+      ],
+      "profiles": [
+        "derived-from-event-role"
+      ],
+      "paths": [
+        "derived-from-event-role"
+      ],
+      "eligibility": {
+        "minimumAgeDays": 0,
+        "maximumAgeDays": null,
+        "sexes": [
+          "female",
+          "male",
+          "other",
+          "unknown"
+        ],
+        "pathways": [
+          "declaring-archetype-and-variant"
+        ]
+      },
+      "contraindications": [
+        "use outside declared pathway without a separately reviewed indication"
+      ],
+      "indications": [
+        "declared pathway event"
+      ],
+      "compatibleRoles": [
+        "declaring-event-role"
+      ],
+      "valueModel": {
+        "kind": "coded-clinical-event",
+        "precisionDecimalPlaces": null,
+        "rangeSource": null
+      },
+      "interpretationRules": [
+        "status and temporal relationship come from the declaring template"
+      ],
+      "repeatGroup": "template-declared",
+      "correlationGroup": "template-declared",
+      "captureExpectations": [
+        "policy-derived"
+      ],
+      "provenance": "reviewed-v4-pathway-grammar",
+      "reviewedStatus": "provisional-pending-designated-clinical-review",
+      "uncertainty": "Clinical assumptions remain visible in the pathway-template review",
+      "clinicalReviewQuestion": "Is the concept appropriate for its declared role, indication, setting, and variant?",
+      "contentClass": "ordinary-patient-content"
+    }
+  },
+  "pathwayConcepts": {
+    "catalog": "native_generator/data/pathway-templates.v4.2.2.json",
+    "model": "coded-pathway-event"
+  },
+  "secondaryClinicalBranches": [
+    {
+      "trait": "metabolic-risk",
+      "eligibleArchetypes": [
+        "chronic-care",
+        "medication-intensive",
+        "oncology",
+        "rare-complex"
+      ],
+      "condition": {
+        "system": "http://snomed.info/sct",
+        "code": "237602007",
+        "display": "Metabolic syndrome",
+        "status": "active"
+      },
+      "medication": null
+    },
+    {
+      "trait": "respiratory-history",
+      "eligibleArchetypes": [
+        "chronic-care",
+        "medication-intensive",
+        "oncology",
+        "rare-complex"
+      ],
+      "condition": {
+        "system": "http://snomed.info/sct",
+        "code": "195967001",
+        "display": "Asthma",
+        "status": "active"
+      },
+      "medication": null
+    },
+    {
+      "trait": "medication-exposure",
+      "eligibleArchetypes": [
+        "chronic-care",
+        "medication-intensive",
+        "oncology",
+        "rare-complex"
+      ],
+      "condition": {
+        "system": "http://snomed.info/sct",
+        "code": "38341003",
+        "display": "Hypertensive disorder",
+        "status": "active"
+      },
+      "medication": {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "29046"
+      }
+    }
+  ],
+  "analytes": [
+    {
+      "system": "http://loinc.org",
+      "code": "6298-4",
+      "display": "Potassium [Moles/volume] in Blood",
+      "unit": "mmol/L",
+      "low": 3.5,
+      "high": 5.1,
+      "model": "quantitative-observation"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "2160-0",
+      "display": "Creatinine [Mass/volume] in Serum or Plasma",
+      "unit": "mg/dL",
+      "low": 0.5,
+      "high": 1.2,
+      "model": "quantitative-observation"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "718-7",
+      "display": "Hemoglobin [Mass/volume] in Blood",
+      "unit": "g/dL",
+      "low": 12.0,
+      "high": 16.0,
+      "model": "quantitative-observation"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "4548-4",
+      "display": "Hemoglobin A1c/Hemoglobin.total in Blood",
+      "unit": "%",
+      "low": 4.0,
+      "high": 5.6,
+      "model": "quantitative-observation"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "2345-7",
+      "display": "Glucose [Mass/volume] in Serum or Plasma",
+      "unit": "mg/dL",
+      "low": 70.0,
+      "high": 99.0,
+      "model": "quantitative-observation"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "2093-3",
+      "display": "Cholesterol [Mass/volume] in Serum or Plasma",
+      "unit": "mg/dL",
+      "low": 100.0,
+      "high": 199.0,
+      "model": "quantitative-observation"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "2085-9",
+      "display": "Cholesterol in HDL [Mass/volume] in Serum or Plasma",
+      "unit": "mg/dL",
+      "low": 40.0,
+      "high": 80.0,
+      "model": "quantitative-observation"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "13457-7",
+      "display": "Cholesterol in LDL [Mass/volume] in Serum or Plasma by calculation",
+      "unit": "mg/dL",
+      "low": 40.0,
+      "high": 129.0,
+      "model": "quantitative-observation"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "8302-2",
+      "display": "Body height",
+      "unit": "cm",
+      "low": 45.0,
+      "high": 200.0,
+      "model": "quantitative-observation"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "29463-7",
+      "display": "Body weight",
+      "unit": "kg",
+      "low": 3.0,
+      "high": 120.0,
+      "model": "quantitative-observation"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "39156-5",
+      "display": "Body mass index",
+      "unit": "kg/m2",
+      "low": 18.5,
+      "high": 24.9,
+      "model": "quantitative-observation"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "19868-9",
+      "display": "Forced vital capacity [Volume] Respiratory system",
+      "unit": "L",
+      "low": 2.0,
+      "high": 5.5,
+      "model": "quantitative-observation"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "1742-6",
+      "display": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma",
+      "unit": "U/L",
+      "low": 7.0,
+      "high": 56.0,
+      "model": "quantitative-observation"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "8480-6",
+      "display": "Systolic blood pressure",
+      "unit": "mm[Hg]",
+      "low": 90.0,
+      "high": 140.0,
+      "model": "quantitative-observation"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "8462-4",
+      "display": "Diastolic blood pressure",
+      "unit": "mm[Hg]",
+      "low": 60.0,
+      "high": 90.0,
+      "model": "quantitative-observation"
+    }
+  ],
+  "medications": [
+    {
+      "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "code": "29046",
+      "display": "Lisinopril",
+      "model": "medication-concept"
+    },
+    {
+      "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "code": "6809",
+      "display": "Metformin",
+      "model": "medication-concept"
+    },
+    {
+      "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "code": "83367",
+      "display": "Atorvastatin",
+      "model": "medication-concept"
+    },
+    {
+      "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "code": "161",
+      "display": "Acetaminophen",
+      "model": "medication-concept"
+    },
+    {
+      "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "code": "17767",
+      "display": "Amlodipine",
+      "model": "medication-concept"
+    },
+    {
+      "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "code": "10582",
+      "display": "Levothyroxine",
+      "model": "medication-concept"
+    },
+    {
+      "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "code": "7646",
+      "display": "Omeprazole",
+      "model": "medication-concept"
+    },
+    {
+      "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "code": "52175",
+      "display": "Losartan",
+      "model": "medication-concept"
+    }
+  ],
+  "immunizations": [
+    {
+      "system": "http://snomed.info/sct",
+      "code": "871822003",
+      "display": "Hepatitis B vaccine",
+      "minimumAgeDays": 1,
+      "model": "pediatric-immunization"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "871761004",
+      "display": "Rotavirus antigen only vaccine product",
+      "minimumAgeDays": 60,
+      "model": "pediatric-immunization"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "981000221107",
+      "display": "Streptococcus pneumoniae antigen only vaccine product",
+      "minimumAgeDays": 60,
+      "model": "pediatric-immunization"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "871839001",
+      "display": "Measles, mumps and rubella vaccine",
+      "minimumAgeDays": 365,
+      "model": "pediatric-immunization"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "871831003",
+      "display": "Diphtheria, tetanus and pertussis vaccine",
+      "minimumAgeDays": 2190,
+      "model": "pediatric-immunization"
+    }
+  ],
+  "branchConcepts": [
+    {
+      "id": "cervical-hpv-test",
+      "system": "http://loinc.org",
+      "code": "82675-0",
+      "display": "Human papilloma virus 16+18+31+33+35+39+45+51+52+56+58+59+66+68 DNA [Presence] in Cervix by NAA with probe detection",
+      "roles": [
+        "order",
+        "result"
+      ],
+      "paths": [
+        "ServiceRequest.code",
+        "Observation.code"
+      ],
+      "specimen": "cervix",
+      "method": "NAA with probe detection",
+      "eligibility": "asymptomatic adult 30-54 with cervix present and no screen in prior 3 years",
+      "provenance": "https://loinc.org/82675-0",
+      "accessDate": "2026-09-25"
+    },
+    {
+      "id": "laparoscopic-appendectomy",
+      "system": "http://snomed.info/sct",
+      "code": "174041007",
+      "display": "Laparoscopic emergency appendectomy",
+      "roles": [
+        "procedure"
+      ],
+      "paths": [
+        "Procedure.code"
+      ],
+      "specimen": null,
+      "method": null,
+      "eligibility": "adult appendicitis emergency laparoscopic or short-stay branch",
+      "provenance": "https://docs.snomed.org/snomed-ct-practical-guides/snomed-ct-starter-guide/7-snomed-ct-expressions",
+      "accessDate": "2026-09-25"
+    },
+    {
+      "id": "appendectomy-discharge-summary",
+      "system": "http://snomed.info/sct",
+      "code": "373942005",
+      "display": "Discharge summary",
+      "roles": [
+        "discharge"
+      ],
+      "paths": [
+        "DocumentReference.type"
+      ],
+      "specimen": null,
+      "method": null,
+      "eligibility": "completed inpatient or short-stay appendectomy recovery",
+      "provenance": "https://data.developer.nhs.uk/specifications/NHS-CDA-eDischarge/Vocabulary/Representing_ClinicalDocument_Code.pdf",
+      "accessDate": "2026-09-25"
+    }
+  ],
+  "localConditionConcepts": {
+    "codeSystem": "urn:hdp-test-bundle:synthetic:condition",
+    "version": "1.0.0",
+    "scope": "S18-LC author-reviewed synthetic semantic labels pending independent review",
+    "denominatorPolicy": {
+      "primary": "30 Condition-role events across all variants in pathway-templates.v4.2.1.json, counted once per event without population weighting",
+      "secondary": "3 secondaryClinicalBranches in clinical-content.v4.4.1.json; two add distinct concepts, one repeats hypertension",
+      "sourceRecordTarget": "Planned S18 allocation denominator is emitted source Condition records, not unique patients or unique clinical facts; 5/30/65 allocation is out of scope here",
+      "interpretation": "Template counts indicate synthetic selection exposure only; they are not patient prevalence or empirical Israeli rates"
+    },
+    "concepts": [
+      {
+        "code": "HDP-COND-0001",
+        "display": "Acute upper respiratory infection",
+        "definition": "Local source label for the synthetic Condition concept acute upper respiratory infection; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Acute upper respiratory infection.",
+        "aliases": [],
+        "resourceTypes": [
+          "Condition"
+        ],
+        "profiles": [
+          "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-condition"
+        ],
+        "paths": [
+          "Condition.code"
+        ],
+        "compatibleRoles": [
+          "condition"
+        ],
+        "mapping": {
+          "system": "http://snomed.info/sct",
+          "code": "195662009",
+          "display": "Acute upper respiratory infection",
+          "relationship": "reviewed-equivalent-by-local-definition",
+          "reviewBasis": "Pinned synthetic source definition and display match this local definition exactly; author semantic review pending independent S18-LC review. This is not a claim about broader SNOMED or ICD coverage."
+        },
+        "eligibility": {
+          "archetypes": [
+            "generally-healthy",
+            "pediatric"
+          ],
+          "sexes": [
+            "female",
+            "male",
+            "other",
+            "unknown"
+          ],
+          "minimumAgeYears": 0,
+          "maximumAgeYears": null,
+          "sources": [
+            "hmo",
+            "hospital-a",
+            "hospital-b"
+          ],
+          "sourceContext": "pathway condition event",
+          "constraint": "Apply only when the source clinical fact has the mapped standard diagnosis; retain age, sex, source and pathway constraints from the source event."
+        },
+        "expectedProminence": {
+          "tier": "common",
+          "templateConditionEventCount": 4,
+          "templateConditionEventDenominator": 30,
+          "secondaryBranchCount": 0,
+          "secondaryBranchDenominator": 3,
+          "basis": "Synthetic unweighted template exposure, not empirical prevalence; source eligibility and allocated Condition-record class determine emitted frequency."
+        },
+        "provenance": {
+          "class": "project-authored-synthetic",
+          "source": "pathway-templates.v4.2.1.json",
+          "reviewStatus": "author-semantic-review-pending-independent-S18-LC-review",
+          "method": "Local definition matched to the pinned synthetic source concept and display; no independent clinical terminology release or Israeli frequency estimate asserted."
+        }
+      },
+      {
+        "code": "HDP-COND-0002",
+        "display": "Gastroenteritis",
+        "definition": "Local source label for the synthetic Condition concept gastroenteritis; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Gastroenteritis.",
+        "aliases": [],
+        "resourceTypes": [
+          "Condition"
+        ],
+        "profiles": [
+          "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-condition"
+        ],
+        "paths": [
+          "Condition.code"
+        ],
+        "compatibleRoles": [
+          "condition"
+        ],
+        "mapping": {
+          "system": "http://snomed.info/sct",
+          "code": "25374005",
+          "display": "Gastroenteritis",
+          "relationship": "reviewed-equivalent-by-local-definition",
+          "reviewBasis": "Pinned synthetic source definition and display match this local definition exactly; author semantic review pending independent S18-LC review. This is not a claim about broader SNOMED or ICD coverage."
+        },
+        "eligibility": {
+          "archetypes": [
+            "generally-healthy",
+            "pediatric"
+          ],
+          "sexes": [
+            "female",
+            "male",
+            "other",
+            "unknown"
+          ],
+          "minimumAgeYears": 0,
+          "maximumAgeYears": null,
+          "sources": [
+            "hmo",
+            "hospital-a",
+            "hospital-b"
+          ],
+          "sourceContext": "pathway condition event",
+          "constraint": "Apply only when the source clinical fact has the mapped standard diagnosis; retain age, sex, source and pathway constraints from the source event."
+        },
+        "expectedProminence": {
+          "tier": "common",
+          "templateConditionEventCount": 4,
+          "templateConditionEventDenominator": 30,
+          "secondaryBranchCount": 0,
+          "secondaryBranchDenominator": 3,
+          "basis": "Synthetic unweighted template exposure, not empirical prevalence; source eligibility and allocated Condition-record class determine emitted frequency."
+        },
+        "provenance": {
+          "class": "project-authored-synthetic",
+          "source": "pathway-templates.v4.2.1.json",
+          "reviewStatus": "author-semantic-review-pending-independent-S18-LC-review",
+          "method": "Local definition matched to the pinned synthetic source concept and display; no independent clinical terminology release or Israeli frequency estimate asserted."
+        }
+      },
+      {
+        "code": "HDP-COND-0003",
+        "display": "Hypertensive disorder",
+        "definition": "Local source label for the synthetic Condition concept hypertensive disorder; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Hypertensive disorder.",
+        "aliases": [],
+        "resourceTypes": [
+          "Condition"
+        ],
+        "profiles": [
+          "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-condition"
+        ],
+        "paths": [
+          "Condition.code"
+        ],
+        "compatibleRoles": [
+          "condition"
+        ],
+        "mapping": {
+          "system": "http://snomed.info/sct",
+          "code": "38341003",
+          "display": "Hypertensive disorder",
+          "relationship": "reviewed-equivalent-by-local-definition",
+          "reviewBasis": "Pinned synthetic source definition and display match this local definition exactly; author semantic review pending independent S18-LC review. This is not a claim about broader SNOMED or ICD coverage."
+        },
+        "eligibility": {
+          "archetypes": [
+            "chronic-care"
+          ],
+          "sexes": [
+            "female",
+            "male",
+            "other",
+            "unknown"
+          ],
+          "minimumAgeYears": 0,
+          "maximumAgeYears": null,
+          "sources": [
+            "hmo",
+            "hospital-a",
+            "hospital-b"
+          ],
+          "sourceContext": "pathway condition event",
+          "constraint": "Apply only when the source clinical fact has the mapped standard diagnosis; retain age, sex, source and pathway constraints from the source event."
+        },
+        "expectedProminence": {
+          "tier": "common",
+          "templateConditionEventCount": 4,
+          "templateConditionEventDenominator": 30,
+          "secondaryBranchCount": 0,
+          "secondaryBranchDenominator": 3,
+          "basis": "Synthetic unweighted template exposure, not empirical prevalence; source eligibility and allocated Condition-record class determine emitted frequency."
+        },
+        "provenance": {
+          "class": "project-authored-synthetic",
+          "source": "pathway-templates.v4.2.1.json",
+          "reviewStatus": "author-semantic-review-pending-independent-S18-LC-review",
+          "method": "Local definition matched to the pinned synthetic source concept and display; no independent clinical terminology release or Israeli frequency estimate asserted."
+        }
+      },
+      {
+        "code": "HDP-COND-0004",
+        "display": "Burn",
+        "definition": "Local source label for the synthetic Condition concept burn; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Burn.",
+        "aliases": [],
+        "resourceTypes": [
+          "Condition"
+        ],
+        "profiles": [
+          "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-condition"
+        ],
+        "paths": [
+          "Condition.code"
+        ],
+        "compatibleRoles": [
+          "condition"
+        ],
+        "mapping": {
+          "system": "http://snomed.info/sct",
+          "code": "125666000",
+          "display": "Burn",
+          "relationship": "reviewed-equivalent-by-local-definition",
+          "reviewBasis": "Pinned synthetic source definition and display match this local definition exactly; author semantic review pending independent S18-LC review. This is not a claim about broader SNOMED or ICD coverage."
+        },
+        "eligibility": {
+          "archetypes": [
+            "generally-healthy",
+            "pediatric",
+            "womens-health"
+          ],
+          "sexes": [
+            "female",
+            "male",
+            "other",
+            "unknown"
+          ],
+          "minimumAgeYears": 0,
+          "maximumAgeYears": null,
+          "sources": [
+            "hmo",
+            "hospital-a",
+            "hospital-b"
+          ],
+          "sourceContext": "pathway condition event",
+          "constraint": "Apply only when the source clinical fact has the mapped standard diagnosis; retain age, sex, source and pathway constraints from the source event."
+        },
+        "expectedProminence": {
+          "tier": "less-common",
+          "templateConditionEventCount": 3,
+          "templateConditionEventDenominator": 30,
+          "secondaryBranchCount": 0,
+          "secondaryBranchDenominator": 3,
+          "basis": "Synthetic unweighted template exposure, not empirical prevalence; source eligibility and allocated Condition-record class determine emitted frequency."
+        },
+        "provenance": {
+          "class": "project-authored-synthetic",
+          "source": "pathway-templates.v4.2.1.json",
+          "reviewStatus": "author-semantic-review-pending-independent-S18-LC-review",
+          "method": "Local definition matched to the pinned synthetic source concept and display; no independent clinical terminology release or Israeli frequency estimate asserted."
+        }
+      },
+      {
+        "code": "HDP-COND-0005",
+        "display": "Malignant neoplasm of breast",
+        "definition": "Local source label for the synthetic Condition concept malignant neoplasm of breast; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Malignant neoplasm of breast.",
+        "aliases": [],
+        "resourceTypes": [
+          "Condition"
+        ],
+        "profiles": [
+          "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-condition"
+        ],
+        "paths": [
+          "Condition.code"
+        ],
+        "compatibleRoles": [
+          "condition"
+        ],
+        "mapping": {
+          "system": "http://snomed.info/sct",
+          "code": "254837009",
+          "display": "Malignant neoplasm of breast",
+          "relationship": "reviewed-equivalent-by-local-definition",
+          "reviewBasis": "Pinned synthetic source definition and display match this local definition exactly; author semantic review pending independent S18-LC review. This is not a claim about broader SNOMED or ICD coverage."
+        },
+        "eligibility": {
+          "archetypes": [
+            "oncology"
+          ],
+          "sexes": [
+            "female",
+            "male",
+            "other",
+            "unknown"
+          ],
+          "minimumAgeYears": 0,
+          "maximumAgeYears": null,
+          "sources": [
+            "hmo",
+            "hospital-a",
+            "hospital-b"
+          ],
+          "sourceContext": "pathway condition event",
+          "constraint": "Apply only when the source clinical fact has the mapped standard diagnosis; retain age, sex, source and pathway constraints from the source event."
+        },
+        "expectedProminence": {
+          "tier": "less-common",
+          "templateConditionEventCount": 3,
+          "templateConditionEventDenominator": 30,
+          "secondaryBranchCount": 0,
+          "secondaryBranchDenominator": 3,
+          "basis": "Synthetic unweighted template exposure, not empirical prevalence; source eligibility and allocated Condition-record class determine emitted frequency."
+        },
+        "provenance": {
+          "class": "project-authored-synthetic",
+          "source": "pathway-templates.v4.2.1.json",
+          "reviewStatus": "author-semantic-review-pending-independent-S18-LC-review",
+          "method": "Local definition matched to the pinned synthetic source concept and display; no independent clinical terminology release or Israeli frequency estimate asserted."
+        }
+      },
+      {
+        "code": "HDP-COND-0006",
+        "display": "Malignant tumor of colon",
+        "definition": "Local source label for the synthetic Condition concept malignant tumor of colon; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Malignant tumor of colon.",
+        "aliases": [],
+        "resourceTypes": [
+          "Condition"
+        ],
+        "profiles": [
+          "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-condition"
+        ],
+        "paths": [
+          "Condition.code"
+        ],
+        "compatibleRoles": [
+          "condition"
+        ],
+        "mapping": {
+          "system": "http://snomed.info/sct",
+          "code": "363406005",
+          "display": "Malignant tumor of colon",
+          "relationship": "reviewed-equivalent-by-local-definition",
+          "reviewBasis": "Pinned synthetic source definition and display match this local definition exactly; author semantic review pending independent S18-LC review. This is not a claim about broader SNOMED or ICD coverage."
+        },
+        "eligibility": {
+          "archetypes": [
+            "oncology"
+          ],
+          "sexes": [
+            "female",
+            "male",
+            "other",
+            "unknown"
+          ],
+          "minimumAgeYears": 0,
+          "maximumAgeYears": null,
+          "sources": [
+            "hmo",
+            "hospital-a",
+            "hospital-b"
+          ],
+          "sourceContext": "pathway condition event",
+          "constraint": "Apply only when the source clinical fact has the mapped standard diagnosis; retain age, sex, source and pathway constraints from the source event."
+        },
+        "expectedProminence": {
+          "tier": "less-common",
+          "templateConditionEventCount": 2,
+          "templateConditionEventDenominator": 30,
+          "secondaryBranchCount": 0,
+          "secondaryBranchDenominator": 3,
+          "basis": "Synthetic unweighted template exposure, not empirical prevalence; source eligibility and allocated Condition-record class determine emitted frequency."
+        },
+        "provenance": {
+          "class": "project-authored-synthetic",
+          "source": "pathway-templates.v4.2.1.json",
+          "reviewStatus": "author-semantic-review-pending-independent-S18-LC-review",
+          "method": "Local definition matched to the pinned synthetic source concept and display; no independent clinical terminology release or Israeli frequency estimate asserted."
+        }
+      },
+      {
+        "code": "HDP-COND-0007",
+        "display": "Type 2 diabetes mellitus",
+        "definition": "Local source label for the synthetic Condition concept type 2 diabetes mellitus; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Type 2 diabetes mellitus.",
+        "aliases": [],
+        "resourceTypes": [
+          "Condition"
+        ],
+        "profiles": [
+          "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-condition"
+        ],
+        "paths": [
+          "Condition.code"
+        ],
+        "compatibleRoles": [
+          "condition"
+        ],
+        "mapping": {
+          "system": "http://snomed.info/sct",
+          "code": "44054006",
+          "display": "Type 2 diabetes mellitus",
+          "relationship": "reviewed-equivalent-by-local-definition",
+          "reviewBasis": "Pinned synthetic source definition and display match this local definition exactly; author semantic review pending independent S18-LC review. This is not a claim about broader SNOMED or ICD coverage."
+        },
+        "eligibility": {
+          "archetypes": [
+            "chronic-care"
+          ],
+          "sexes": [
+            "female",
+            "male",
+            "other",
+            "unknown"
+          ],
+          "minimumAgeYears": 0,
+          "maximumAgeYears": null,
+          "sources": [
+            "hmo",
+            "hospital-a",
+            "hospital-b"
+          ],
+          "sourceContext": "pathway condition event",
+          "constraint": "Apply only when the source clinical fact has the mapped standard diagnosis; retain age, sex, source and pathway constraints from the source event."
+        },
+        "expectedProminence": {
+          "tier": "less-common",
+          "templateConditionEventCount": 2,
+          "templateConditionEventDenominator": 30,
+          "secondaryBranchCount": 0,
+          "secondaryBranchDenominator": 3,
+          "basis": "Synthetic unweighted template exposure, not empirical prevalence; source eligibility and allocated Condition-record class determine emitted frequency."
+        },
+        "provenance": {
+          "class": "project-authored-synthetic",
+          "source": "pathway-templates.v4.2.1.json",
+          "reviewStatus": "author-semantic-review-pending-independent-S18-LC-review",
+          "method": "Local definition matched to the pinned synthetic source concept and display; no independent clinical terminology release or Israeli frequency estimate asserted."
+        }
+      },
+      {
+        "code": "HDP-COND-0008",
+        "display": "Chronic kidney disease",
+        "definition": "Local source label for the synthetic Condition concept chronic kidney disease; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Chronic kidney disease.",
+        "aliases": [],
+        "resourceTypes": [
+          "Condition"
+        ],
+        "profiles": [
+          "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-condition"
+        ],
+        "paths": [
+          "Condition.code"
+        ],
+        "compatibleRoles": [
+          "condition"
+        ],
+        "mapping": {
+          "system": "http://snomed.info/sct",
+          "code": "709044004",
+          "display": "Chronic kidney disease",
+          "relationship": "reviewed-equivalent-by-local-definition",
+          "reviewBasis": "Pinned synthetic source definition and display match this local definition exactly; author semantic review pending independent S18-LC review. This is not a claim about broader SNOMED or ICD coverage."
+        },
+        "eligibility": {
+          "archetypes": [
+            "chronic-care",
+            "rare-complex"
+          ],
+          "sexes": [
+            "female",
+            "male",
+            "other",
+            "unknown"
+          ],
+          "minimumAgeYears": 0,
+          "maximumAgeYears": null,
+          "sources": [
+            "hmo",
+            "hospital-a",
+            "hospital-b"
+          ],
+          "sourceContext": "pathway condition event",
+          "constraint": "Apply only when the source clinical fact has the mapped standard diagnosis; retain age, sex, source and pathway constraints from the source event."
+        },
+        "expectedProminence": {
+          "tier": "less-common",
+          "templateConditionEventCount": 2,
+          "templateConditionEventDenominator": 30,
+          "secondaryBranchCount": 0,
+          "secondaryBranchDenominator": 3,
+          "basis": "Synthetic unweighted template exposure, not empirical prevalence; source eligibility and allocated Condition-record class determine emitted frequency."
+        },
+        "provenance": {
+          "class": "project-authored-synthetic",
+          "source": "pathway-templates.v4.2.1.json",
+          "reviewStatus": "author-semantic-review-pending-independent-S18-LC-review",
+          "method": "Local definition matched to the pinned synthetic source concept and display; no independent clinical terminology release or Israeli frequency estimate asserted."
+        }
+      },
+      {
+        "code": "HDP-COND-0009",
+        "display": "Motor neuron disease",
+        "definition": "Local source label for the synthetic Condition concept motor neuron disease; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Motor neuron disease.",
+        "aliases": [],
+        "resourceTypes": [
+          "Condition"
+        ],
+        "profiles": [
+          "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-condition"
+        ],
+        "paths": [
+          "Condition.code"
+        ],
+        "compatibleRoles": [
+          "condition"
+        ],
+        "mapping": {
+          "system": "http://snomed.info/sct",
+          "code": "193093009",
+          "display": "Motor neuron disease",
+          "relationship": "reviewed-equivalent-by-local-definition",
+          "reviewBasis": "Pinned synthetic source definition and display match this local definition exactly; author semantic review pending independent S18-LC review. This is not a claim about broader SNOMED or ICD coverage."
+        },
+        "eligibility": {
+          "archetypes": [
+            "rare-complex"
+          ],
+          "sexes": [
+            "female",
+            "male",
+            "other",
+            "unknown"
+          ],
+          "minimumAgeYears": 0,
+          "maximumAgeYears": null,
+          "sources": [
+            "hmo",
+            "hospital-a",
+            "hospital-b"
+          ],
+          "sourceContext": "pathway condition event",
+          "constraint": "Apply only when the source clinical fact has the mapped standard diagnosis; retain age, sex, source and pathway constraints from the source event."
+        },
+        "expectedProminence": {
+          "tier": "rare-in-template",
+          "templateConditionEventCount": 1,
+          "templateConditionEventDenominator": 30,
+          "secondaryBranchCount": 0,
+          "secondaryBranchDenominator": 3,
+          "basis": "Synthetic unweighted template exposure, not empirical prevalence; source eligibility and allocated Condition-record class determine emitted frequency."
+        },
+        "provenance": {
+          "class": "project-authored-synthetic",
+          "source": "pathway-templates.v4.2.1.json",
+          "reviewStatus": "author-semantic-review-pending-independent-S18-LC-review",
+          "method": "Local definition matched to the pinned synthetic source concept and display; no independent clinical terminology release or Israeli frequency estimate asserted."
+        }
+      },
+      {
+        "code": "HDP-COND-0010",
+        "display": "Dysmenorrhea",
+        "definition": "Local source label for the synthetic Condition concept dysmenorrhea; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Dysmenorrhea.",
+        "aliases": [],
+        "resourceTypes": [
+          "Condition"
+        ],
+        "profiles": [
+          "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-condition"
+        ],
+        "paths": [
+          "Condition.code"
+        ],
+        "compatibleRoles": [
+          "condition"
+        ],
+        "mapping": {
+          "system": "http://snomed.info/sct",
+          "code": "266599000",
+          "display": "Dysmenorrhea",
+          "relationship": "reviewed-equivalent-by-local-definition",
+          "reviewBasis": "Pinned synthetic source definition and display match this local definition exactly; author semantic review pending independent S18-LC review. This is not a claim about broader SNOMED or ICD coverage."
+        },
+        "eligibility": {
+          "archetypes": [
+            "womens-health"
+          ],
+          "sexes": [
+            "female",
+            "male",
+            "other",
+            "unknown"
+          ],
+          "minimumAgeYears": 0,
+          "maximumAgeYears": null,
+          "sources": [
+            "hmo",
+            "hospital-a",
+            "hospital-b"
+          ],
+          "sourceContext": "pathway condition event",
+          "constraint": "Apply only when the source clinical fact has the mapped standard diagnosis; retain age, sex, source and pathway constraints from the source event."
+        },
+        "expectedProminence": {
+          "tier": "rare-in-template",
+          "templateConditionEventCount": 1,
+          "templateConditionEventDenominator": 30,
+          "secondaryBranchCount": 0,
+          "secondaryBranchDenominator": 3,
+          "basis": "Synthetic unweighted template exposure, not empirical prevalence; source eligibility and allocated Condition-record class determine emitted frequency."
+        },
+        "provenance": {
+          "class": "project-authored-synthetic",
+          "source": "pathway-templates.v4.2.1.json",
+          "reviewStatus": "author-semantic-review-pending-independent-S18-LC-review",
+          "method": "Local definition matched to the pinned synthetic source concept and display; no independent clinical terminology release or Israeli frequency estimate asserted."
+        }
+      },
+      {
+        "code": "HDP-COND-0011",
+        "display": "Systemic lupus erythematosus",
+        "definition": "Local source label for the synthetic Condition concept systemic lupus erythematosus; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Systemic lupus erythematosus.",
+        "aliases": [],
+        "resourceTypes": [
+          "Condition"
+        ],
+        "profiles": [
+          "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-condition"
+        ],
+        "paths": [
+          "Condition.code"
+        ],
+        "compatibleRoles": [
+          "condition"
+        ],
+        "mapping": {
+          "system": "http://snomed.info/sct",
+          "code": "55464009",
+          "display": "Systemic lupus erythematosus",
+          "relationship": "reviewed-equivalent-by-local-definition",
+          "reviewBasis": "Pinned synthetic source definition and display match this local definition exactly; author semantic review pending independent S18-LC review. This is not a claim about broader SNOMED or ICD coverage."
+        },
+        "eligibility": {
+          "archetypes": [
+            "rare-complex"
+          ],
+          "sexes": [
+            "female",
+            "male",
+            "other",
+            "unknown"
+          ],
+          "minimumAgeYears": 0,
+          "maximumAgeYears": null,
+          "sources": [
+            "hmo",
+            "hospital-a",
+            "hospital-b"
+          ],
+          "sourceContext": "pathway condition event",
+          "constraint": "Apply only when the source clinical fact has the mapped standard diagnosis; retain age, sex, source and pathway constraints from the source event."
+        },
+        "expectedProminence": {
+          "tier": "rare-in-template",
+          "templateConditionEventCount": 1,
+          "templateConditionEventDenominator": 30,
+          "secondaryBranchCount": 0,
+          "secondaryBranchDenominator": 3,
+          "basis": "Synthetic unweighted template exposure, not empirical prevalence; source eligibility and allocated Condition-record class determine emitted frequency."
+        },
+        "provenance": {
+          "class": "project-authored-synthetic",
+          "source": "pathway-templates.v4.2.1.json",
+          "reviewStatus": "author-semantic-review-pending-independent-S18-LC-review",
+          "method": "Local definition matched to the pinned synthetic source concept and display; no independent clinical terminology release or Israeli frequency estimate asserted."
+        }
+      },
+      {
+        "code": "HDP-COND-0012",
+        "display": "Metabolic disease",
+        "definition": "Local source label for the synthetic Condition concept metabolic disease; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Metabolic disease.",
+        "aliases": [],
+        "resourceTypes": [
+          "Condition"
+        ],
+        "profiles": [
+          "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-condition"
+        ],
+        "paths": [
+          "Condition.code"
+        ],
+        "compatibleRoles": [
+          "condition"
+        ],
+        "mapping": {
+          "system": "http://snomed.info/sct",
+          "code": "75934005",
+          "display": "Metabolic disease",
+          "relationship": "reviewed-equivalent-by-local-definition",
+          "reviewBasis": "Pinned synthetic source definition and display match this local definition exactly; author semantic review pending independent S18-LC review. This is not a claim about broader SNOMED or ICD coverage."
+        },
+        "eligibility": {
+          "archetypes": [
+            "rare-complex"
+          ],
+          "sexes": [
+            "female",
+            "male",
+            "other",
+            "unknown"
+          ],
+          "minimumAgeYears": 0,
+          "maximumAgeYears": null,
+          "sources": [
+            "hmo",
+            "hospital-a",
+            "hospital-b"
+          ],
+          "sourceContext": "pathway condition event",
+          "constraint": "Apply only when the source clinical fact has the mapped standard diagnosis; retain age, sex, source and pathway constraints from the source event."
+        },
+        "expectedProminence": {
+          "tier": "rare-in-template",
+          "templateConditionEventCount": 1,
+          "templateConditionEventDenominator": 30,
+          "secondaryBranchCount": 0,
+          "secondaryBranchDenominator": 3,
+          "basis": "Synthetic unweighted template exposure, not empirical prevalence; source eligibility and allocated Condition-record class determine emitted frequency."
+        },
+        "provenance": {
+          "class": "project-authored-synthetic",
+          "source": "pathway-templates.v4.2.1.json",
+          "reviewStatus": "author-semantic-review-pending-independent-S18-LC-review",
+          "method": "Local definition matched to the pinned synthetic source concept and display; no independent clinical terminology release or Israeli frequency estimate asserted."
+        }
+      },
+      {
+        "code": "HDP-COND-0013",
+        "display": "Breast lump",
+        "definition": "Local source label for the synthetic Condition concept breast lump; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Breast lump.",
+        "aliases": [],
+        "resourceTypes": [
+          "Condition"
+        ],
+        "profiles": [
+          "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-condition"
+        ],
+        "paths": [
+          "Condition.code"
+        ],
+        "compatibleRoles": [
+          "condition"
+        ],
+        "mapping": {
+          "system": "http://snomed.info/sct",
+          "code": "89164003",
+          "display": "Breast lump",
+          "relationship": "reviewed-equivalent-by-local-definition",
+          "reviewBasis": "Pinned synthetic source definition and display match this local definition exactly; author semantic review pending independent S18-LC review. This is not a claim about broader SNOMED or ICD coverage."
+        },
+        "eligibility": {
+          "archetypes": [
+            "womens-health"
+          ],
+          "sexes": [
+            "female",
+            "male",
+            "other",
+            "unknown"
+          ],
+          "minimumAgeYears": 0,
+          "maximumAgeYears": null,
+          "sources": [
+            "hmo",
+            "hospital-a",
+            "hospital-b"
+          ],
+          "sourceContext": "pathway condition event",
+          "constraint": "Apply only when the source clinical fact has the mapped standard diagnosis; retain age, sex, source and pathway constraints from the source event."
+        },
+        "expectedProminence": {
+          "tier": "rare-in-template",
+          "templateConditionEventCount": 1,
+          "templateConditionEventDenominator": 30,
+          "secondaryBranchCount": 0,
+          "secondaryBranchDenominator": 3,
+          "basis": "Synthetic unweighted template exposure, not empirical prevalence; source eligibility and allocated Condition-record class determine emitted frequency."
+        },
+        "provenance": {
+          "class": "project-authored-synthetic",
+          "source": "pathway-templates.v4.2.1.json",
+          "reviewStatus": "author-semantic-review-pending-independent-S18-LC-review",
+          "method": "Local definition matched to the pinned synthetic source concept and display; no independent clinical terminology release or Israeli frequency estimate asserted."
+        }
+      },
+      {
+        "code": "HDP-COND-0014",
+        "display": "Leukemia",
+        "definition": "Local source label for the synthetic Condition concept leukemia; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Leukemia.",
+        "aliases": [],
+        "resourceTypes": [
+          "Condition"
+        ],
+        "profiles": [
+          "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-condition"
+        ],
+        "paths": [
+          "Condition.code"
+        ],
+        "compatibleRoles": [
+          "condition"
+        ],
+        "mapping": {
+          "system": "http://snomed.info/sct",
+          "code": "93143009",
+          "display": "Leukemia",
+          "relationship": "reviewed-equivalent-by-local-definition",
+          "reviewBasis": "Pinned synthetic source definition and display match this local definition exactly; author semantic review pending independent S18-LC review. This is not a claim about broader SNOMED or ICD coverage."
+        },
+        "eligibility": {
+          "archetypes": [
+            "oncology"
+          ],
+          "sexes": [
+            "female",
+            "male",
+            "other",
+            "unknown"
+          ],
+          "minimumAgeYears": 0,
+          "maximumAgeYears": null,
+          "sources": [
+            "hmo",
+            "hospital-a",
+            "hospital-b"
+          ],
+          "sourceContext": "pathway condition event",
+          "constraint": "Apply only when the source clinical fact has the mapped standard diagnosis; retain age, sex, source and pathway constraints from the source event."
+        },
+        "expectedProminence": {
+          "tier": "rare-in-template",
+          "templateConditionEventCount": 1,
+          "templateConditionEventDenominator": 30,
+          "secondaryBranchCount": 0,
+          "secondaryBranchDenominator": 3,
+          "basis": "Synthetic unweighted template exposure, not empirical prevalence; source eligibility and allocated Condition-record class determine emitted frequency."
+        },
+        "provenance": {
+          "class": "project-authored-synthetic",
+          "source": "pathway-templates.v4.2.1.json",
+          "reviewStatus": "author-semantic-review-pending-independent-S18-LC-review",
+          "method": "Local definition matched to the pinned synthetic source concept and display; no independent clinical terminology release or Israeli frequency estimate asserted."
+        }
+      },
+      {
+        "code": "HDP-COND-0015",
+        "display": "Metabolic syndrome",
+        "definition": "Local source label for the synthetic Condition concept metabolic syndrome; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Metabolic syndrome.",
+        "aliases": [],
+        "resourceTypes": [
+          "Condition"
+        ],
+        "profiles": [
+          "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-condition"
+        ],
+        "paths": [
+          "Condition.code"
+        ],
+        "compatibleRoles": [
+          "condition"
+        ],
+        "mapping": {
+          "system": "http://snomed.info/sct",
+          "code": "237602007",
+          "display": "Metabolic syndrome",
+          "relationship": "reviewed-equivalent-by-local-definition",
+          "reviewBasis": "Pinned synthetic source definition and display match this local definition exactly; author semantic review pending independent S18-LC review. This is not a claim about broader SNOMED or ICD coverage."
+        },
+        "eligibility": {
+          "archetypes": [
+            "chronic-care",
+            "medication-intensive",
+            "oncology",
+            "rare-complex"
+          ],
+          "sexes": [
+            "female",
+            "male",
+            "other",
+            "unknown"
+          ],
+          "minimumAgeYears": 0,
+          "maximumAgeYears": null,
+          "sources": [
+            "hmo"
+          ],
+          "sourceContext": "secondary trait metabolic-risk",
+          "constraint": "Apply only when the source clinical fact has the mapped standard diagnosis; retain age, sex, source and pathway constraints from the source event."
+        },
+        "expectedProminence": {
+          "tier": "rare-in-template",
+          "templateConditionEventCount": 0,
+          "templateConditionEventDenominator": 30,
+          "secondaryBranchCount": 1,
+          "secondaryBranchDenominator": 3,
+          "basis": "Synthetic unweighted template exposure, not empirical prevalence; source eligibility and allocated Condition-record class determine emitted frequency."
+        },
+        "provenance": {
+          "class": "project-authored-synthetic",
+          "source": "clinical-content.v4.4.1.json secondaryClinicalBranches",
+          "reviewStatus": "author-semantic-review-pending-independent-S18-LC-review",
+          "method": "Local definition matched to the pinned synthetic source concept and display; no independent clinical terminology release or Israeli frequency estimate asserted."
+        }
+      },
+      {
+        "code": "HDP-COND-0016",
+        "display": "Asthma",
+        "definition": "Local source label for the synthetic Condition concept asthma; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Asthma.",
+        "aliases": [],
+        "resourceTypes": [
+          "Condition"
+        ],
+        "profiles": [
+          "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-condition"
+        ],
+        "paths": [
+          "Condition.code"
+        ],
+        "compatibleRoles": [
+          "condition"
+        ],
+        "mapping": {
+          "system": "http://snomed.info/sct",
+          "code": "195967001",
+          "display": "Asthma",
+          "relationship": "reviewed-equivalent-by-local-definition",
+          "reviewBasis": "Pinned synthetic source definition and display match this local definition exactly; author semantic review pending independent S18-LC review. This is not a claim about broader SNOMED or ICD coverage."
+        },
+        "eligibility": {
+          "archetypes": [
+            "chronic-care",
+            "medication-intensive",
+            "oncology",
+            "rare-complex"
+          ],
+          "sexes": [
+            "female",
+            "male",
+            "other",
+            "unknown"
+          ],
+          "minimumAgeYears": 0,
+          "maximumAgeYears": null,
+          "sources": [
+            "hmo"
+          ],
+          "sourceContext": "secondary trait respiratory-history",
+          "constraint": "Apply only when the source clinical fact has the mapped standard diagnosis; retain age, sex, source and pathway constraints from the source event."
+        },
+        "expectedProminence": {
+          "tier": "rare-in-template",
+          "templateConditionEventCount": 0,
+          "templateConditionEventDenominator": 30,
+          "secondaryBranchCount": 1,
+          "secondaryBranchDenominator": 3,
+          "basis": "Synthetic unweighted template exposure, not empirical prevalence; source eligibility and allocated Condition-record class determine emitted frequency."
+        },
+        "provenance": {
+          "class": "project-authored-synthetic",
+          "source": "clinical-content.v4.4.1.json secondaryClinicalBranches",
+          "reviewStatus": "author-semantic-review-pending-independent-S18-LC-review",
+          "method": "Local definition matched to the pinned synthetic source concept and display; no independent clinical terminology release or Israeli frequency estimate asserted."
+        }
+      }
+    ]
+  },
+  "branchQuantitativeModels": [
+    {
+      "system": "http://loinc.org",
+      "code": "59408-5",
+      "display": "Oxygen saturation in Arterial blood by Pulse oximetry",
+      "unit": "%",
+      "generationMinimum": 97,
+      "generationMaximum": 99,
+      "validMinimum": 0,
+      "validMaximum": 100,
+      "allowedStatuses": [
+        "final"
+      ],
+      "requiresEventTime": true,
+      "referenceRangeHandling": "omit",
+      "interpretationHandling": "omit",
+      "ordinaryDistributionGuardApplicable": false,
+      "provenance": "Existing care_pathway oxygen branch: 97 + index % 3. Engineering generation domain, not a clinical normal range.",
+      "reviewStatus": "engineering-contract-pending-independent-clinical-review"
+    }
+  ]
+}

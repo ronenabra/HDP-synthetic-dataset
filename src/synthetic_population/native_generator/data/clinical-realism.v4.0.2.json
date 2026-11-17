@@ -1,0 +1,926 @@
+{
+  "catalogVersion": "4.0.2",
+  "status": "provisional-pending-designated-clinical-review",
+  "frozenBeforeCanonicalGeneration": true,
+  "sourceCaptureCatalog": "tools/synthetic_population/data/source-capture.v1.0.0.json",
+  "detectorSemanticsCatalog": "tools/synthetic_population/data/detector-semantics.v1.2.0.json",
+  "upstreamIssueCatalog": "tools/synthetic_population/data/upstream-profile-issues.v1.0.0.json",
+  "pathwayReleaseDecisions": {
+    "pediatric-immunization": {
+      "status": "candidate-validation-authorized-qualification-pending",
+      "issueId": "IL-CORE-VACCINE-SLICE-OFFLINE-EXPANSION",
+      "generationDefault": "enabled",
+      "defaultCandidatePermitted": true,
+      "diagnosticGenerationMode": "enabled",
+      "rationale": "The 2026-09-24 S13C decision permits pediatric immunization to enter default-candidate validation after a current-context native and exact-input T1 pass with zero fatal/error findings. The active catalog/spec change requires a fresh immutable pilot, exact-input T1 and exhaustive T2 before canonical generation. Later official, terminology, promotion and human clinical-review gates remain mandatory. No corrective overlay or fatal/error allowance is permitted.",
+      "profileContextLock": "tools/synthetic_population/validator.lock.json"
+    }
+  },
+  "randomStreamContract": [
+    "dataset-seed",
+    "cohort-identity",
+    "model-layer",
+    "pathway",
+    "event-role"
+  ],
+  "evidence": [
+    {
+      "id": "IL-MOH-IMMUNIZATION-2026",
+      "kind": "clinical-rule-constraint",
+      "title": "Israel Ministry of Health immunization schedule by age",
+      "url": "https://me.health.gov.il/en/parenting/raising-children/immunization-schedule/babies-immunization-schedule/",
+      "accessDate": "2026-08-31",
+      "transferability": "Directly applicable Israeli schedule; coded vaccine concepts remain provisional until terminology review."
+    },
+    {
+      "id": "WHO-HB-2024",
+      "kind": "clinical-rule-constraint",
+      "title": "WHO guideline on haemoglobin cutoffs to define anaemia",
+      "url": "https://www.who.int/publications/i/item/9789240088542",
+      "accessDate": "2026-08-31",
+      "transferability": "Physiologic plausibility and directional subgroup rules only; not used as an Israeli prevalence estimate."
+    },
+    {
+      "id": "KDIGO-CKD-2024",
+      "kind": "clinical-rule-constraint",
+      "title": "KDIGO 2024 Clinical Practice Guideline for CKD",
+      "url": "https://kdigo.org/wp-content/uploads/2026/04/KDIGO-2024-CKD-Guideline.pdf",
+      "accessDate": "2026-08-31",
+      "transferability": "Used for conservative renal/potassium monitoring topology, not population frequency."
+    },
+    {
+      "id": "FHIR-R4-OBSERVATION",
+      "kind": "clinical-rule-constraint",
+      "title": "FHIR R4 Observation",
+      "url": "https://hl7.org/fhir/R4/observation-definitions.html",
+      "accessDate": "2026-08-31",
+      "transferability": "Directly applicable to value, interpretation, reference-range, method, and specimen representation."
+    }
+  ],
+  "metricDefinitions": {
+    "minimumPatientStructuralSignatures": {
+      "value": 75,
+      "kind": "fixture-diversity-target",
+      "rationale": "Anti-clone floor from R30; not prevalence."
+    },
+    "maximumPopulationSignatureShare": {
+      "value": 0.1,
+      "kind": "fixture-diversity-target",
+      "rationale": "Anti-template ceiling from R30."
+    },
+    "maximumArchetypeSignatureShare": {
+      "value": 0.35,
+      "kind": "fixture-diversity-target",
+      "rationale": "Within-archetype richness floor."
+    },
+    "minimumArchetypeVariants": {
+      "value": 5,
+      "kind": "fixture-diversity-target",
+      "rationale": "Rare/complex uses four named sub-pathways."
+    },
+    "maximumReasonConcentration": {
+      "value": 0.35,
+      "absoluteCeiling": 0.5,
+      "kind": "fixture-diversity-target",
+      "rationale": "Prevents organization-fixed semantics."
+    },
+    "minimumReasonFamiliesPerSource": {
+      "value": 12,
+      "kind": "fixture-diversity-target",
+      "rationale": "Source workflow breadth."
+    },
+    "minimumMultiEpisodeActiveShare": {
+      "value": 0.7,
+      "kind": "fixture-diversity-target",
+      "rationale": "Longitudinal fixture richness."
+    },
+    "minimumOneYearOverallShare": {
+      "value": 0.4,
+      "kind": "fixture-diversity-target",
+      "rationale": "Longitudinal fixture richness."
+    },
+    "minimumOneYearIntensiveShare": {
+      "value": 0.9,
+      "kind": "fixture-diversity-target",
+      "rationale": "Chronic/medication/oncology/rare pathway requirement."
+    },
+    "maximumFixedOffsetShare": {
+      "value": 0.2,
+      "kind": "fixture-diversity-target",
+      "rationale": "Rejects date-shift clones."
+    },
+    "maximumPairwiseNearDuplicateRate": {
+      "value": 0.05,
+      "kind": "fixture-diversity-target",
+      "rationale": "Applies at every normalized R30 grain and rejects populations dominated by one-component template substitutions."
+    },
+    "maximumAbnormalPointMassShare": {
+      "value": 0.25,
+      "kind": "fixture-diversity-target",
+      "rationale": "Rejects boundary-spike abnormalities."
+    }
+  },
+  "backgroundClinicalModel": {
+    "status": "provisional-pending-designated-clinical-review",
+    "trajectoryClasses": [
+      "stable-normal",
+      "isolated-mild-abnormal-resolves",
+      "persistent-mild-abnormal",
+      "gradual-worsening",
+      "gradual-improvement",
+      "medication-or-condition-affected",
+      "acute-episode-recovery"
+    ],
+    "subgroupCorrelations": [
+      {
+        "id": "oncology-low-hemoglobin",
+        "analyte": "718-7",
+        "selector": "archetype=oncology",
+        "direction": "low",
+        "minimumSelectedCount": 20,
+        "minimumComparatorCount": 100,
+        "minimumEffectDifference": 0.03
+      },
+      {
+        "id": "intensive-high-potassium",
+        "analyte": "6298-4",
+        "selector": "archetype-in=chronic-care,medication-intensive,rare-complex",
+        "direction": "high",
+        "minimumSelectedCount": 20,
+        "minimumComparatorCount": 100,
+        "minimumEffectDifference": 0.03
+      },
+      {
+        "id": "older-high-creatinine",
+        "analyte": "2160-0",
+        "selector": "age>=65",
+        "direction": "high",
+        "minimumSelectedCount": 20,
+        "minimumComparatorCount": 100,
+        "minimumEffectDifference": 0.03
+      },
+      {
+        "id": "medication-exposure-high-potassium",
+        "analyte": "6298-4",
+        "selector": "secondary-trait=medication-exposure",
+        "direction": "high",
+        "minimumSelectedCount": 20,
+        "minimumComparatorCount": 100,
+        "minimumEffectDifference": 0.01
+      }
+    ],
+    "jointFamilies": [
+      {
+        "id": "renal-potassium",
+        "analytes": [
+          "6298-4",
+          "2160-0"
+        ],
+        "minimumPairedPatients": 100,
+        "minimumPearsonCorrelation": 0.08
+      }
+    ],
+    "minimumRepeatedAnalyteRateIntensive": 0.2,
+    "rationale": "Fixture-realism targets frozen before the canonical re-audit candidate; not population prevalence."
+  },
+  "pathwayVariants": {
+    "generally-healthy": [
+      "preventive-no-test",
+      "preventive-screening",
+      "respiratory-self-limited",
+      "gastrointestinal-self-limited",
+      "minor-injury",
+      "emergency-evaluation"
+    ],
+    "chronic-care": [
+      "hypertension-stable",
+      "diabetes-stable",
+      "renal-monitoring",
+      "medication-adjustment",
+      "specialty-referral",
+      "mixed-cardiometabolic"
+    ],
+    "pediatric": [
+      "infant-well-child",
+      "child-well-child",
+      "adolescent-preventive",
+      "respiratory-acute",
+      "gastrointestinal-acute",
+      "minor-injury"
+    ],
+    "medication-intensive": [
+      "reconciliation-stable",
+      "dose-change",
+      "dispense-follow-up",
+      "monitoring-result",
+      "temporary-stop",
+      "polypharmacy-review"
+    ],
+    "womens-health": [
+      "preventive-risk-assessment",
+      "age-eligible-screening",
+      "gynecologic-symptom",
+      "reproductive-follow-up",
+      "breast-symptom",
+      "ordinary-injury"
+    ],
+    "perioperative-surgical": [
+      "emergency-appendectomy",
+      "elective-procedure",
+      "short-admission",
+      "postoperative-review",
+      "procedure-with-medication",
+      "referred-surgery"
+    ],
+    "oncology": [
+      "solid-tumor-systemic",
+      "solid-tumor-surgical",
+      "hematologic-treatment",
+      "toxicity-monitoring",
+      "supportive-care",
+      "surveillance"
+    ],
+    "rare-complex": [
+      "multi-system-inflammatory",
+      "neuromuscular-support",
+      "complex-renal",
+      "rare-metabolic"
+    ]
+  },
+  "encounterReasons": [
+    {
+      "system": "http://snomed.info/sct",
+      "code": "185349003",
+      "display": "Encounter for check up"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "49727002",
+      "display": "Cough"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "195662009",
+      "display": "Acute upper respiratory infection"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "34014006",
+      "display": "Viral disease"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "38341003",
+      "display": "Hypertensive disorder"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "161891005",
+      "display": "Backache"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "386661006",
+      "display": "Fever"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "21522001",
+      "display": "Abdominal pain"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "233604007",
+      "display": "Pneumonia"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "74400008",
+      "display": "Appendicitis"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "125666000",
+      "display": "Burn"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "89164003",
+      "display": "Breast lump"
+    }
+  ],
+  "vaccineConcepts": [
+    {
+      "ageBand": "infant",
+      "system": "http://snomed.info/sct",
+      "code": "871822003",
+      "display": "Hepatitis B vaccine"
+    },
+    {
+      "ageBand": "child",
+      "system": "http://snomed.info/sct",
+      "code": "871839001",
+      "display": "Measles, mumps and rubella vaccine"
+    },
+    {
+      "ageBand": "adolescent",
+      "system": "http://snomed.info/sct",
+      "code": "871831003",
+      "display": "Diphtheria, tetanus and pertussis vaccine"
+    }
+  ],
+  "ordinaryCodings": [
+    {
+      "system": "http://snomed.info/sct",
+      "code": "185349003",
+      "canonicalDisplay": "Encounter for check up",
+      "aliases": [],
+      "resourceTypes": [
+        "Encounter"
+      ],
+      "paths": [
+        "reasonCode[*].coding[*]"
+      ],
+      "semanticRole": "encounter reason",
+      "source": "reviewed pathway catalog",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "49727002",
+      "canonicalDisplay": "Cough",
+      "aliases": [],
+      "resourceTypes": [
+        "Encounter"
+      ],
+      "paths": [
+        "reasonCode[*].coding[*]"
+      ],
+      "semanticRole": "encounter reason",
+      "source": "reviewed pathway catalog",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "195662009",
+      "canonicalDisplay": "Acute upper respiratory infection",
+      "aliases": [],
+      "resourceTypes": [
+        "Encounter"
+      ],
+      "paths": [
+        "reasonCode[*].coding[*]"
+      ],
+      "semanticRole": "encounter reason",
+      "source": "reviewed pathway catalog",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "34014006",
+      "canonicalDisplay": "Viral disease",
+      "aliases": [],
+      "resourceTypes": [
+        "Encounter"
+      ],
+      "paths": [
+        "reasonCode[*].coding[*]"
+      ],
+      "semanticRole": "encounter reason",
+      "source": "reviewed pathway catalog",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "38341003",
+      "canonicalDisplay": "Hypertensive disorder",
+      "aliases": [],
+      "resourceTypes": [
+        "Encounter"
+      ],
+      "paths": [
+        "reasonCode[*].coding[*]"
+      ],
+      "semanticRole": "encounter reason",
+      "source": "reviewed pathway catalog",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "161891005",
+      "canonicalDisplay": "Backache",
+      "aliases": [],
+      "resourceTypes": [
+        "Encounter"
+      ],
+      "paths": [
+        "reasonCode[*].coding[*]"
+      ],
+      "semanticRole": "encounter reason",
+      "source": "reviewed pathway catalog",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "386661006",
+      "canonicalDisplay": "Fever",
+      "aliases": [],
+      "resourceTypes": [
+        "Encounter"
+      ],
+      "paths": [
+        "reasonCode[*].coding[*]"
+      ],
+      "semanticRole": "encounter reason",
+      "source": "reviewed pathway catalog",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "21522001",
+      "canonicalDisplay": "Abdominal pain",
+      "aliases": [
+        "Abdominal pain",
+        "Abdominal pain (finding)"
+      ],
+      "resourceTypes": [
+        "Encounter"
+      ],
+      "paths": [
+        "reasonCode[*].coding[*]"
+      ],
+      "semanticRole": "encounter reason",
+      "source": "reviewed pathway catalog",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "233604007",
+      "canonicalDisplay": "Pneumonia",
+      "aliases": [],
+      "resourceTypes": [
+        "Encounter"
+      ],
+      "paths": [
+        "reasonCode[*].coding[*]"
+      ],
+      "semanticRole": "encounter reason",
+      "source": "reviewed pathway catalog",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "74400008",
+      "canonicalDisplay": "Appendicitis",
+      "aliases": [],
+      "resourceTypes": [
+        "Encounter"
+      ],
+      "paths": [
+        "reasonCode[*].coding[*]"
+      ],
+      "semanticRole": "encounter reason",
+      "source": "reviewed pathway catalog",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "125666000",
+      "canonicalDisplay": "Burn",
+      "aliases": [],
+      "resourceTypes": [
+        "Encounter"
+      ],
+      "paths": [
+        "reasonCode[*].coding[*]"
+      ],
+      "semanticRole": "encounter reason",
+      "source": "reviewed pathway catalog",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "89164003",
+      "canonicalDisplay": "Breast lump",
+      "aliases": [],
+      "resourceTypes": [
+        "Encounter"
+      ],
+      "paths": [
+        "reasonCode[*].coding[*]"
+      ],
+      "semanticRole": "encounter reason",
+      "source": "reviewed pathway catalog",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "871822003",
+      "canonicalDisplay": "Hepatitis B vaccine",
+      "aliases": [],
+      "resourceTypes": [
+        "Immunization"
+      ],
+      "paths": [
+        "vaccineCode.coding[*]"
+      ],
+      "semanticRole": "age-appropriate vaccine",
+      "source": "IL-MOH-IMMUNIZATION-2026",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "provisional",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "871839001",
+      "canonicalDisplay": "Measles, mumps and rubella vaccine",
+      "aliases": [],
+      "resourceTypes": [
+        "Immunization"
+      ],
+      "paths": [
+        "vaccineCode.coding[*]"
+      ],
+      "semanticRole": "age-appropriate vaccine",
+      "source": "IL-MOH-IMMUNIZATION-2026",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "provisional",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "871831003",
+      "canonicalDisplay": "Diphtheria, tetanus and pertussis vaccine",
+      "aliases": [],
+      "resourceTypes": [
+        "Immunization"
+      ],
+      "paths": [
+        "vaccineCode.coding[*]"
+      ],
+      "semanticRole": "age-appropriate vaccine",
+      "source": "IL-MOH-IMMUNIZATION-2026",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "provisional",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "368208006",
+      "canonicalDisplay": "Left arm",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "intentional wrong body-site-as-diagnosis",
+      "source": "R34 semantic mutation",
+      "provenanceClass": "reviewed-intentional-problem",
+      "status": "active",
+      "problemStatus": "intentional-problem"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "396550006",
+      "canonicalDisplay": "Blood test (procedure)",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "intentional wrong procedure-as-diagnosis",
+      "source": "R34 semantic mutation",
+      "provenanceClass": "reviewed-intentional-problem",
+      "status": "active",
+      "problemStatus": "intentional-problem"
+    },
+    {
+      "system": "http://unitsofmeasure.org",
+      "code": "kg",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "valueQuantity"
+      ],
+      "semanticRole": "intentional wrong unit family",
+      "source": "R34 unit mutation",
+      "provenanceClass": "ucum",
+      "status": "active",
+      "problemStatus": "intentional-problem"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "185389009",
+      "canonicalDisplay": "Follow-up visit",
+      "aliases": [],
+      "resourceTypes": [
+        "Encounter"
+      ],
+      "paths": [
+        "reasonCode[*].coding[*]"
+      ],
+      "semanticRole": "actual postoperative follow-up reason",
+      "source": "R29 executable perioperative grammar",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "86273004",
+      "canonicalDisplay": "Biopsy",
+      "aliases": [],
+      "resourceTypes": [
+        "Procedure"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "oncology diagnostic confirmation",
+      "source": "R29 executable oncology grammar",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "363346000",
+      "canonicalDisplay": "Malignant neoplastic disease",
+      "aliases": [],
+      "resourceTypes": [
+        "Encounter"
+      ],
+      "paths": [
+        "reasonCode[*].coding[*]"
+      ],
+      "semanticRole": "oncology surveillance reason",
+      "source": "R29 executable oncology grammar",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "55464009",
+      "canonicalDisplay": "Systemic lupus erythematosus",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "named rare/complex pathway diagnosis",
+      "source": "R29 executable rare/complex grammar",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "provisional",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "193093009",
+      "canonicalDisplay": "Motor neuron disease",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "named rare/complex pathway diagnosis",
+      "source": "R29 executable rare/complex grammar",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "provisional",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "709044004",
+      "canonicalDisplay": "Chronic kidney disease",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "named rare/complex pathway diagnosis",
+      "source": "R29 executable rare/complex grammar",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "provisional",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "75934005",
+      "canonicalDisplay": "Metabolic disease",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "named rare/complex pathway diagnosis",
+      "source": "R29 executable rare/complex grammar",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "provisional",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "237602007",
+      "canonicalDisplay": "Metabolic syndrome",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "material secondary metabolic-risk condition",
+      "source": "R29 executable secondary-trait model",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "provisional",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "195967001",
+      "canonicalDisplay": "Asthma",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "material secondary respiratory-history condition",
+      "source": "R29 executable secondary-trait model",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "provisional",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "14669001",
+      "canonicalDisplay": "Acute kidney injury",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "renal scenario acute precipitant/control",
+      "source": "R32 material scenario variant",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "provisional",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "code": "1191",
+      "canonicalDisplay": "Aspirin",
+      "aliases": [],
+      "resourceTypes": [
+        "MedicationRequest"
+      ],
+      "paths": [
+        "medicationCodeableConcept.coding[*]"
+      ],
+      "semanticRole": "bleeding scenario interacting exposure/control",
+      "source": "R32 material scenario variant",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+      "code": "provisional",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "verificationStatus.coding[*]"
+      ],
+      "semanticRole": "intentional diagnosis lifecycle conflict",
+      "source": "R34 material problem variant",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "intentional-problem"
+    },
+    {
+      "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "code": "723",
+      "canonicalDisplay": "Amoxicillin",
+      "aliases": [],
+      "resourceTypes": [
+        "MedicationStatement"
+      ],
+      "paths": [
+        "medicationCodeableConcept.coding[*]"
+      ],
+      "semanticRole": "documented allergy-scenario exposure/control",
+      "source": "R32 material scenario variant",
+      "provenanceClass": "reviewed-external-medication",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "738995006",
+      "canonicalDisplay": "Swallow (administration method)",
+      "aliases": [],
+      "resourceTypes": [
+        "MedicationStatement"
+      ],
+      "paths": [
+        "dosage[*].method.coding[*]"
+      ],
+      "semanticRole": "documented medication-statement administration method",
+      "source": "R32 material scenario variant",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://unitsofmeasure.org",
+      "code": "mg",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "MedicationStatement"
+      ],
+      "paths": [
+        "dosage[*].doseAndRate[*].doseQuantity"
+      ],
+      "semanticRole": "documented medication-statement dose",
+      "source": "R32 material scenario variant",
+      "provenanceClass": "ucum",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+      "code": "acute",
+      "canonicalDisplay": "Short course (acute) therapy",
+      "aliases": [],
+      "resourceTypes": [
+        "MedicationStatement"
+      ],
+      "paths": [
+        "extension[*].valueCodeableConcept.coding[*]"
+      ],
+      "semanticRole": "documented medication-statement course",
+      "source": "R32 material scenario variant",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "mixed"
+    }
+  ],
+  "clinicalReviewStatus": "pending",
+  "historicalPathwayReleaseDecisions": {
+    "pediatric-immunization": {
+      "status": "enabled-with-pinned-corrective-profile-context",
+      "issueId": "IL-CORE-VACCINE-SLICE-OFFLINE-EXPANSION",
+      "generationDefault": "enabled",
+      "defaultCandidatePermitted": true,
+      "diagnosticGenerationMode": "enabled",
+      "rationale": "The exact IL Core 0.21.0 profile is preserved and a digest-pinned corrective overlay supplies the missing SNOMED system pattern required by its slice discriminator. Clinically appropriate age/pathway concepts are enabled in the default candidate."
+    }
+  }
+}

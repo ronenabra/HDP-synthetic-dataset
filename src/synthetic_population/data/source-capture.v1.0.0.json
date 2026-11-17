@@ -1,0 +1,297 @@
+{
+  "catalogVersion": "1.0.0",
+  "frozenBeforePilotGeneration": true,
+  "targetKind": "fixture-diversity-target",
+  "rationale": "R28 requires every configured capture/omission branch to remain observable without treating branch frequency as epidemiologic prevalence.",
+  "canonicalMinimumCountPerBranch": 5,
+  "canonicalRateBandPerBranch": {
+    "minimum": 0.02,
+    "maximum": 0.4
+  },
+  "sources": {
+    "hmo": {
+      "branches": [
+        {
+          "id": "preventive-no-test",
+          "workflowFamily": "preventive",
+          "resourceTypes": [
+            "Encounter",
+            "Condition"
+          ],
+          "captureMode": "local-episode-no-test"
+        },
+        {
+          "id": "referral-only",
+          "workflowFamily": "referral",
+          "resourceTypes": [
+            "Encounter",
+            "Condition",
+            "ServiceRequest"
+          ],
+          "captureMode": "local-referral-without-local-result"
+        },
+        {
+          "id": "community-lab",
+          "workflowFamily": "community-testing",
+          "resourceTypes": [
+            "Encounter",
+            "Condition",
+            "ServiceRequest",
+            "Specimen",
+            "Observation"
+          ],
+          "captureMode": "complete-local-order-specimen-result"
+        },
+        {
+          "id": "external-result",
+          "workflowFamily": "community-testing",
+          "resourceTypes": [
+            "Encounter",
+            "Condition",
+            "Observation"
+          ],
+          "captureMode": "received-result-with-identifier-only-order-and-specimen"
+        },
+        {
+          "id": "cancelled-order",
+          "workflowFamily": "community-testing",
+          "resourceTypes": [
+            "Encounter",
+            "Condition",
+            "ServiceRequest"
+          ],
+          "captureMode": "revoked-local-order"
+        },
+        {
+          "id": "chronic-monitoring",
+          "workflowFamily": "chronic",
+          "resourceTypes": [
+            "Encounter",
+            "Condition",
+            "ServiceRequest",
+            "Specimen",
+            "Observation"
+          ],
+          "captureMode": "longitudinal-monitoring"
+        },
+        {
+          "id": "medication-review",
+          "workflowFamily": "medication",
+          "resourceTypes": [
+            "Encounter",
+            "Condition"
+          ],
+          "captureMode": "clinical-review-with-medication-events-owned-by-pathway"
+        },
+        {
+          "id": "summary-only",
+          "workflowFamily": "preventive",
+          "resourceTypes": [
+            "Encounter",
+            "Condition"
+          ],
+          "captureMode": "source-local-summary"
+        }
+      ]
+    },
+    "hospital-a": {
+      "branches": [
+        {
+          "id": "emergency-discharge",
+          "workflowFamily": "emergency",
+          "resourceTypes": [
+            "Encounter",
+            "Condition"
+          ],
+          "captureMode": "emergency-discharge-without-local-test"
+        },
+        {
+          "id": "emergency-lab",
+          "workflowFamily": "emergency",
+          "resourceTypes": [
+            "Encounter",
+            "Condition",
+            "ServiceRequest",
+            "Specimen",
+            "Observation"
+          ],
+          "captureMode": "emergency-local-lab"
+        },
+        {
+          "id": "specialty-referral",
+          "workflowFamily": "ambulatory-specialty",
+          "resourceTypes": [
+            "Encounter",
+            "Condition",
+            "ServiceRequest"
+          ],
+          "captureMode": "specialty-referral-only"
+        },
+        {
+          "id": "inpatient-procedure-workup",
+          "workflowFamily": "inpatient",
+          "resourceTypes": [
+            "Encounter",
+            "Condition",
+            "ServiceRequest",
+            "Specimen",
+            "Observation"
+          ],
+          "captureMode": "inpatient-diagnostic-workup"
+        },
+        {
+          "id": "external-specimen-result",
+          "workflowFamily": "procedure-or-diagnostic",
+          "resourceTypes": [
+            "Encounter",
+            "Condition",
+            "Observation"
+          ],
+          "captureMode": "result-with-externally-owned-specimen"
+        },
+        {
+          "id": "cancelled-diagnostic",
+          "workflowFamily": "procedure-or-diagnostic",
+          "resourceTypes": [
+            "Encounter",
+            "Condition",
+            "ServiceRequest"
+          ],
+          "captureMode": "revoked-diagnostic-order"
+        },
+        {
+          "id": "discharge-follow-up",
+          "workflowFamily": "discharge-or-follow-up",
+          "resourceTypes": [
+            "Encounter",
+            "Condition"
+          ],
+          "captureMode": "discharge-follow-up-summary"
+        },
+        {
+          "id": "pathology-workup",
+          "workflowFamily": "procedure-or-diagnostic",
+          "resourceTypes": [
+            "Encounter",
+            "Condition",
+            "ServiceRequest",
+            "Specimen",
+            "Observation"
+          ],
+          "captureMode": "pathology-order-specimen-result"
+        }
+      ]
+    },
+    "hospital-b": {
+      "branches": [
+        {
+          "id": "regional-emergency-discharge",
+          "workflowFamily": "emergency",
+          "resourceTypes": [
+            "Encounter",
+            "Condition"
+          ],
+          "captureMode": "regional-emergency-discharge"
+        },
+        {
+          "id": "regional-emergency-lab",
+          "workflowFamily": "emergency",
+          "resourceTypes": [
+            "Encounter",
+            "Condition",
+            "ServiceRequest",
+            "Specimen",
+            "Observation"
+          ],
+          "captureMode": "regional-emergency-local-lab"
+        },
+        {
+          "id": "short-admission",
+          "workflowFamily": "inpatient",
+          "resourceTypes": [
+            "Encounter",
+            "Condition",
+            "ServiceRequest",
+            "Observation"
+          ],
+          "captureMode": "short-admission-result-without-local-specimen"
+        },
+        {
+          "id": "imaging-referral",
+          "workflowFamily": "ambulatory-specialty",
+          "resourceTypes": [
+            "Encounter",
+            "Condition",
+            "ServiceRequest"
+          ],
+          "captureMode": "imaging-referral-only"
+        },
+        {
+          "id": "received-result",
+          "workflowFamily": "procedure-or-diagnostic",
+          "resourceTypes": [
+            "Encounter",
+            "Condition",
+            "Observation"
+          ],
+          "captureMode": "received-result"
+        },
+        {
+          "id": "cancelled-order",
+          "workflowFamily": "procedure-or-diagnostic",
+          "resourceTypes": [
+            "Encounter",
+            "Condition",
+            "ServiceRequest"
+          ],
+          "captureMode": "revoked-local-order"
+        },
+        {
+          "id": "transfer-summary",
+          "workflowFamily": "discharge-or-follow-up",
+          "resourceTypes": [
+            "Encounter",
+            "Condition"
+          ],
+          "captureMode": "transfer-summary-only"
+        },
+        {
+          "id": "delayed-lab",
+          "workflowFamily": "procedure-or-diagnostic",
+          "resourceTypes": [
+            "Encounter",
+            "Condition",
+            "ServiceRequest",
+            "Specimen",
+            "Observation"
+          ],
+          "captureMode": "delayed-local-lab"
+        }
+      ]
+    }
+  },
+  "requiredWorkflowFamilies": {
+    "hmo": [
+      "preventive",
+      "chronic",
+      "referral",
+      "medication",
+      "community-testing"
+    ],
+    "hospital-a": [
+      "emergency",
+      "ambulatory-specialty",
+      "inpatient",
+      "procedure-or-diagnostic",
+      "discharge-or-follow-up"
+    ],
+    "hospital-b": [
+      "emergency",
+      "ambulatory-specialty",
+      "inpatient",
+      "procedure-or-diagnostic",
+      "discharge-or-follow-up"
+    ]
+  },
+  "clinicalReviewStatus": "pending"
+}

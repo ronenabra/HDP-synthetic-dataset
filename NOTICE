@@ -1,0 +1,44 @@
+HDP Synthetic Dataset
+Copyright 2026 HDP Synthetic Dataset contributors
+
+Project-owned code, documentation, and original synthetic content are offered
+under the Apache License, Version 2.0. Third-party terminology, examples,
+reference data, trademarks, and other material retain their own terms. This
+notice does not change any license or grant additional third-party rights.
+
+This project uses the HL7 FHIR R4 standard and Israeli IL Core/HDP references.
+HL7 and FHIR are registered trademarks of Health Level Seven International.
+Their use does not constitute endorsement by HL7 or any other publisher.
+
+This material contains content from LOINC (http://loinc.org). LOINC is copyright
+© Regenstrief Institute, Inc. and the Logical Observation Identifiers Names
+and Codes (LOINC) Committee and is available at no cost under the license at
+http://loinc.org/license. LOINC® is a registered United States trademark of
+Regenstrief Institute, Inc.
+
+The project uses selected SNOMED CT identifiers, descriptions, and mappings.
+That content retains SNOMED International's applicable terms; the full SNOMED CT
+database is not distributed. See https://www.snomed.org/licensing.
+
+This product uses publicly available data courtesy of the U.S. National Library
+of Medicine (NLM), National Institutes of Health, Department of Health and Human
+Services; NLM is not responsible for the product and does not endorse or
+recommend this or any other product.
+The project's frozen RxNorm content may not reflect the most current or
+accurate data available from NLM.
+
+UCUM is copyright ©1999-2024 Regenstrief Institute, Inc. All rights reserved.
+UCUM unit codes are used under their own terms. The UCUM License, Version 1.1,
+including its warranty disclaimer, is at https://ucum.org/license.
+
+DICOM is a registered trademark of the National Electrical Manufacturers
+Association (NEMA). DICOM coding references retain their publisher's terms.
+The official standard is available at https://dicom.nema.org/.
+
+Locality inputs cite the Israel Central Bureau of Statistics and Israel's
+government open-data portal. Locality weights are rounded fixture inputs,
+not current official population statistics. Source details and separate
+data terms are recorded in THIRD_PARTY_NOTICES.md and the input catalogs.
+
+See THIRD_PARTY_NOTICES.md for dependency licenses, attribution sources,
+and reference-package terms.

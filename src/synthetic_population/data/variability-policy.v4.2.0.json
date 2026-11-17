@@ -1,0 +1,45 @@
+{
+  "catalogVersion": "4.2.0",
+  "frozenBeforeCanonicalGeneration": true,
+  "normalizerVersion": "4.2.0",
+  "includedFields": [
+    "resource/profile role",
+    "clinical codes/families",
+    "status",
+    "reference topology",
+    "event ordering bucket",
+    "optional branch presence",
+    "directed reference paths and two rounds of resolved clinical-neighbor labels"
+  ],
+  "excludedFields": [
+    "identifiers",
+    "UUID/fullUrl",
+    "exact timestamps",
+    "numeric values",
+    "demographic spelling",
+    "display",
+    "narrative",
+    "notes",
+    "meta timestamps",
+    "generator/problem/scenario/trajectory tags",
+    "security labels",
+    "checksum fields",
+    "isolated unreferenced coverage content",
+    "synthetic capture/role classifications"
+  ],
+  "distanceWeights": {
+    "multisetClinicalRoleToken": 1.0
+  },
+  "nearCloneDistanceThreshold": 0.15,
+  "thresholds": {
+    "maximumExactCloneShare": 0.05,
+    "maximumDuplicateMembershipRate": 0.3,
+    "maximumNearCloneClusterShare": 0.15,
+    "maximumTopSignatureShare": 0.2,
+    "minimumEffectiveSignatureFraction": 0.1,
+    "maximumEffectiveSignatureCountRequired": 20,
+    "maximumEpisodeTopSignatureShare": 0.25,
+    "minimumWithinVariantSignatures": 3,
+    "minimumRareWithinVariantSignatures": 2
+  }
+}

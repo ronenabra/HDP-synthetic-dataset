@@ -1,0 +1,338 @@
+{
+  "catalogVersion": "4.0.0",
+  "status": "provisional-pending-designated-clinical-review",
+  "disclaimer": "Synthetic fixture predicates only; not production clinical decision support.",
+  "variantContracts": [
+    {
+      "name": "renal-medication-risk",
+      "variant": "chronic-renal-trend",
+      "eventRoles": [
+        "active-renal-condition",
+        "active-medication-exposure",
+        "serial-potassium-results"
+      ],
+      "sourceOwnership": {
+        "hmo": [
+          "active-renal-condition"
+        ],
+        "hospital-a": [
+          "serial-potassium-results"
+        ],
+        "hospital-b": [
+          "active-medication-exposure"
+        ]
+      },
+      "occurrenceFields": [
+        "Condition.onset[x]",
+        "MedicationRequest.authoredOn+dosage.timing.boundsPeriod",
+        "Observation.effective[x]"
+      ],
+      "exposureDerivation": "active MedicationRequest start through bounds end or open active interval",
+      "relations": [
+        "exposure starts before and remains active at monitoring",
+        "potassium results are sequential and increasing"
+      ],
+      "matchedControl": "non-rising potassium series"
+    },
+    {
+      "name": "renal-medication-risk",
+      "variant": "acute-renal-precipitant",
+      "eventRoles": [
+        "active-renal-condition",
+        "active-medication-exposure",
+        "acute-precipitant",
+        "abnormal-potassium-result"
+      ],
+      "sourceOwnership": {
+        "hmo": [
+          "active-renal-condition"
+        ],
+        "hospital-a": [
+          "acute-precipitant",
+          "abnormal-potassium-result"
+        ],
+        "hospital-b": [
+          "active-medication-exposure"
+        ]
+      },
+      "occurrenceFields": [
+        "Condition.onset[x]",
+        "MedicationRequest.authoredOn+dosage.timing.boundsPeriod",
+        "Observation.effective[x]"
+      ],
+      "exposureDerivation": "active MedicationRequest start through bounds end or open active interval",
+      "relations": [
+        "precipitant precedes renal change within configured window",
+        "exposure overlaps monitoring"
+      ],
+      "matchedControl": "resolved or out-of-window acute precipitant"
+    },
+    {
+      "name": "renal-medication-risk",
+      "variant": "medication-dose-escalation",
+      "eventRoles": [
+        "active-renal-condition",
+        "low-dose-order",
+        "high-dose-order",
+        "abnormal-potassium-result"
+      ],
+      "sourceOwnership": {
+        "hmo": [
+          "active-renal-condition"
+        ],
+        "hospital-a": [
+          "abnormal-potassium-result"
+        ],
+        "hospital-b": [
+          "low-dose-order",
+          "high-dose-order"
+        ]
+      },
+      "occurrenceFields": [
+        "Condition.onset[x]",
+        "MedicationRequest.authoredOn+dosage.timing.boundsPeriod",
+        "Observation.effective[x]"
+      ],
+      "exposureDerivation": "chronological complete MedicationRequest dose events",
+      "relations": [
+        "low dose strictly precedes high dose",
+        "abnormal result follows exposure within configured window"
+      ],
+      "matchedControl": "stopped or non-escalating later order"
+    },
+    {
+      "name": "bleeding-risk",
+      "variant": "overt-bleeding",
+      "eventRoles": [
+        "anticoagulant-exposure",
+        "low-hemoglobin-result",
+        "active-bleeding-condition"
+      ],
+      "sourceOwnership": {
+        "hmo": [
+          "anticoagulant-exposure"
+        ],
+        "hospital-a": [
+          "low-hemoglobin-result"
+        ],
+        "hospital-b": [
+          "active-bleeding-condition"
+        ]
+      },
+      "occurrenceFields": [
+        "MedicationRequest.authoredOn+dosage.timing.boundsPeriod",
+        "Observation.effective[x]",
+        "Condition.onset[x]"
+      ],
+      "exposureDerivation": "active anticoagulant request interval",
+      "relations": [
+        "bleeding and low hemoglobin occur during or shortly after exposure"
+      ],
+      "matchedControl": "non-overt or temporally unrelated bleeding context"
+    },
+    {
+      "name": "bleeding-risk",
+      "variant": "falling-hemoglobin",
+      "eventRoles": [
+        "anticoagulant-exposure",
+        "active-bleeding-condition",
+        "serial-hemoglobin-results"
+      ],
+      "sourceOwnership": {
+        "hmo": [
+          "anticoagulant-exposure"
+        ],
+        "hospital-a": [
+          "serial-hemoglobin-results"
+        ],
+        "hospital-b": [
+          "active-bleeding-condition"
+        ]
+      },
+      "occurrenceFields": [
+        "MedicationRequest.authoredOn+dosage.timing.boundsPeriod",
+        "Observation.effective[x]",
+        "Condition.onset[x]"
+      ],
+      "exposureDerivation": "active anticoagulant request interval",
+      "relations": [
+        "hemoglobin decreases sequentially within configured window",
+        "series overlaps exposure"
+      ],
+      "matchedControl": "non-falling hemoglobin series"
+    },
+    {
+      "name": "bleeding-risk",
+      "variant": "interacting-exposure",
+      "eventRoles": [
+        "anticoagulant-exposure",
+        "interacting-exposure",
+        "low-hemoglobin-result",
+        "active-bleeding-condition"
+      ],
+      "sourceOwnership": {
+        "hmo": [
+          "anticoagulant-exposure"
+        ],
+        "hospital-a": [
+          "low-hemoglobin-result"
+        ],
+        "hospital-b": [
+          "interacting-exposure",
+          "active-bleeding-condition"
+        ]
+      },
+      "occurrenceFields": [
+        "MedicationRequest.authoredOn+dosage.timing.boundsPeriod",
+        "Observation.effective[x]",
+        "Condition.onset[x]"
+      ],
+      "exposureDerivation": "intersection of two active medication request intervals",
+      "relations": [
+        "medication intervals overlap",
+        "low hemoglobin occurs in the risk window"
+      ],
+      "matchedControl": "non-overlapping interacting exposure"
+    },
+    {
+      "name": "allergy-treatment-risk",
+      "variant": "prescribing-after-allergy",
+      "eventRoles": [
+        "confirmed-severe-allergy",
+        "culture-enrichment",
+        "active-prescription"
+      ],
+      "sourceOwnership": {
+        "hmo": [
+          "confirmed-severe-allergy"
+        ],
+        "hospital-a": [
+          "culture-enrichment"
+        ],
+        "hospital-b": [
+          "active-prescription"
+        ]
+      },
+      "occurrenceFields": [
+        "AllergyIntolerance.onset[x]",
+        "Observation.effective[x]",
+        "MedicationRequest.authoredOn"
+      ],
+      "exposureDerivation": "complete active MedicationRequest prescription event",
+      "relations": [
+        "allergy strictly precedes prescription within configured window"
+      ],
+      "matchedControl": "treatment precedes allergy or uses a control status"
+    },
+    {
+      "name": "allergy-treatment-risk",
+      "variant": "administration-after-allergy",
+      "eventRoles": [
+        "confirmed-severe-allergy",
+        "culture-enrichment",
+        "performed-administration"
+      ],
+      "sourceOwnership": {
+        "hmo": [
+          "confirmed-severe-allergy"
+        ],
+        "hospital-a": [
+          "culture-enrichment"
+        ],
+        "hospital-b": [
+          "performed-administration"
+        ]
+      },
+      "occurrenceFields": [
+        "AllergyIntolerance.onset[x]",
+        "Observation.effective[x]",
+        "MedicationAdministration.effective[x]"
+      ],
+      "exposureDerivation": "completed MedicationAdministration event; MedicationStatement is insufficient",
+      "relations": [
+        "allergy strictly precedes performed administration"
+      ],
+      "matchedControl": "stopped administration or unsupported history assertion"
+    },
+    {
+      "name": "allergy-treatment-risk",
+      "variant": "culture-informed-treatment",
+      "eventRoles": [
+        "confirmed-severe-allergy",
+        "culture-order",
+        "specimen-collection",
+        "culture-result",
+        "active-treatment-decision"
+      ],
+      "sourceOwnership": {
+        "hmo": [
+          "confirmed-severe-allergy"
+        ],
+        "hospital-a": [
+          "culture-order",
+          "specimen-collection",
+          "culture-result"
+        ],
+        "hospital-b": [
+          "active-treatment-decision"
+        ]
+      },
+      "occurrenceFields": [
+        "AllergyIntolerance.onset[x]",
+        "ServiceRequest.authoredOn",
+        "Specimen.collection.collected[x]",
+        "Observation.effective[x]",
+        "MedicationRequest.authoredOn"
+      ],
+      "exposureDerivation": "complete active MedicationRequest treatment decision",
+      "relations": [
+        "order before collection",
+        "collection before result",
+        "result before treatment within configured windows"
+      ],
+      "matchedControl": "culture result occurs after treatment"
+    }
+  ],
+  "scenarios": {
+    "renal-medication-risk": {
+      "exposureToMonitoringDays": {
+        "minimum": 0,
+        "maximum": 90
+      },
+      "precipitantToChangeDays": {
+        "minimum": 0,
+        "maximum": 14
+      },
+      "source": "KDIGO-CKD-2024"
+    },
+    "bleeding-risk": {
+      "exposureToBleedingDays": {
+        "minimum": 0,
+        "maximum": 14
+      },
+      "hemoglobinTrendDays": {
+        "minimum": 1,
+        "maximum": 30
+      },
+      "source": "fixture-conservative-review-window"
+    },
+    "allergy-treatment-risk": {
+      "allergyBeforeTreatmentDays": {
+        "minimum": 0,
+        "maximum": 3650
+      },
+      "source": "FHIR-R4-ALLERGY-MEDICATION-LIFECYCLE"
+    },
+    "culture-informed-treatment": {
+      "collectionToResultDays": {
+        "minimum": 0,
+        "maximum": 7
+      },
+      "resultToTreatmentDays": {
+        "minimum": 0,
+        "maximum": 7
+      },
+      "source": "fixture-conservative-review-window"
+    }
+  }
+}

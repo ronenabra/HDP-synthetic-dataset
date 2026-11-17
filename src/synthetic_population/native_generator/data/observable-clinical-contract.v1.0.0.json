@@ -1,0 +1,629 @@
+{
+  "schemaVersion": "1.0.0",
+  "reviewStatus": "pending-independent-review",
+  "panelMembers": {
+    "24331-1": [
+      "2093-3",
+      "2085-9",
+      "13457-7"
+    ],
+    "58410-2": [
+      "718-7",
+      "6690-2",
+      "777-3",
+      "789-8",
+      "4544-3",
+      "787-2",
+      "785-6",
+      "786-4",
+      "788-0"
+    ],
+    "71651007": [
+      "24606-6"
+    ]
+  },
+  "narrativeResults": {
+    "24606-6": "BI-RADS 1: no suspicious mammographic finding. Continue routine screening.",
+    "225337009": "No additional risk factors identified during this review. Continue the existing follow-up plan.",
+    "386661006": "Fever reported during this acute episode; temperature not measured in this capture. Supportive care and reassessment if persistent.",
+    "160245001": "No current presenting complaint reported at this preventive assessment.",
+    "58410-2": "CBC: hemoglobin 13.8 g/dL; leukocytes 6.2 10*3/uL; platelets 240 10*3/uL; erythrocytes 4.6 10*6/uL; hematocrit 41.4%; MCV 90 fL; MCH 30 pg; MCHC 33.3 g/dL; RDW 13%."
+  },
+  "branchTests": {
+    "glucose-screen": [
+      "2345-7"
+    ],
+    "glucose-monitor": [
+      "2345-7"
+    ],
+    "oxygen-saturation": [
+      "59408-5"
+    ],
+    "cbc-monitor": [
+      "58410-2"
+    ],
+    "cbc-monitoring": [
+      "58410-2"
+    ],
+    "hepatic-toxicity": [
+      "1742-6"
+    ],
+    "hematologic-toxicity": [
+      "58410-2"
+    ]
+  },
+  "unsupportedBranchPolicy": "Assigned branch labels without an observable predicate receive no branch-depth or diversity credit. They remain explicit unsupported engineering scope, for independent review and successor capture/clinical review; no assignment is silently counted as proven.",
+  "sources": [
+    "https://loinc.org/58410-2",
+    "https://loinc.org/59408-5",
+    "https://dicom.nema.org/medical/dicom/2026a/output/chtml/part16/sect_CID_612.html",
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4f3a9248-a354-4c77-bf5b-9eed38f00219"
+  ],
+  "perioperativeRegimens": {
+    "2180": {
+      "display": "Cefazolin",
+      "doseMg": 2000,
+      "frequencyPerDay": 1,
+      "routeCode": "47625008",
+      "routeDisplay": "Intravenous route",
+      "doseRangeMg": [
+        1000,
+        2000
+      ]
+    }
+  },
+  "branchDispositions": {
+    "generally-healthy/preventive-no-test/counselling": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "generally-healthy/preventive-no-test/no-follow-up": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "generally-healthy/preventive-no-test/seasonal-prevention": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "generally-healthy/preventive-screening/lipid-screen": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "generally-healthy/preventive-screening/glucose-screen": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "generally-healthy/preventive-screening/blood-pressure": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "generally-healthy/respiratory-self-limited/no-test": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "generally-healthy/respiratory-self-limited/targeted-test": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "generally-healthy/respiratory-self-limited/symptomatic-care": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "generally-healthy/gastrointestinal-self-limited/hydration": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "generally-healthy/gastrointestinal-self-limited/no-test": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "generally-healthy/gastrointestinal-self-limited/stool-test": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "generally-healthy/minor-injury/burn-care": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "generally-healthy/minor-injury/sprain-care": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "generally-healthy/minor-injury/wound-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "generally-healthy/emergency-evaluation/discharge-home": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "generally-healthy/emergency-evaluation/targeted-observation": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "generally-healthy/emergency-evaluation/community-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "chronic-care/hypertension-stable/home-monitoring": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "chronic-care/hypertension-stable/annual-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "chronic-care/hypertension-stable/lipid-risk": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "chronic-care/diabetes-stable/hba1c-stable": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "chronic-care/diabetes-stable/diet-review": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "chronic-care/diabetes-stable/retinal-referral": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "chronic-care/renal-monitoring/creatinine-repeat": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "chronic-care/renal-monitoring/potassium-repeat": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "chronic-care/renal-monitoring/nephrology-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "chronic-care/medication-adjustment/dose-increase": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "chronic-care/medication-adjustment/dose-decrease": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "chronic-care/medication-adjustment/switch-class": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "chronic-care/specialty-referral/cardiology": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "chronic-care/specialty-referral/nephrology": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "chronic-care/specialty-referral/endocrinology": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "chronic-care/mixed-cardiometabolic/lipid-monitoring": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "chronic-care/mixed-cardiometabolic/renal-monitoring": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "chronic-care/mixed-cardiometabolic/medication-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "pediatric/infant-well-child/feeding-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "pediatric/infant-well-child/routine-vaccine": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "pediatric/infant-well-child/growth-repeat": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "pediatric/child-well-child/growth-repeat": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "pediatric/child-well-child/routine-vaccine": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "pediatric/child-well-child/development-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "pediatric/adolescent-preventive/bmi-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "pediatric/adolescent-preventive/blood-pressure": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "pediatric/adolescent-preventive/routine-vaccine": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "pediatric/respiratory-acute/no-test": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "pediatric/respiratory-acute/oxygen-saturation": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "pediatric/respiratory-acute/community-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "pediatric/gastrointestinal-acute/hydration": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "pediatric/gastrointestinal-acute/no-test": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "pediatric/gastrointestinal-acute/weight-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "pediatric/minor-injury/wound-care": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "pediatric/minor-injury/sprain-care": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "pediatric/minor-injury/community-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "medication-intensive/reconciliation-stable/two-drug-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "medication-intensive/reconciliation-stable/adherence-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "medication-intensive/reconciliation-stable/stable-dose": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "medication-intensive/dose-change/dose-increase": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "medication-intensive/dose-change/dose-decrease": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "medication-intensive/dose-change/switch-class": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "medication-intensive/dispense-follow-up/on-time-refill": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "medication-intensive/dispense-follow-up/late-refill": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "medication-intensive/dispense-follow-up/pharmacist-review": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "medication-intensive/monitoring-result/renal-monitor": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "medication-intensive/monitoring-result/glucose-monitor": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "medication-intensive/monitoring-result/cbc-monitor": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "medication-intensive/temporary-stop/acute-illness-hold": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "medication-intensive/temporary-stop/procedure-hold": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "medication-intensive/temporary-stop/adverse-effect-hold": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "medication-intensive/polypharmacy-review/deprescribing": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "medication-intensive/polypharmacy-review/interaction-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "medication-intensive/polypharmacy-review/adherence-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "womens-health/preventive-risk-assessment/family-history": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "womens-health/preventive-risk-assessment/average-risk": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "womens-health/preventive-risk-assessment/lifestyle-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "womens-health/age-eligible-screening/mammography": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "womens-health/age-eligible-screening/cervical-screen": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "womens-health/age-eligible-screening/result-review": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "womens-health/gynecologic-symptom/pain-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "womens-health/gynecologic-symptom/bleeding-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "womens-health/gynecologic-symptom/ultrasound-referral": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "womens-health/reproductive-follow-up/contraception-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "womens-health/reproductive-follow-up/preconception-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "womens-health/reproductive-follow-up/nonpregnant-follow-up": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "womens-health/breast-symptom/clinical-exam": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "womens-health/breast-symptom/imaging-referral": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "womens-health/breast-symptom/benign-follow-up": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "womens-health/ordinary-injury/minor-burn": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "womens-health/ordinary-injury/sprain": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "womens-health/ordinary-injury/wound-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "perioperative-surgical/emergency-appendectomy/laparoscopic": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "perioperative-surgical/emergency-appendectomy/open": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "perioperative-surgical/emergency-appendectomy/short-stay": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "perioperative-surgical/elective-procedure/cholecystectomy": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "perioperative-surgical/elective-procedure/hernia-repair": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "perioperative-surgical/elective-procedure/day-surgery": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "perioperative-surgical/short-admission/day-procedure": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "perioperative-surgical/short-admission/overnight-stay": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "perioperative-surgical/short-admission/regional-follow-up": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "perioperative-surgical/postoperative-review/wound-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "perioperative-surgical/postoperative-review/medication-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "perioperative-surgical/postoperative-review/functional-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "perioperative-surgical/procedure-with-medication/anesthesia": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "perioperative-surgical/procedure-with-medication/analgesia": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "perioperative-surgical/procedure-with-medication/antibiotic-prophylaxis": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "perioperative-surgical/referred-surgery/external-summary": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "perioperative-surgical/referred-surgery/regional-referral": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "perioperative-surgical/referred-surgery/community-follow-up": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "oncology/solid-tumor-systemic/toxicity-monitor": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "oncology/solid-tumor-systemic/supportive-care": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "oncology/solid-tumor-systemic/response-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "oncology/solid-tumor-surgical/colon-surgery": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "oncology/solid-tumor-surgical/pathology-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "oncology/solid-tumor-surgical/surveillance": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "oncology/hematologic-treatment/cbc-monitoring": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "oncology/hematologic-treatment/transfusion-support": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "oncology/hematologic-treatment/response-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "oncology/toxicity-monitoring/renal-toxicity": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "oncology/toxicity-monitoring/hepatic-toxicity": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "oncology/toxicity-monitoring/hematologic-toxicity": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "oncology/supportive-care/pain-control": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "oncology/supportive-care/antiemetic-support": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "oncology/supportive-care/anemia-support": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "oncology/surveillance/imaging-surveillance": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "oncology/surveillance/lab-surveillance": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "oncology/surveillance/community-shared-care": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "rare-complex/multi-system-inflammatory/renal-monitoring": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "rare-complex/multi-system-inflammatory/rheumatology-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "rare-complex/multi-system-inflammatory/medication-monitoring": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "rare-complex/neuromuscular-support/respiratory-support": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "rare-complex/neuromuscular-support/mobility-support": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "rare-complex/neuromuscular-support/neurology-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "rare-complex/complex-renal/potassium-monitor": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "rare-complex/complex-renal/nephrology-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "rare-complex/complex-renal/medication-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "rare-complex/rare-metabolic/glucose-monitor": {
+      "status": "observable-predicate",
+      "reason": "Independent emitted-FHIR content, timing and link predicate."
+    },
+    "rare-complex/rare-metabolic/dietetic-review": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    },
+    "rare-complex/rare-metabolic/specialty-follow-up": {
+      "status": "unsupported-no-coverage-credit",
+      "reason": "Existing template captures the parent pathway but does not distinguish this secondary branch with independently verified clinical facts. Exclude secondary-branch coverage/diversity credit; retain parent clinical events."
+    }
+  }
+}

@@ -1,0 +1,5622 @@
+{
+  "hmo": {
+    "urn:uuid:07f92e5d-5312-5d77-b81d-a9d5c63cfcf7": [
+      {
+        "op": "replace",
+        "path": "/code/coding",
+        "value": [
+          {
+            "code": "21522001",
+            "display": "Abdominal pain",
+            "system": "http://snomed.info/sct"
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/meta/tag",
+        "value": [
+          {
+            "code": "4.2.1-s14-1000-normal",
+            "system": "urn:hdp-test-bundle:synthetic-dataset"
+          },
+          {
+            "code": "hmo",
+            "system": "urn:hdp-test-bundle:synthetic-source"
+          },
+          {
+            "code": "womens-health",
+            "system": "urn:hdp-test-bundle:synthetic-archetype"
+          },
+          {
+            "code": "hmo-performed",
+            "system": "urn:hdp-test-bundle:synthetic:capture-class"
+          },
+          {
+            "code": "standard-only",
+            "system": "urn:hdp-test-bundle:synthetic:condition-coding-class"
+          }
+        ]
+      }
+    ],
+    "urn:uuid:0b76f12a-d570-54bb-9dc9-2323b27ba13c": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic active Aspirin order.</div>"
+      }
+    ],
+    "urn:uuid:0f65a03c-8b7f-594b-ad0e-4035964f6751": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication status: stopped.</div>"
+      }
+    ],
+    "urn:uuid:1488dcc1-1a02-56f4-99c1-161c77d2abad": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 104.87
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 67.4
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:20807600-97cb-5a26-953a-004397f2d05e": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 105.4
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 68.08
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:2829ac29-73c0-5c8d-82bc-0c57bb578df8": [
+      {
+        "op": "replace",
+        "path": "/diagnosis",
+        "value": [
+          {
+            "condition": {
+              "display": "Abdominal pain",
+              "identifier": {
+                "system": "urn:hdp-test-bundle:synthetic:hmo:condition",
+                "type": {
+                  "coding": [
+                    {
+                      "code": "strong-id",
+                      "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+                    }
+                  ]
+                },
+                "value": "4d643d47-ed6c-5c4d-9c4d-97867a97756b"
+              },
+              "reference": "urn:uuid:4d643d47-ed6c-5c4d-9c4d-97867a97756b",
+              "type": "Condition"
+            },
+            "use": {
+              "coding": [
+                {
+                  "code": "AD",
+                  "display": "Admission diagnosis",
+                  "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "urn:uuid:2ca63c1e-2257-5faf-bf82-238895a229c1": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 109.73
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 79.43
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:347a0606-782c-5c03-babf-e6957dcb4673": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic active Aspirin order.</div>"
+      }
+    ],
+    "urn:uuid:35b50370-813f-5749-b342-900c34a5d57f": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 132.55
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 83.6
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:360d3e14-8c07-5740-a344-d870b9633f6e": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 97.6
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 61.95
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:3aa982e5-13cd-5e59-bd65-a72923832789": [
+      {
+        "op": "replace",
+        "path": "/code/coding",
+        "value": [
+          {
+            "code": "HDP-COND-FORMAL-ABDOMINAL-PAIN",
+            "display": "Abdominal pain",
+            "system": "urn:hdp-test-bundle:synthetic:condition",
+            "version": "formal-repair-1"
+          }
+        ]
+      }
+    ],
+    "urn:uuid:3d9c59d9-61da-5252-88a0-d8041953a7a0": [
+      {
+        "op": "replace",
+        "path": "/diagnosis",
+        "value": [
+          {
+            "condition": {
+              "display": "Abdominal pain",
+              "identifier": {
+                "system": "urn:hdp-test-bundle:synthetic:hmo:condition",
+                "type": {
+                  "coding": [
+                    {
+                      "code": "strong-id",
+                      "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+                    }
+                  ]
+                },
+                "value": "6e90d577-eda0-50a8-8b7b-3df5bc6081f9"
+              },
+              "reference": "urn:uuid:6e90d577-eda0-50a8-8b7b-3df5bc6081f9",
+              "type": "Condition"
+            },
+            "use": {
+              "coding": [
+                {
+                  "code": "AD",
+                  "display": "Admission diagnosis",
+                  "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "urn:uuid:4118607d-3cf0-5e85-be87-6f839ab9e735": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 107.2
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 77.45
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:41dc6f26-c376-59b7-85bf-7e9be05b4e16": [
+      {
+        "op": "replace",
+        "path": "/diagnosis",
+        "value": [
+          {
+            "condition": {
+              "display": "Abdominal pain",
+              "identifier": {
+                "system": "urn:hdp-test-bundle:synthetic:hmo:condition",
+                "type": {
+                  "coding": [
+                    {
+                      "code": "strong-id",
+                      "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+                    }
+                  ]
+                },
+                "value": "3aa982e5-13cd-5e59-bd65-a72923832789"
+              },
+              "reference": "urn:uuid:3aa982e5-13cd-5e59-bd65-a72923832789",
+              "type": "Condition"
+            },
+            "use": {
+              "coding": [
+                {
+                  "code": "AD",
+                  "display": "Admission diagnosis",
+                  "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "urn:uuid:47d29450-5117-5b5c-a586-1e7992ae8902": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 119.93
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 76.97
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:4d643d47-ed6c-5c4d-9c4d-97867a97756b": [
+      {
+        "op": "replace",
+        "path": "/code/coding",
+        "value": [
+          {
+            "code": "21522001",
+            "display": "Abdominal pain",
+            "system": "http://snomed.info/sct"
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/meta/tag",
+        "value": [
+          {
+            "code": "4.2.1-s14-1000-normal",
+            "system": "urn:hdp-test-bundle:synthetic-dataset"
+          },
+          {
+            "code": "hmo",
+            "system": "urn:hdp-test-bundle:synthetic-source"
+          },
+          {
+            "code": "womens-health",
+            "system": "urn:hdp-test-bundle:synthetic-archetype"
+          },
+          {
+            "code": "hmo-performed",
+            "system": "urn:hdp-test-bundle:synthetic:capture-class"
+          },
+          {
+            "code": "standard-only",
+            "system": "urn:hdp-test-bundle:synthetic:condition-coding-class"
+          }
+        ]
+      }
+    ],
+    "urn:uuid:50f403cb-25a3-52fc-accc-7d9f3f8f7cad": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication status: stopped.</div>"
+      }
+    ],
+    "urn:uuid:53174de8-f59f-5a58-ab6d-019c845f1f15": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 110.88
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 71.91
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:55ef0409-fdbb-531a-8fdd-9cf97bd19397": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 115.63
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 73.93
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:5798f74f-bcac-564e-8b42-9bd9f4131f4f": [
+      {
+        "op": "replace",
+        "path": "/code/coding",
+        "value": [
+          {
+            "code": "21522001",
+            "display": "Abdominal pain",
+            "system": "http://snomed.info/sct"
+          }
+        ]
+      }
+    ],
+    "urn:uuid:5cfebb48-43c0-57b3-968f-5b0bfb516e41": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 95.54
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 60.41
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:5ea3426d-8000-547a-8f82-fa8edeebe16b": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 116.49
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 73.3
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:62356e11-f4f5-59f3-9602-ffb06a8bda83": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 110.62
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 57.04
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:6dad0bfb-ca63-54ed-8fba-192a54e81746": [
+      {
+        "op": "replace",
+        "path": "/diagnosis",
+        "value": [
+          {
+            "condition": {
+              "display": "Abdominal pain",
+              "identifier": {
+                "system": "urn:hdp-test-bundle:synthetic:hmo:condition",
+                "type": {
+                  "coding": [
+                    {
+                      "code": "strong-id",
+                      "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+                    }
+                  ]
+                },
+                "value": "07f92e5d-5312-5d77-b81d-a9d5c63cfcf7"
+              },
+              "reference": "urn:uuid:07f92e5d-5312-5d77-b81d-a9d5c63cfcf7",
+              "type": "Condition"
+            },
+            "use": {
+              "coding": [
+                {
+                  "code": "AD",
+                  "display": "Admission diagnosis",
+                  "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "urn:uuid:6e90d577-eda0-50a8-8b7b-3df5bc6081f9": [
+      {
+        "op": "replace",
+        "path": "/code/coding",
+        "value": [
+          {
+            "code": "21522001",
+            "display": "Abdominal pain",
+            "system": "http://snomed.info/sct"
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/meta/tag",
+        "value": [
+          {
+            "code": "4.2.1-s14-1000-normal",
+            "system": "urn:hdp-test-bundle:synthetic-dataset"
+          },
+          {
+            "code": "hmo",
+            "system": "urn:hdp-test-bundle:synthetic-source"
+          },
+          {
+            "code": "womens-health",
+            "system": "urn:hdp-test-bundle:synthetic-archetype"
+          },
+          {
+            "code": "hmo-performed",
+            "system": "urn:hdp-test-bundle:synthetic:capture-class"
+          },
+          {
+            "code": "standard-only",
+            "system": "urn:hdp-test-bundle:synthetic:condition-coding-class"
+          }
+        ]
+      }
+    ],
+    "urn:uuid:6f68024a-89aa-5072-9a65-47f6cb8f2213": [
+      {
+        "op": "replace",
+        "path": "/diagnosis",
+        "value": [
+          {
+            "condition": {
+              "display": "Abdominal pain",
+              "identifier": {
+                "system": "urn:hdp-test-bundle:synthetic:hmo:condition",
+                "type": {
+                  "coding": [
+                    {
+                      "code": "strong-id",
+                      "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+                    }
+                  ]
+                },
+                "value": "6e90d577-eda0-50a8-8b7b-3df5bc6081f9"
+              },
+              "reference": "urn:uuid:6e90d577-eda0-50a8-8b7b-3df5bc6081f9",
+              "type": "Condition"
+            },
+            "use": {
+              "coding": [
+                {
+                  "code": "AD",
+                  "display": "Admission diagnosis",
+                  "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "urn:uuid:701ca6d5-758f-53d8-a361-cd38e8da60db": [
+      {
+        "op": "replace",
+        "path": "/diagnosis",
+        "value": [
+          {
+            "condition": {
+              "display": "Abdominal pain",
+              "identifier": {
+                "system": "urn:hdp-test-bundle:synthetic:hmo:condition",
+                "value": "event-8d8f8949413f6b04baf795be-encounter-indication"
+              },
+              "type": "Condition"
+            },
+            "use": {
+              "coding": [
+                {
+                  "code": "AD",
+                  "display": "Admission diagnosis",
+                  "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/reasonCode",
+        "value": [
+          {
+            "coding": [
+              {
+                "code": "21522001",
+                "display": "Abdominal pain",
+                "system": "http://snomed.info/sct"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/reasonReference",
+        "value": [
+          {
+            "display": "Abdominal pain",
+            "identifier": {
+              "system": "urn:hdp-test-bundle:synthetic:hmo:condition",
+              "value": "event-8d8f8949413f6b04baf795be-encounter-indication"
+            },
+            "type": "Condition"
+          }
+        ]
+      }
+    ],
+    "urn:uuid:71400794-74c8-54da-b49c-d11d9532cfbe": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 125.42
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 75.67
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:71bb58f2-beed-57bd-b077-5ddb0c925c91": [
+      {
+        "op": "replace",
+        "path": "/diagnosis",
+        "value": [
+          {
+            "condition": {
+              "display": "Abdominal pain",
+              "identifier": {
+                "system": "urn:hdp-test-bundle:synthetic:hmo:condition",
+                "type": {
+                  "coding": [
+                    {
+                      "code": "strong-id",
+                      "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+                    }
+                  ]
+                },
+                "value": "8262711f-92bc-5e75-98dc-608d465b1b12"
+              },
+              "reference": "urn:uuid:8262711f-92bc-5e75-98dc-608d465b1b12",
+              "type": "Condition"
+            },
+            "use": {
+              "coding": [
+                {
+                  "code": "AD",
+                  "display": "Admission diagnosis",
+                  "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "urn:uuid:72a06efa-af67-5ae1-96a3-f3d83bb52675": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 109.33
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 70.75
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:733823cc-6d77-5fba-9b35-6db6e18aaa52": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic active Aspirin order.</div>"
+      }
+    ],
+    "urn:uuid:76911d90-7d08-5c8e-8228-d91c8b3b69a6": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 105.47
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 67.85
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:7851388d-a56f-520b-8b9f-aa2dc4d8ea5b": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 131.39
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 82.94
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:81b5bb6e-19c5-551a-b86b-4b7caa8d4ec8": [
+      {
+        "op": "replace",
+        "path": "/diagnosis",
+        "value": [
+          {
+            "condition": {
+              "display": "Abdominal pain",
+              "identifier": {
+                "system": "urn:hdp-test-bundle:synthetic:hmo:condition",
+                "value": "event-57763ed076573348534a898b-encounter-indication"
+              },
+              "type": "Condition"
+            },
+            "use": {
+              "coding": [
+                {
+                  "code": "AD",
+                  "display": "Admission diagnosis",
+                  "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/reasonCode",
+        "value": [
+          {
+            "coding": [
+              {
+                "code": "21522001",
+                "display": "Abdominal pain",
+                "system": "http://snomed.info/sct"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/reasonReference",
+        "value": [
+          {
+            "display": "Abdominal pain",
+            "identifier": {
+              "system": "urn:hdp-test-bundle:synthetic:hmo:condition",
+              "value": "event-57763ed076573348534a898b-encounter-indication"
+            },
+            "type": "Condition"
+          }
+        ]
+      }
+    ],
+    "urn:uuid:8262711f-92bc-5e75-98dc-608d465b1b12": [
+      {
+        "op": "replace",
+        "path": "/code/coding",
+        "value": [
+          {
+            "code": "21522001",
+            "display": "Abdominal pain",
+            "system": "http://snomed.info/sct"
+          }
+        ]
+      }
+    ],
+    "urn:uuid:860a59bf-2c04-58d0-86da-d58e90d9f824": [
+      {
+        "op": "replace",
+        "path": "/code/coding",
+        "value": [
+          {
+            "code": "21522001",
+            "display": "Abdominal pain",
+            "system": "http://snomed.info/sct"
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/meta/tag",
+        "value": [
+          {
+            "code": "4.2.1-s14-1000-normal",
+            "system": "urn:hdp-test-bundle:synthetic-dataset"
+          },
+          {
+            "code": "hmo",
+            "system": "urn:hdp-test-bundle:synthetic-source"
+          },
+          {
+            "code": "womens-health",
+            "system": "urn:hdp-test-bundle:synthetic-archetype"
+          },
+          {
+            "code": "gynecologic-symptom",
+            "system": "urn:hdp-test-bundle:synthetic-pathway-variant"
+          },
+          {
+            "code": "external-result",
+            "system": "urn:hdp-test-bundle:synthetic-capture-variant"
+          },
+          {
+            "code": "standard-only",
+            "system": "urn:hdp-test-bundle:synthetic:condition-coding-class"
+          }
+        ]
+      }
+    ],
+    "urn:uuid:8f005dc3-5f9b-5016-9322-f31f3e8128ac": [
+      {
+        "op": "replace",
+        "path": "/diagnosis",
+        "value": [
+          {
+            "condition": {
+              "display": "Abdominal pain",
+              "identifier": {
+                "system": "urn:hdp-test-bundle:synthetic:hmo:condition",
+                "type": {
+                  "coding": [
+                    {
+                      "code": "strong-id",
+                      "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+                    }
+                  ]
+                },
+                "value": "5798f74f-bcac-564e-8b42-9bd9f4131f4f"
+              },
+              "reference": "urn:uuid:5798f74f-bcac-564e-8b42-9bd9f4131f4f",
+              "type": "Condition"
+            },
+            "use": {
+              "coding": [
+                {
+                  "code": "AD",
+                  "display": "Admission diagnosis",
+                  "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "urn:uuid:9c8783ca-c77f-5453-94fe-6a64f4129236": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 101.77
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 65.08
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:9d051f15-504d-53e3-b706-f3ad8244c440": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication status: stopped.</div>"
+      }
+    ],
+    "urn:uuid:9e47698b-6944-5e4f-933f-f385e00808fa": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 118.33
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 72.1
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:9f6b47b4-fc30-5f44-94be-f18771440fa6": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 120.96
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 72.91
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:9fb37cb8-5147-541e-97de-6932bee1752f": [
+      {
+        "op": "replace",
+        "path": "/diagnosis",
+        "value": [
+          {
+            "condition": {
+              "display": "Abdominal pain",
+              "identifier": {
+                "system": "urn:hdp-test-bundle:synthetic:hmo:condition",
+                "value": "event-8c8fc4a44d398da012f5d1a3-encounter-indication"
+              },
+              "type": "Condition"
+            },
+            "use": {
+              "coding": [
+                {
+                  "code": "AD",
+                  "display": "Admission diagnosis",
+                  "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/reasonCode",
+        "value": [
+          {
+            "coding": [
+              {
+                "code": "21522001",
+                "display": "Abdominal pain",
+                "system": "http://snomed.info/sct"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/reasonReference",
+        "value": [
+          {
+            "display": "Abdominal pain",
+            "identifier": {
+              "system": "urn:hdp-test-bundle:synthetic:hmo:condition",
+              "value": "event-8c8fc4a44d398da012f5d1a3-encounter-indication"
+            },
+            "type": "Condition"
+          }
+        ]
+      }
+    ],
+    "urn:uuid:a6124fb6-1cc3-5620-b90d-c5993cd60d1f": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 109.03
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 70.53
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:b172e171-f2fa-53f0-830a-0e91582ddddd": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 133.46
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 84.12
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:b6b4f92a-c2ec-58cd-8a77-43e64612b8a6": [
+      {
+        "op": "replace",
+        "path": "/diagnosis",
+        "value": [
+          {
+            "condition": {
+              "display": "Abdominal pain",
+              "identifier": {
+                "system": "urn:hdp-test-bundle:synthetic:hmo:condition",
+                "value": "event-1bbe41c36f3c9e5a8cbac425-encounter-indication"
+              },
+              "type": "Condition"
+            },
+            "use": {
+              "coding": [
+                {
+                  "code": "AD",
+                  "display": "Admission diagnosis",
+                  "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/reasonCode",
+        "value": [
+          {
+            "coding": [
+              {
+                "code": "21522001",
+                "display": "Abdominal pain",
+                "system": "http://snomed.info/sct"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/reasonReference",
+        "value": [
+          {
+            "display": "Abdominal pain",
+            "identifier": {
+              "system": "urn:hdp-test-bundle:synthetic:hmo:condition",
+              "value": "event-1bbe41c36f3c9e5a8cbac425-encounter-indication"
+            },
+            "type": "Condition"
+          }
+        ]
+      }
+    ],
+    "urn:uuid:b6e38c4b-5295-5cd8-ad09-0b807d5062c2": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 110.06
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 71.29
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:c136d1a6-83b7-5e69-94f9-87a178cefb09": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 105.77
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 68.08
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:c6d27280-f643-5040-b10e-e3a43671f1ae": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 118.01
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 75.29
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:cf5c467c-4417-59ab-8ca1-c2653eade353": [
+      {
+        "op": "replace",
+        "path": "/diagnosis",
+        "value": [
+          {
+            "condition": {
+              "display": "Abdominal pain",
+              "identifier": {
+                "system": "urn:hdp-test-bundle:synthetic:hmo:condition",
+                "type": {
+                  "coding": [
+                    {
+                      "code": "strong-id",
+                      "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+                    }
+                  ]
+                },
+                "value": "07f92e5d-5312-5d77-b81d-a9d5c63cfcf7"
+              },
+              "reference": "urn:uuid:07f92e5d-5312-5d77-b81d-a9d5c63cfcf7",
+              "type": "Condition"
+            },
+            "use": {
+              "coding": [
+                {
+                  "code": "AD",
+                  "display": "Admission diagnosis",
+                  "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "urn:uuid:d524238a-f18d-58ec-b9f2-01f88e9a8233": [
+      {
+        "op": "replace",
+        "path": "/diagnosis",
+        "value": [
+          {
+            "condition": {
+              "display": "Abdominal pain",
+              "identifier": {
+                "system": "urn:hdp-test-bundle:synthetic:hmo:condition",
+                "value": "event-93e0240c7ff7862aae09282c-encounter-indication"
+              },
+              "type": "Condition"
+            },
+            "use": {
+              "coding": [
+                {
+                  "code": "AD",
+                  "display": "Admission diagnosis",
+                  "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/reasonCode",
+        "value": [
+          {
+            "coding": [
+              {
+                "code": "21522001",
+                "display": "Abdominal pain",
+                "system": "http://snomed.info/sct"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/reasonReference",
+        "value": [
+          {
+            "display": "Abdominal pain",
+            "identifier": {
+              "system": "urn:hdp-test-bundle:synthetic:hmo:condition",
+              "value": "event-93e0240c7ff7862aae09282c-encounter-indication"
+            },
+            "type": "Condition"
+          }
+        ]
+      }
+    ],
+    "urn:uuid:d9d2ccd0-d45e-5687-a869-2752663a571a": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 97.2
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 61.65
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:da9f7983-f470-5e96-b13b-0d10c5ab981a": [
+      {
+        "op": "replace",
+        "path": "/diagnosis",
+        "value": [
+          {
+            "condition": {
+              "display": "Abdominal pain",
+              "identifier": {
+                "system": "urn:hdp-test-bundle:synthetic:hmo:condition",
+                "value": "event-1004cc3d86aaf457489d65ec-encounter-indication"
+              },
+              "type": "Condition"
+            },
+            "use": {
+              "coding": [
+                {
+                  "code": "AD",
+                  "display": "Admission diagnosis",
+                  "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/reasonCode",
+        "value": [
+          {
+            "coding": [
+              {
+                "code": "21522001",
+                "display": "Abdominal pain",
+                "system": "http://snomed.info/sct"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/reasonReference",
+        "value": [
+          {
+            "display": "Abdominal pain",
+            "identifier": {
+              "system": "urn:hdp-test-bundle:synthetic:hmo:condition",
+              "value": "event-1004cc3d86aaf457489d65ec-encounter-indication"
+            },
+            "type": "Condition"
+          }
+        ]
+      }
+    ],
+    "urn:uuid:e6efd764-868d-50b9-a435-9486c10e8292": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 113.9
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 73.16
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:ebffad0e-dea1-5199-b75c-624ccc6f4458": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 100.35
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 64.01
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:fe513a5f-654e-5bbe-a105-f1df26be7b57": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 105.63
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 67.97
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:fe69f491-11af-5322-92dc-cd66fa54e88e": [
+      {
+        "op": "replace",
+        "path": "/component",
+        "value": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 110.52
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure",
+                  "system": "http://loinc.org"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "code": "mm[Hg]",
+              "system": "http://unitsofmeasure.org",
+              "unit": "mmHg",
+              "value": 71.64
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic blood pressure measurement; pediatric interpretation requires age and clinical context.</div>"
+      }
+    ],
+    "urn:uuid:fed18ead-b9a5-5ec7-8284-2ca538edc2ad": [
+      {
+        "op": "replace",
+        "path": "/diagnosis",
+        "value": [
+          {
+            "condition": {
+              "display": "Abdominal pain",
+              "identifier": {
+                "system": "urn:hdp-test-bundle:synthetic:hmo:condition",
+                "type": {
+                  "coding": [
+                    {
+                      "code": "strong-id",
+                      "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+                    }
+                  ]
+                },
+                "value": "4d643d47-ed6c-5c4d-9c4d-97867a97756b"
+              },
+              "reference": "urn:uuid:4d643d47-ed6c-5c4d-9c4d-97867a97756b",
+              "type": "Condition"
+            },
+            "use": {
+              "coding": [
+                {
+                  "code": "AD",
+                  "display": "Admission diagnosis",
+                  "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "hospital-a": {
+    "urn:uuid:00781972-f6fe-50c6-aef1-860aed74dc7a": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:013caa04-4d1e-5336-87a5-335f1a98b759": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:02c4823d-1fd4-507f-8cd5-e4a95c3c72ed": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:03bd7344-4e2a-5dcc-8803-1e409eff03e7": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:073beb85-888e-5f4f-a20b-e839587996e9": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:077171ab-2e02-5a7e-a99f-a7de4dab380f": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:07b596ba-2179-54cf-a068-4792e0c07278": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:0aa52367-a635-5248-8e77-d62d5056779c": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:0afca8de-f940-5675-ade6-a18d9493f390": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:0bb41372-44c0-5ad4-95f6-3ab1b5ec0816": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:0bf2d262-f7ff-5abb-b817-14b35d767198": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:0c33691e-10e3-59e2-8660-cfe7ee082141": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:0d8b5c46-351d-5906-930a-21a287cf8237": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:0ec00588-6fb0-5363-ae93-58383e6f73fc": [
+      {
+        "op": "replace",
+        "path": "/note",
+        "value": [
+          {
+            "text": "Resolved appendicitis history; a later appendectomy is recorded in the linked procedure."
+          }
+        ]
+      }
+    ],
+    "urn:uuid:10d1453c-3711-5dc1-8c6c-774ba4f4eb35": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:1207158b-13fd-5976-b976-930b66fb17f7": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:1579173d-d0cd-54be-8313-39d7c62f8810": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:179f62c9-eae8-5cfc-a3cf-56f85647b1c5": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:19524ab2-8b6c-5890-b7db-af2f6674aa56": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:1a2f3b77-3fc8-56a9-a87c-17ac1032c7f8": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:1bba76c4-17c1-52fb-98fe-34d9f456522a": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:1c3cb555-091a-5ef1-942e-5c1934283c65": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:20c74405-4cd4-5a38-a21e-e28e86121145": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:21bde53e-c8d5-5ea5-a785-752420e638e2": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:231c6848-4d4c-5f29-a36c-33758c786787": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:2418fb2a-315c-518f-967f-4f20c574491c": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:248c01f0-3a89-5013-8363-0c93a75ceced": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:25061ad5-91fa-55fe-9593-42b2bba9c7d7": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:27267372-0174-5a15-9eef-76523663cf16": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:272e725f-e1de-53f9-8207-c5f91fac237d": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:283b1cfd-200e-5165-87a8-cb7a14ac3306": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:2c20ca92-6922-580e-b963-753a207874ec": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:2c6d0ce6-4443-5b4d-b019-b9c968d1625f": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:2d242088-98aa-5e6b-85ba-f1ec17275b6e": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:2d53c13a-a384-56ac-a4d3-7902569158a9": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:2d53c635-1bdf-58d9-94c4-e9163ead8343": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:2d55fef5-e0fe-5538-8501-a9ba59b0daa7": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:2e5c6e87-ed1f-50cf-a4c9-a3a689e19612": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:2e736331-c065-5bf3-b0d5-f74e4c0ca893": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:2fb29685-210b-5dcb-b741-b4130363fb7f": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:30088b35-763d-5805-8663-e7a3fa400012": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:323ae3b9-869c-5601-81ba-78a0e16ba693": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:33924a42-8dcc-596e-823d-6c741a9a978b": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:347f9719-b2c2-5bac-9355-574192cdd7f3": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:35285454-c7fb-5fb0-9fcc-4f7ea23be192": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:3597954c-a26c-5b3a-a6f0-209c23707fb9": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:35b9fddd-313c-5670-9501-bd71e2a59660": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:369b56aa-a73a-5d17-b105-50fba9382118": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:37ca5137-c234-5d65-84f0-350efff9fb46": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:381d45f9-3715-56cd-8990-a65809d239ce": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:38f68948-21ff-5df2-92d4-18f7ea3b80b9": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:393df673-6de8-5b39-83cd-0ebcf994eabd": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:395cc8a4-fd2d-5b8d-90fe-04b541f683ba": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:3b00fb79-b318-5a62-b570-bf8598376f5c": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:3b82acc7-28fa-52c5-bda9-8be843db34d8": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:3da151d8-63da-5da9-8633-b7f88e9b6c39": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:3daf2a43-4120-5638-a796-923c5bf73ad4": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:3f144aff-3c47-5548-ab61-0f9c1d38d84a": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:4008a474-fb01-5155-8bd0-e84259b27877": [
+      {
+        "op": "replace",
+        "path": "/code/coding",
+        "value": [
+          {
+            "code": "21522001",
+            "display": "Abdominal pain",
+            "system": "http://snomed.info/sct"
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/meta/tag",
+        "value": [
+          {
+            "code": "4.2.1-s14-1000-normal",
+            "system": "urn:hdp-test-bundle:synthetic-dataset"
+          },
+          {
+            "code": "hospital-a",
+            "system": "urn:hdp-test-bundle:synthetic-source"
+          },
+          {
+            "code": "womens-health",
+            "system": "urn:hdp-test-bundle:synthetic-archetype"
+          },
+          {
+            "code": "gynecologic-symptom",
+            "system": "urn:hdp-test-bundle:synthetic-pathway-variant"
+          },
+          {
+            "code": "pathology-workup",
+            "system": "urn:hdp-test-bundle:synthetic-capture-variant"
+          },
+          {
+            "code": "standard-only",
+            "system": "urn:hdp-test-bundle:synthetic:condition-coding-class"
+          }
+        ]
+      }
+    ],
+    "urn:uuid:40f6a160-5f27-551e-8a06-d287fc493eb1": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:4163b5b5-ae8b-5e2d-8edc-0007b762a278": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:4178e11f-0484-571f-b9d4-05ee876cb6bb": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:4201ea19-3fff-5d56-ab45-ad39b784b81e": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:4258ced6-8822-555e-b7b1-be3628f5f76e": [
+      {
+        "op": "replace",
+        "path": "/note",
+        "value": [
+          {
+            "text": "Resolved appendicitis history; a later appendectomy is recorded in the linked procedure."
+          }
+        ]
+      }
+    ],
+    "urn:uuid:4477a248-25fc-5115-a519-ec817d734602": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:452b6555-c393-55aa-b8e3-d66da5b49b80": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:45b2cbd2-d84f-5b18-9567-fa1cf6b5d56d": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:4631e6ed-37df-5b34-885a-06136747e64a": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:48760a36-fca3-52c0-80e6-ea81d5dd220a": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:4c71cdfd-ffc6-57fb-a539-00e5bf3113a0": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:4ddb612f-7657-5af6-8d17-7b9d36f50946": [
+      {
+        "op": "replace",
+        "path": "/note",
+        "value": [
+          {
+            "text": "Resolved appendicitis history; a later appendectomy is recorded in the linked procedure."
+          }
+        ]
+      }
+    ],
+    "urn:uuid:4eb77e94-e7fb-5918-a55d-09c05a3276cf": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:4f89ab12-28ac-5998-84a4-19a4e0cabfee": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:51c92de2-2a1c-5883-ad00-01a5ccaec954": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:53deb35f-2791-57f1-9b3b-c9f2d6a7a2ed": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:543f3e66-d803-5f8e-acd4-90197999f7d3": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:5565fcda-abb6-58b6-98e0-b065cfdc262d": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:562cb338-5a88-55fc-984b-0e99fc658198": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:58d9ba8f-a936-5c4b-985b-af6cdd362ce9": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:5a2c3925-61ee-51f2-8fa8-03cc49c71545": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:5a98822f-050c-5750-9975-5c84b224f3de": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:5b11f3a0-9408-55d3-b01a-0a1fce518b09": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:5c021b44-1fb6-5e84-9af8-9b7b9c26ad10": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:6026018a-1ee5-504a-b546-f68bfb448133": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:62029487-7e90-5fbf-afdb-084c56c9a6d2": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:6285812d-31ae-599b-8a29-9fec921f0d8d": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:6365bd5d-6017-5859-863b-68ef1651feb6": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:6466eb88-eade-5a03-987e-4d885d5f3204": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:66a9673e-b18e-55e2-9a1a-b6cd42efebbd": [
+      {
+        "op": "replace",
+        "path": "/note",
+        "value": [
+          {
+            "text": "Resolved appendicitis history; a later appendectomy is recorded in the linked procedure."
+          }
+        ]
+      }
+    ],
+    "urn:uuid:6786a69a-a762-5cfa-9f40-37846f62c356": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:68136205-aa92-570c-a6dc-fe9b4a535112": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:6941dd3c-27c9-5ea9-ad13-e1fa0a301f67": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:6944cd1f-d712-5568-990c-d2117f03323b": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:6b02db9a-d8a8-5c18-aea6-4b95143ab7bb": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:6b9ba4a3-0cdf-584a-9685-e94338ebdcd4": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:6ba7cb56-0fc0-5585-b449-3ca7fa96e76d": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:6c1dae67-4f07-5e9c-ada0-6537d0b1c544": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:6c678285-c184-512e-bffb-0c72e7f2d6b2": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:6d1daa70-3ce5-5070-a289-718c30ade968": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:6ef13648-3263-588a-835c-4e0620aa4aee": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:6f4b8fe5-4ac1-5217-baf0-c45de496202e": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:75e0a35d-a8e3-5675-9742-40e94cc9f558": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:790338a0-5f88-5489-a720-12f67855c9fa": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:7b0a7766-dfda-593e-9e16-7f8846b5ffb2": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:7b74c2d7-4d4b-5938-94be-b5df44b170da": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:7bae6fec-2474-5a59-986c-b23318e38431": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:7c1c0a7f-902e-55be-8f54-25080e814e1e": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:7d9954e6-f963-5e1e-98fd-6a538de97280": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:7ffecdad-b944-5bb4-893a-a7db1ac4d196": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:806e475a-4c61-5563-a237-f164b8792003": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:810edc2f-e0f2-5fbc-8f40-d387e5055cf1": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:814e037d-9cd3-5170-922d-3ad119f6c65a": [
+      {
+        "op": "replace",
+        "path": "/note",
+        "value": [
+          {
+            "text": "Resolved appendicitis history; a later appendectomy is recorded in the linked procedure."
+          }
+        ]
+      }
+    ],
+    "urn:uuid:8193d8c5-bc8f-5142-bb33-04b0af5eaf34": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:859c2006-49f7-5738-a5df-d0f9c34abac4": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:865ca684-7d93-5483-ae5a-d27754db346e": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:86969a41-4b69-5e93-aab1-31d7bb08e5b1": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:87cbf0a3-1c3a-5547-ad42-330f92b0b1e2": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:8b00457c-be05-5aea-bffe-594a67185853": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:8b235dbf-e13b-5d42-b462-0aff7b089337": [
+      {
+        "op": "replace",
+        "path": "/note",
+        "value": [
+          {
+            "text": "Resolved appendicitis history; a later appendectomy is recorded in the linked procedure."
+          }
+        ]
+      }
+    ],
+    "urn:uuid:8db75a29-458a-5dd0-99fb-8f4f2f831901": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:8f40320e-e624-5a2e-bf85-55f196ad0e75": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:8fb5e22a-c32e-5cdf-bc8b-55ddea7e2f3a": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:8ff98d66-7050-5e1b-8a78-8c55fcfb1ec7": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:905e7624-2f26-5d5b-a709-0f1a32e15b16": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:907107c9-c041-5236-a0c7-ab820a0f532a": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:9444cd6f-98ae-58c8-908a-df296fc635e3": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:960da44f-b366-5a4d-b308-86f3abd9bfa8": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:976f9e7a-9c73-5694-b9c8-ebf74a27cfff": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:9c01c1df-08f1-519e-9873-678664351ed1": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:9fe4efb2-3a2f-5721-80e3-8e52f3ebba6d": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:a0f0ad4b-28c0-5449-b51a-f037b946f5d5": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:a10c75cd-acab-5a91-8d4a-58958c9d7c21": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:a2426988-49f7-5b32-bbe7-34eba736b51c": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:a46c521b-f556-5357-80de-5c59365d917c": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:a50c8667-8d57-5cff-bf08-83c8d7018621": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:a5a6f1eb-aef0-5514-a555-c54cb2fa24a3": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:a7f3f43c-8ebd-594f-be79-2588ab76f66d": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:acfadb82-9c75-59ae-8fd4-b99d79a13f81": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:af3a04ad-d187-52e0-9785-a1e71066d2fb": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:af4af978-5f70-5724-bc7a-51cc0c2e7e01": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:afed084a-c1c9-5633-be7d-6ca344399469": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:b1084ec0-ad45-595b-b7eb-a829a8abb7bc": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:b10c3bed-a70d-5246-a1f4-8339f54c1e66": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:b140420d-e070-5f52-a56a-dcb01425c770": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:b1a91709-6c92-5688-bfed-71057d93a502": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:b1d2f5fe-46c0-5084-8b74-59d6406cbc52": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:b3cabd20-bbde-5e2c-ab0e-af6cbf7b89d0": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:b40e70dd-e9f3-5c4b-ac94-49f47b0078f3": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:b49bc131-53b7-5d26-b320-f6431307718f": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:b4df2706-f675-57d3-aab4-4ffa5c015a8e": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:b51f8203-dce1-528f-a547-cd966d7d4bc1": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:b75d57d2-c735-509d-9478-c99a3b23d4ca": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:b984fc11-917e-5047-956e-45d3af1b430b": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:ba0d909c-6a4c-5123-bf57-820e8365fddb": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:ba8efde7-ccf9-5647-8089-be1e01419549": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:bb2ae849-6ede-5651-99a8-32e781231c57": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:bb683629-8895-5160-bf14-f9b666adcb2e": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:bdefdad4-5c8d-5938-8f49-2810a8d889a0": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:be4c062e-733e-59d6-9e10-e211473bd62a": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:bead2051-7437-5cbc-8de9-b9e29bd2cfc5": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:bfc3cdc3-4e26-5d29-8893-52eeb0c3e2bc": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:c24d287a-a822-5c37-800c-f51247936f23": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:c2c250c6-1e3c-5945-aea3-9504fa49c278": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:c3ef12ce-f4a2-5102-992d-bb97835d3704": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:c4693199-5cac-5f7e-9c40-42049a451b82": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:c55416e0-5618-53f8-9826-49940d5f68a3": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:c628cdb1-0845-597b-9610-a5de00d31abd": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:c8b7d001-1ddf-5277-a9d4-eb51f6122b91": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:c8fd4233-e968-5ddf-bba3-beed9f02340b": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:c9236b18-dfa5-5b8c-ac89-ad9f12ba5025": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:c9731774-fdb9-5182-bfc3-607ee3c3585f": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:c9af243f-12b2-561d-ba51-76950b832546": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:ce971bff-5115-5710-924e-4ed0e5afd9ce": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:cf11cbe5-52b8-51ba-bd84-9863f4990170": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:cff7f120-6f42-5d21-8d07-191c5cdcb4f7": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:d1549cbc-eee0-5606-a65e-76985305572b": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:d45793ea-95d4-54e5-ab56-5c71926e496b": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:d51d07cc-2464-5b02-a329-3488b2f7dc6f": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:d623250c-230c-5050-8f04-5dbf27e63095": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:d68ba7c4-842e-5281-bb1d-a755d85eba43": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:d7767223-4a5d-5f97-bb1b-b175d3f66bbc": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:d8830119-562b-5d2a-977f-5a12d73ed9e5": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:da3d41f2-41c3-533e-a2b0-60d14c94827e": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:da4dbcd4-0ac3-5cd5-8a62-6f739a2c622b": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:dcc71ee6-1433-5ae5-8b94-8bf7831b7b31": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:dce5e386-e4bd-58c4-9f54-b3bf436b7c72": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:dd0e0ff3-094c-5670-8fe2-df1838efcc15": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:dded60c5-79fb-52bc-a95a-f1bc1c434b81": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:deddef0a-be89-567a-b16a-17efb0e77bdf": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:e017ae1e-38ce-5721-af09-cb91c7f7da3e": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:e4b91ff5-5e2d-5a9d-a72f-bb7d87f756d1": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:e51d20d8-49a6-5d17-9270-2b0f14dc1e96": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:e56fb7c5-ed76-503f-9615-173327dfa999": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:e57b7b81-9858-5594-8e92-8925916adcef": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:e5a589d5-c984-502a-80f9-65830730bd33": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:e6bd636c-5b9c-5692-8c92-bb0bc4370225": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:e706832c-c5ee-5d9d-936a-6cce76b635d4": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:e79216c5-523c-52c2-91d3-e2aeebd41b0f": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:e79b4818-eeee-57e8-b8df-430f2c2a03a6": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:ead26bc9-465d-53d4-8ef2-95e1184c0258": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:ee205b4d-6986-50cb-b8ab-fc3f2b6ab9c4": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:ef710792-c215-5737-9c2a-fe086e0b39c6": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:f13a7bb5-26e6-5509-ab11-72706a20ce38": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:f1e7357a-70ea-523e-9dab-bd818bb50d1b": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:f48bc535-47d4-552c-9a9b-dc98ed86f6c8": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:f4df372c-4d05-5e01-84da-0c2e1cb5d353": [
+      {
+        "op": "replace",
+        "path": "/note",
+        "value": [
+          {
+            "text": "Resolved appendicitis history; a later appendectomy is recorded in the linked procedure."
+          }
+        ]
+      }
+    ],
+    "urn:uuid:f50344fa-8163-5e17-8df7-57c32f793838": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:f55d8e64-b16f-5bc2-91c4-8649c51ce008": [
+      {
+        "op": "replace",
+        "path": "/code/coding",
+        "value": [
+          {
+            "code": "21522001",
+            "display": "Abdominal pain",
+            "system": "http://snomed.info/sct"
+          }
+        ]
+      }
+    ],
+    "urn:uuid:f77529a0-cf6f-5b9e-8614-6ee5d395e5dc": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:f78eed40-eec1-52e2-9876-12c02c3369b2": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:f8996cfc-d56a-5fce-bdfe-4cf2ac225266": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:f982bddd-29a4-57bf-a819-64b72da9549d": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:f9d3142e-2037-5862-8192-791e219e3583": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:f9f73ac3-5b4a-52c4-83e8-6efaeedcc9ac": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:fbe6d27a-e791-5462-85db-ee90ffbbbfb2": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:fdc11047-ca4b-5085-8a4a-a9320763ea87": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:fde4710b-6eea-5d38-a9b8-c27368688182": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:fe148c7d-e856-5f25-99c8-06c3b373e0ee": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ],
+    "urn:uuid:fe4e9403-3819-5482-a2cf-7ee85edc644b": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Hemoglobin [Mass/volume] in Blood.</div>"
+      }
+    ]
+  },
+  "hospital-b": {
+    "urn:uuid:01a938f9-da6d-5e9c-8c85-8bd655fda017": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:01e159b7-7638-5536-afe5-59a86b4d2e81": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:03ea900d-20ae-576b-8004-448cebc387d2": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:04966db2-9316-514a-840b-3e2a94841b45": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:04dcb0fb-6996-57b1-ae41-0d897d678b91": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:0612089e-177d-5050-916a-0d8e6f620c30": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:0619196b-d486-5418-8ff9-f74b4e51b075": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:07b50fd9-0756-5873-9b5a-dc0582c6bed7": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:083c6882-afbf-5884-8539-38f4c0b78e86": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:096da01e-00ae-5139-9163-1b94e60d16ac": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:0e13b19f-d73c-51c6-8784-ebed5075ecc1": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:102b6984-067b-5a6f-aff4-9ae7e933ad9b": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:10447b94-0bff-57af-97c9-4c3df037478f": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:12b8135a-6643-5951-9c3c-a702b918aaf1": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:13492fae-50f4-5a9e-a80e-aba856a066dc": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:13b78a84-d14e-50bb-b2c2-ed7b4f2d31a4": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:152b9e63-38c5-5ae7-836e-28609593c2fa": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:15de5e50-0efd-5246-aa31-575355389221": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic completed Spironolactone order.</div>"
+      }
+    ],
+    "urn:uuid:163017ae-ff79-5ed1-9f6b-edcb5d74837c": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:174257ac-973f-5814-846d-3bb2d1a5e1b7": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:18495bde-5e36-522e-be26-6a3b275f5649": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:1a31385c-b8f5-5016-aae5-5df5bf3e6f3d": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:1b3c37ad-d594-509e-b447-05c2a67b86b0": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:1c72a1c9-b572-523c-a78e-565f9998c10f": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:1c90a841-6c21-523a-bc43-f7b26f19bfc7": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication status: completed.</div>"
+      }
+    ],
+    "urn:uuid:1ca96bd6-f886-5656-848e-0e99eab3c768": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:1cd1d012-6c75-5673-9261-e9c96c0adaf1": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:1d3a5d8d-16ce-5769-af80-a031050234e3": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:1dba2a77-581d-5fcb-9cbb-e6e5628d95ab": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:1f49f52e-919f-57b7-bf96-260d0a7f7a83": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:1f6953fe-c5c6-514d-928c-f1b26b1ce082": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:21442da3-e783-5887-9ec0-2367e786a2d7": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:21883292-4371-5628-aff0-8849f7676cfc": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication status: completed.</div>"
+      }
+    ],
+    "urn:uuid:231c87e1-8b54-5896-b3d0-55c5234e9c45": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:245fea6e-dc2f-5a30-8114-6a94c044db6c": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:2488a76b-8919-54f3-b37a-8dedc9fdb53c": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:253729ae-b4a3-543e-a734-77e5ba23def3": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:25b2371b-ac15-5549-8248-e14a988564dc": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:25f369cb-cbeb-55af-b8bd-dae6e2e7690a": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:288996ca-9315-5c9e-a1c4-8bbfe8b1b0ea": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:29aa0b51-9984-5342-a8df-53019d813721": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:2abea09c-6945-5df0-b8dc-57f4ea5c32a4": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:2b517799-d7fe-519a-ac20-70210c32a1f7": [
+      {
+        "op": "replace",
+        "path": "/code/coding",
+        "value": [
+          {
+            "code": "21522001",
+            "display": "Abdominal pain",
+            "system": "http://snomed.info/sct"
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/meta/tag",
+        "value": [
+          {
+            "code": "4.2.1-s14-1000-normal",
+            "system": "urn:hdp-test-bundle:synthetic-dataset"
+          },
+          {
+            "code": "hospital-b",
+            "system": "urn:hdp-test-bundle:synthetic-source"
+          },
+          {
+            "code": "womens-health",
+            "system": "urn:hdp-test-bundle:synthetic-archetype"
+          },
+          {
+            "code": "gynecologic-symptom",
+            "system": "urn:hdp-test-bundle:synthetic-pathway-variant"
+          },
+          {
+            "code": "short-admission",
+            "system": "urn:hdp-test-bundle:synthetic-capture-variant"
+          },
+          {
+            "code": "standard-only",
+            "system": "urn:hdp-test-bundle:synthetic:condition-coding-class"
+          }
+        ]
+      }
+    ],
+    "urn:uuid:2db4c799-b924-5837-90ff-8cde2fc0c2a0": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:2f75d124-e474-5a85-afea-0fe865f70e5c": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:305fae10-fddf-512d-b862-b8c49da4e236": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:319b35af-0911-5c94-b3af-3c96f2233749": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:322cd833-dfb5-5682-9f1d-342bb9b95e07": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic completed Spironolactone order.</div>"
+      }
+    ],
+    "urn:uuid:32fa7085-8ceb-5edc-9675-03c29f566fa5": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:334619ff-63e1-54a9-b0b7-73a8337a7df5": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:342baef1-25d3-5659-b2ae-cca150bf8b9d": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:3455227f-7e14-5a60-b4fe-3b9de44487b6": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:3507da4f-8b6d-5af4-97e7-1a4b70303cb8": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:358ecf5f-a046-50ee-b3ab-60aa17493572": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:369d3e22-5b08-517f-bee2-321c2f2ca4ef": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:369f4277-700d-5016-b655-a7610d7dced5": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:372b051c-0fc9-556f-8771-faf45fbf7c18": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:3794702f-febb-5163-b1e0-cb2e40d4ee30": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:3891d4d9-353b-5069-a09b-de2ee7531b52": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:3a735ef4-d324-5572-8d1c-079e4a0a78ad": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:3b288ecb-1201-5963-b4a3-21aae7dce43c": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication status: completed.</div>"
+      }
+    ],
+    "urn:uuid:3f43c23f-dbc9-58e2-95cf-8bfaf8ddebac": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:4033da61-1cad-5486-95ee-e39b99344f96": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:411d6a3b-a998-5d8f-89af-0386b22e7ee3": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:430a5ac7-3994-5deb-a0c6-9624c0aa895f": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:4353ba44-1b95-5276-93c9-70350b31f848": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:43b2bfe0-5de6-5328-98f6-1b712f9d98c9": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:43f806b6-a883-5888-b6e6-84dd16f68669": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:44b87ec2-1da4-566c-b131-97e71b3e9c8f": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:467adcd2-f7ea-549e-8dc2-51f026d4d9ed": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:474ddfe9-f9ee-5cec-b41b-9ab69d9a9551": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:478cd81a-bf4b-5682-93d1-0222947e631e": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:47d75b6a-fe46-5ba0-b4ca-9aad474e88c2": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:48212d97-5fc2-58de-815e-f22d995c4e1d": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:4901fa32-11c8-5632-9bab-d51923d2f530": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:49250a39-1d70-5ceb-991a-585864cea464": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:4a5e9aab-5135-5589-9077-53e9d36c67f3": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:4bbcdf0d-9b1c-57b7-8012-36bcaf294ec9": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:4e1d0dc8-3e99-5c8e-9073-c3a9602e7e96": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:4e957ade-9e24-550c-98a4-e71837bf08ba": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:4ecc0695-fad2-512f-847e-ed2f60c26306": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:507ba6f0-fe8f-580e-a5f1-6c3751123c9d": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:51afd3b8-f56f-5b24-8c14-9d5cbd45d0f3": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:5314f2c9-8330-5eab-93f0-a410f3a9c5b4": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:55b69ba2-7a84-54c1-8f39-a13bc2f05368": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:5642b778-cd3d-5480-b88e-a8492487d527": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:5676f6f9-9745-51a6-9c9f-21093e10990b": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:56e8ad84-e2de-5e2a-ba1d-b16e7f0b1bfd": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:56f19bd0-d0ea-581b-8efa-a0ab3afcb5ab": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:5798630e-7489-5f16-a8eb-4fc9c987c2e7": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:57f860dc-c048-558f-a2c9-7e954af7a979": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:57fb6be1-1f71-5f2a-93e1-2ec1b3fcb239": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:58c0f4fd-a1c8-5474-8342-a2d7784bfab3": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:58e88cb8-3a3b-5483-b7f6-f5a248c449f7": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:5a2a8f3c-c366-5259-a418-f919b74c1a15": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:5a46f9a9-1f7c-56a0-b0d0-5bc9ec7704e8": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:5ac97d1d-0898-5d49-a5d9-d8ae2066c5a3": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:5ad583b6-9462-50f6-aee2-8a94486a4443": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:5cc84da0-5f53-5e0f-9ab2-353d0d1b1858": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:5d03145e-368e-5d39-ae32-07f77822bbc5": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:5ecd9894-6cef-538f-8ee1-52a718e533d9": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:5f05df37-2b5b-5106-94c2-db7c74f17153": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:60020e13-9337-5ae2-bdbd-37d70af676c8": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:601ba233-df98-55fe-8533-77e9c3e20628": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:611bba12-5e8c-544b-ab1f-28005cc8e1af": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:6293d959-3262-5141-8574-3dcdc0365046": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:63d26425-2f60-5bd0-822e-57e9e5f072b4": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:6462a485-d9d0-5db7-b3e4-70bbb2125a0d": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:68ba38dd-ed4f-5328-8dd5-217b5e063b23": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:68cccb48-37f0-5b6e-a3b3-84c8addfe02e": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:695b8363-ce35-5ada-90fc-6756b33cfa2b": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:6a2718b0-fea0-5ebb-acff-66d3627f7cf2": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:6a992b7c-edc0-565c-9f12-6e86822d7895": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic completed Spironolactone order.</div>"
+      }
+    ],
+    "urn:uuid:6b3dc6ab-df6e-5af2-ae97-07570800738a": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:6b45207a-d02b-5915-bca8-cce9e33659d8": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:6c47a240-8e2c-558a-a3f9-8a5eee318336": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:7112932c-ecc1-5e6a-ae39-89968b67aac9": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:712c3316-ecc8-54e2-916b-5fe8b854df5a": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:721616e1-fe34-5db1-9586-3eaf83e72b78": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:73887891-0a8d-5e88-bdc4-86eb3294792c": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:74dca1b1-a86b-5596-9ecf-801469b30e16": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:76803941-dcff-5487-ad9a-98bdc3a1ed5a": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:77875a32-097a-553e-8552-ebad7c1b6c3d": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:781a95c6-8c8a-5402-97db-4be755d8abb8": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:7abc2af4-acb2-5045-a4ca-87236e79fdbf": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:7be33623-8b1e-5f32-8929-05cfeea783a6": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:7db4f3dd-4452-5d10-bc5c-011092b9b577": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:7f316435-6e86-5adb-a7ca-a8fa9dce7e34": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:80f97a0a-0b6d-5486-aac0-798abd15e33d": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:8310c490-fef4-57c4-948b-463dbe74b592": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:831f5ba2-0cea-5c9b-9a9c-353e0f895b14": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:84a3f989-e7cb-5263-89da-94def08014a6": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:84cf2444-570e-5ad8-9b0e-99f1fedd0d91": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:85db020f-9812-5959-8a47-377ee0f43805": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:85e73500-929e-574c-80b1-07c616abd4db": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:863c752f-d658-50df-846a-eadf7f924a06": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:86832058-fd50-5a1c-8fe6-24b091007734": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:88d9fe83-e78a-5caa-be35-b319f2ae9cd5": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:897f5ec3-1a2f-5b85-a626-249e40f14978": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:8acf92ed-16b7-508e-b084-81176f3004d3": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:8d042982-4d83-5066-a7b5-cb0e41ed1241": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:8f2bfa6f-e925-580f-8506-2935b513ebc9": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:8f816062-28b3-5012-b4ea-b2aa8712318c": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:917773d4-7481-5469-adc3-3dfbb0cae5e6": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:918bd875-3e1e-5cbf-9c3c-030f9aa71167": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:923497c9-040e-5747-8828-d7e7874d5997": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:93f4c9ed-9eb9-504c-8714-045b26746fac": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:940ed965-5983-5d57-bbfc-5be7a84482e9": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:9537b425-3024-540a-a380-cfd8417226ef": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:95d40b87-b2cd-59c3-a387-89b811a36229": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:961c1d9f-2c12-5b44-b22b-2644df7d7bba": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:97aa414a-d9ea-5908-bee2-82deb708db55": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:984c3fd3-9a7e-5200-98e7-85ad0534d406": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:989a80a9-c875-5804-aae4-7a0317610790": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:98f35b02-3ed5-5b90-9fff-158a96948548": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:9a5bac52-7b1c-5c8b-9f79-13702a76994e": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:9aefd850-b00b-5ac5-b533-441b2b928c5b": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:9b9202c8-6199-5905-b9c1-c1a7ef4c4d74": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:9c44d5f0-97b5-55d2-acaf-9889bc5e7cc2": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:a1f5c3e6-a342-5198-ba58-51a439a80afe": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:a4196591-b52a-5c7a-940d-c8e1fe10bf69": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:a4d21981-4df5-57a5-8c87-43a86cc1e63d": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:a4fb0441-3aad-5ebc-87d7-8191ad23b349": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:a66620d9-52e7-5d8d-a5d9-4fffa4e7e7fb": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:aaa8c3bb-cb9f-599f-94d6-b7754291ca9e": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:ab0136f9-75ee-5dd9-8d56-9ae8a0c6137e": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:ad31425e-50f6-5eda-97fd-f804cedcd342": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:ad6c2514-306e-5f02-9922-407d4b29275c": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:adffa197-8d18-5d02-b4a6-6af4de175fe7": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:aec8f515-8742-59f4-a2e3-1f246d30f548": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:b0bbd63d-a268-558a-82f8-b2da4c165f6d": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:b1ce2cc7-ea18-5859-a5bd-ee25b3041dac": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:b474f6f6-99bd-5ee3-948d-ae1532ce73f2": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:b58671ef-4e36-5906-bb93-6e9072fca675": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:b64b5754-0964-5ed0-81d2-b07eb2f14940": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:b75899ed-da8b-5a3b-b12e-25649948e254": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:ba030131-9d60-51c1-8925-d6640d2d8969": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:bb1b83eb-fdb2-5c6d-950f-8bcb1836d833": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:bb80e11e-6340-5c6a-9ee3-f419e1f195ac": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:bc1eadfe-07eb-5632-80b7-6dae399e68e5": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:bc59f04c-66d0-566d-92ef-dbe3a08540b2": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:bd51c272-7796-5e41-a9d3-a9c311461bae": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:bf392a1d-2cd1-5527-8b99-6e074ce160de": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:bf56e008-94c5-5c6f-8fd8-d5db8a2aaa23": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:bfe125c4-7b25-59d8-820c-0cde4a85c745": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:c2569b44-19db-51d6-a6e9-f3e3e54abced": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:c34acea3-d76e-585e-8b78-da5e33a66d66": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:c3983232-b0f4-5f4b-8069-d3429cc0b3bb": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:c3e16391-e825-507c-a8b4-2c39f6e34858": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:c8f32d04-022d-535e-8450-0b3a1d52c5b9": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:c97d0f7a-4da7-5edd-b26c-a5497711a61d": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:cc8c01e2-ad8b-52fc-b2f5-e4f4607ea0ee": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:ccc3c0e9-42f3-5165-9274-d822bd864b3c": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:cf63328b-b478-5d0c-9405-8fb29545c4da": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:d1992488-d5e6-58f2-ae67-7caea1d14595": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:d2ad5432-7fe0-5bdd-909b-c2b183593e1b": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:d3329979-0f0e-5a9a-b34c-198cd2398097": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:d3530465-6c54-5c7b-b43e-50864c020d86": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:d3c94661-0741-53a5-a475-a44e043261c7": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:d4af7a5f-499a-52ae-97f0-8a66739399d0": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:d522ed14-9932-5bc4-9bfe-b9407dc90de5": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:d62854e5-facd-53c3-8e73-a56f591db964": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:d64dd195-91be-5d61-96fe-27fe1abab4e9": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:d6579ac4-ebcb-5938-bba9-746770bc2879": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:d66aa9a1-c523-528a-9660-5a415f5bca4f": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:d814e86f-4132-5226-b557-86d8365d1db3": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:daf7df60-7792-5be0-899c-c53785e75a12": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:dbf035ca-65f1-5a37-95da-ed291cee77cb": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:dc94fc4a-24ab-5884-895f-a9be7cfdc48c": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:df12f28f-9f61-5082-8cac-adf84fe767bd": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:e1358784-e918-505d-a8af-1d0ed5e207eb": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:e1bb91ad-eff6-59f7-86d8-c17838cfd7d3": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:e1e70d73-c4ba-58dd-969e-382e06c83202": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:e35ae553-3b46-58b5-a586-f27737460c19": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:e3d46512-4038-5bf5-b467-241c74fd6c60": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:e4b9e0be-aa9f-51f2-afd9-60c6d7cb3b12": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:e91b5b2c-68f8-5b2e-b4eb-54520a100420": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:e976c47f-5604-5a6e-87ef-b6a74b78c687": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:eadee213-e0db-5589-9528-5e74aa173929": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:eb896119-05ff-5fd9-a797-cf8b1e601f61": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:ed4bfc73-7bab-52a0-be91-812c0c30ed0a": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:edf09f0b-7550-5d2c-aed1-0d65ef7bd1f0": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:ee1a027d-c197-58e5-b963-8f327d1caf85": [
+      {
+        "op": "replace",
+        "path": "/dosageInstruction",
+        "value": [
+          {
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "code": "mg",
+                  "system": "http://unitsofmeasure.org",
+                  "unit": "mg",
+                  "value": 46.4
+                }
+              }
+            ],
+            "method": {
+              "coding": [
+                {
+                  "code": "738995006",
+                  "display": "Swallow (administration method)",
+                  "system": "http://snomed.info/sct"
+                }
+              ]
+            },
+            "route": {
+              "coding": [
+                {
+                  "code": "26643006",
+                  "display": "Oral route",
+                  "system": "http://snomed.info/sct"
+                }
+              ]
+            },
+            "text": "Synthetic oral liquid amoxicillin: 46.4 mg 2 times daily for seven days; dose reference uses documented 4.64 kg weight from 2025-06-11, not a current weight measurement.",
+            "timing": {
+              "repeat": {
+                "frequency": 2,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "op": "replace",
+        "path": "/medicationCodeableConcept/text",
+        "value": "Synthetic oral liquid amoxicillin; see structured pediatric dosage."
+      }
+    ],
+    "urn:uuid:ee5abdc6-22a5-5d8e-bd1c-ed8a1b8c6c80": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:ef03128f-1bb4-5b45-a551-06be14436dae": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:efd38382-82e4-5d99-b27b-0ccd9e258c53": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:f0c437af-7e56-54de-8317-f3bbd26c67bf": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:f270e704-1b4f-5512-87c0-7c0e3bd9dfe8": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:f3cf0721-331d-536f-ab9e-bc901dd374ce": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:f3cfa8ef-54d9-5d69-9ee2-aeba4c6ebcf2": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:f68f372f-7704-5e00-8871-9d05a9c9e2a2": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:f6de4916-7b55-5e1e-8228-3a4870d1381c": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:f9a39dfa-3e04-5b1b-924f-8ae5d10f5a10": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:fc1cf3f5-4ffc-5cb9-a90f-788872e47b23": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:fcb98e9e-68f8-56b5-a33d-5a8de4505934": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:fd337f28-92ef-58fd-95b4-342156be05b8": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:fde218a9-dc7a-5379-b44a-169e4c8396e7": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ],
+    "urn:uuid:ff55bd76-c0b0-5e0d-a719-5c3636806dc0": [
+      {
+        "op": "replace",
+        "path": "/text/div",
+        "value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Synthetic laboratory order for Creatinine [Mass/volume] in Serum or Plasma.</div>"
+      }
+    ]
+  }
+}

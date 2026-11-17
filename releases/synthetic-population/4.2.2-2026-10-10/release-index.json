@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "releaseId": "4.2.2-2026-10-10",
+  "fhirVersion": "4.0.1",
+  "datasets": [
+    {
+      "populationSize": 1000,
+      "resourceCount": 19179,
+      "archive": {
+        "file": "hdp-synthetic-1k.tar.zst",
+        "bytes": 1667795,
+        "sha256": "487fcfde1ba425c097f21ad4dad27396a3c7038d63a564fa41d273295c44d1cb",
+        "expandedFileBytes": 88081518
+      },
+      "bundles": [
+        {
+          "archiveMember": "1k/bundles/hmo.source.transaction.json",
+          "source": "hmo",
+          "bytes": 56146596,
+          "sha256": "1ecbbc2bb2892147e310795e2f987a846b5696eaacb4c2033a860c0e1a78fe18",
+          "resourceCount": 11815,
+          "patientResourceCount": 1006
+        },
+        {
+          "archiveMember": "1k/bundles/hospital-a.source.transaction.json",
+          "source": "hospital-a",
+          "bytes": 17774571,
+          "sha256": "4cc751b576cd54a9ac13021053c611c792efdd7467e0106da43a9121d15f3ec4",
+          "resourceCount": 4024,
+          "patientResourceCount": 1005
+        },
+        {
+          "archiveMember": "1k/bundles/hospital-b.source.transaction.json",
+          "source": "hospital-b",
+          "bytes": 14158530,
+          "sha256": "305a70b9b2279497c85ec7ea92143ab9837eb62c92e0a6904e52af4879561c5f",
+          "resourceCount": 3340,
+          "patientResourceCount": 1006
+        }
+      ]
+    },
+    {
+      "populationSize": 10000,
+      "resourceCount": 190525,
+      "archive": {
+        "file": "hdp-synthetic-10k.tar.zst",
+        "bytes": 17554269,
+        "sha256": "d5d35ec7a6698f2ee17c85809a9042b8345a9f362ac71f146411d8de52bc985a",
+        "expandedFileBytes": 872678732
+      },
+      "bundles": [
+        {
+          "archiveMember": "10k/bundles/hmo.source.transaction.json",
+          "source": "hmo",
+          "bytes": 557415097,
+          "sha256": "b510540915bbc8b697ec4660eaa0e9d8915544091c082f098e6914e59c086ea0",
+          "resourceCount": 117447,
+          "patientResourceCount": 10049
+        },
+        {
+          "archiveMember": "10k/bundles/hospital-a.source.transaction.json",
+          "source": "hospital-a",
+          "bytes": 176712846,
+          "sha256": "31ba6839a5e2c9db909d2bb2def078b12046b5c042e76644599425ba4baf7ea8",
+          "resourceCount": 40357,
+          "patientResourceCount": 10048
+        },
+        {
+          "archiveMember": "10k/bundles/hospital-b.source.transaction.json",
+          "source": "hospital-b",
+          "bytes": 138548958,
+          "sha256": "c9a787d47bfad48ad57a7abe30b797cd9111636774394bc2b5eb618a701c0bbb",
+          "resourceCount": 32721,
+          "patientResourceCount": 10042
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "original1k": "All resources and 34 validation envelopes, with reviewed exceptions",
+    "original10k": "Twelve selected graphs; not exhaustive official resource validation",
+    "standalone1kReproduction": "All three source bundles matched byte for byte",
+    "standalone10kReproduction": "not-run",
+    "externalHumanClinicalClearance": "unavailable",
+    "serverLoadingPerformed": false
+  },
+  "limitations": [
+    "Synthetic fixtures are not representative patient statistics or clinical guidance.",
+    "Intentional data-quality problems and inherited clinical limitations are retained.",
+    "Forty canonical culture-profile errors remain under a reviewed exception.",
+    "Offline terminology validation is incomplete.",
+    "Some pediatric prescriptions and neonatal administrations have unknown doses or amounts.",
+    "Allergy-associated prescribing risks and possible partial administration remain.",
+    "Pediatric blood pressure has no age-specific interpretation.",
+    "Dose-reference weights can be older than the related treatment dates.",
+    "Automated clinical review is not external human clinical clearance."
+  ]
+}

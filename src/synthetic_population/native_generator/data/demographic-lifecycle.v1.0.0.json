@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "deceasedPerThousand": 20,
+  "pediatricPerThousand": 150,
+  "olderAdultMinPercent": 25,
+  "olderAdultMaxPercent": 28,
+  "minimumDeceasedAgeYears": 75,
+  "earliestDeathDate": "2025-01-01",
+  "latestDeathDate": "2025-12-31"
+}

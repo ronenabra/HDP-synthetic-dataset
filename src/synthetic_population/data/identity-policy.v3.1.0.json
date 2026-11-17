@@ -1,0 +1,28 @@
+{
+  "policyVersion": "3.1.0",
+  "decision": "formal-profile-document-exception",
+  "owner": "HDP profile maintainers and certification policy owners",
+  "profile": "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-patient",
+  "issue": "The Patient profile requires an IL-ID/passport slice, while safe synthetic fixtures must not emit production-shaped national identifiers.",
+  "safeRepresentation": {
+    "system": "http://fhir.health.gov.il/identifier/il-hdp-test-id",
+    "valuePolicy": "Exactly two test anchors: string values 1 and 2 per source; no UUIDs in this namespace",
+    "security": "HTEST"
+  },
+  "forbidden": [
+    "checksum-valid Israeli national ID",
+    "production passport system",
+    "production-shaped identity token"
+  ],
+  "reviewCondition": "Expire when the HDP profiles or an approved test policy define an explicit non-production identifier slice.",
+  "status": "pending-profile-policy-resolution",
+  "businessIdentifiers": {
+    "patientSandboxSystem": "http://fhir.health.gov.il/identifier/il-hdp-sandbox-synthetic-id",
+    "patientSandboxValue": "Seed-controlled pseudorandom UUIDv4 for every non-anchor Patient, including duplicate candidates",
+    "practitionerSystem": "http://fhir.health.gov.il/identifier/encrypted-id-primary-moh",
+    "practitionerValue": "Seed-controlled pseudorandom UUIDv4",
+    "uniqueness": "No overlap between distinct resources or with strong GUIDs; exported copies preserve resource identity",
+    "strongIdentifiers": "Preserved in addition to these business identifiers",
+    "source": "Technical guidelines v3.9 section 3.9.1 plus user sandbox policy 2026-10-06"
+  }
+}

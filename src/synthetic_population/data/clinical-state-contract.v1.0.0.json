@@ -1,0 +1,109 @@
+{
+  "schemaVersion": "1.0.0",
+  "reviewStatus": "engineering-contract-pending-independent-clinical-review",
+  "findingIds": [
+    "F02",
+    "F03",
+    "F05",
+    "F06",
+    "F07"
+  ],
+  "renal": {
+    "stage4Range": [
+      15,
+      30
+    ],
+    "upperExclusive": true,
+    "minimumLongitudinalDays": 90,
+    "adultMethod": "CKD-EPI 2021 creatinine, IDMS-traceable; no race coefficient",
+    "exceptionMethod": "measured GFR: iohexol clearance",
+    "exceptionCode": {
+      "system": "urn:hdp-test-bundle:clinical-state",
+      "code": "measured-gfr"
+    },
+    "exceptionRequirement": "Two independent samples at least 90 days apart, stage-4 results in mL/min/{1.73_m2}, explicit iohexol method, both referenced by the Condition evidence. Derived copies do not supply independent confirmation.",
+    "source": "https://www.niddk.nih.gov/research-funding/research-programs/kidney-clinical-research-epidemiology/laboratory/glomerular-filtration-rate-equations/adults"
+  },
+  "hiv": {
+    "infantBoundaryMonths": 18,
+    "virologyCode": "5018-7",
+    "confirmation": "Two positive virologic tests on separate samples; source copies and derived results are not independent.",
+    "source": "https://clinicalinfo.hiv.gov/en/guidelines/pediatric-arv/diagnosis-hiv-infection-infants-and-children?view=full"
+  },
+  "acuteEpisode": {
+    "ordinaryDurationDays": 7,
+    "appendicitisDisposition": "Historical resolved episode, treatment details not captured; unrelated cataract surgery is not treatment evidence. Active persistence needs explicit evidence.",
+    "futureAbatement": "Keep current active state until modeled resolution occurs by the saved timelineAnchor."
+  },
+  "anthropometry": {
+    "growthAnchors": [
+      {
+        "ageYears": 0,
+        "heightCm": 50,
+        "weightKg": 3.5
+      },
+      {
+        "ageYears": 1,
+        "heightCm": 75,
+        "weightKg": 10
+      },
+      {
+        "ageYears": 5,
+        "heightCm": 110,
+        "weightKg": 18
+      },
+      {
+        "ageYears": 12,
+        "heightCm": 150,
+        "weightKg": 42
+      },
+      {
+        "ageYears": 18,
+        "heightCm": 170,
+        "weightKg": 65
+      }
+    ],
+    "ordinaryAdultHeightCm": [
+      150,
+      190
+    ],
+    "ordinaryAdultBmi": [
+      19,
+      28
+    ],
+    "referenceDisposition": "Omit unvalidated global growth reference ranges and interpretations; these are synthetic generation anchors, not clinical diagnostic ranges.",
+    "exceptionRequirement": "Final anthropometry assessment with coded supported exception, linked confirmed Condition of the same code, matching subject, timely episode, narrative rationale and a value within the exception model; downstream exact-case review still required.",
+    "screenRatioBounds": [
+      0.35,
+      3
+    ],
+    "screenDisposition": "Candidate screen relative to age model, not a diagnosis or hard universal clinical threshold.",
+    "supportedExceptions": {
+      "skeletal-dysplasia": {
+        "codes": [
+          "8302-2"
+        ],
+        "minimumAgeYears": 18,
+        "ratioBounds": [
+          0.25,
+          1
+        ]
+      },
+      "limb-deficiency": {
+        "codes": [
+          "29463-7"
+        ],
+        "minimumAgeYears": 18,
+        "ratioBounds": [
+          0.2,
+          1
+        ]
+      }
+    }
+  },
+  "spirometry": {
+    "minimumModeledAgeYears": 6,
+    "unsupportedDisposition": "Cancel test and state not-performed; omit numeric result and exclude from depth/coverage.",
+    "source": "https://www.thoracic.org/statements/resources/respiratory-disease-pediatric/raisedvolume1-3.pdf"
+  }
+}

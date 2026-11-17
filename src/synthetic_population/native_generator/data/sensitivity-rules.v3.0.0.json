@@ -1,0 +1,87 @@
+{
+  "catalogVersion": "3.0.0",
+  "status": "provisional-pending-clinical-review",
+  "requiredFactContract": "A required fact activates its declared owning source for the minimum coherent fact episode; omission is a generation failure.",
+  "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+  "rules": [
+    {
+      "id": "adult-hiv-positive",
+      "factCode": "adult-hiv-positive",
+      "owningSource": "hmo",
+      "captureMode": "source-local-laboratory-fact-graph",
+      "expectedResourceMultiplicity": 2,
+      "ageAtEvent": "18+",
+      "confidentiality": "R",
+      "clinicalSensitivity": ["HIV"],
+      "nopat": false,
+      "propagateToRoles": ["hiv-result", "hiv-condition", "hiv-encounter"],
+      "stopAtRoles": ["routine-lab", "routine-order", "demographics"]
+    },
+    {
+      "id": "minor-hiv-positive",
+      "factCode": "minor-hiv-positive",
+      "owningSource": "hmo",
+      "captureMode": "source-local-laboratory-fact-graph",
+      "expectedResourceMultiplicity": 2,
+      "ageAtEvent": "under-18",
+      "confidentiality": "V",
+      "clinicalSensitivity": ["HIV"],
+      "nopat": false,
+      "propagateToRoles": ["hiv-result", "hiv-condition", "hiv-encounter"],
+      "stopAtRoles": ["routine-lab", "routine-order", "demographics"]
+    },
+    {
+      "id": "adult-hiv-negative",
+      "factCode": "adult-hiv-negative",
+      "owningSource": "hmo",
+      "captureMode": "source-local-laboratory-result",
+      "expectedResourceMultiplicity": 1,
+      "ageAtEvent": "18+",
+      "confidentiality": null,
+      "clinicalSensitivity": [],
+      "nopat": false,
+      "propagateToRoles": [],
+      "stopAtRoles": []
+    },
+    {
+      "id": "mental-health-diagnosis",
+      "factCode": "mental-health-diagnosis",
+      "owningSource": "hmo",
+      "captureMode": "source-local-condition-graph",
+      "expectedResourceMultiplicity": 2,
+      "confidentiality": "R",
+      "clinicalSensitivity": ["MH"],
+      "nopat": false,
+      "propagateToRoles": ["mental-health-condition", "mental-health-encounter"],
+      "stopAtRoles": ["routine-lab", "routine-order"]
+    },
+    {
+      "id": "protected-domestic-violence-indicator",
+      "factCode": "protected-domestic-violence-indicator",
+      "owningSource": "hospital-a",
+      "captureMode": "minimum-protected-assessment-graph",
+      "expectedResourceMultiplicity": 2,
+      "confidentiality": "V",
+      "clinicalSensitivity": ["SDV"],
+      "nopat": true,
+      "propagateToRoles": ["violence-flag", "protected-narrative"],
+      "stopAtRoles": ["ordinary-injury", "routine-treatment", "routine-lab"]
+    },
+    {
+      "id": "ordinary-injury",
+      "factCode": "ordinary-injury",
+      "owningSource": "hospital-b",
+      "captureMode": "minimum-regional-injury-condition",
+      "expectedResourceMultiplicity": 1,
+      "confidentiality": null,
+      "clinicalSensitivity": [],
+      "nopat": false,
+      "propagateToRoles": [],
+      "stopAtRoles": []
+    }
+  ],
+  "sources": [
+    "Docs/regulation-docs/current/08-information-classification-procedure.md",
+    "Docs/regulation-docs/current/09-information-classification-implementation.md"
+  ]
+}

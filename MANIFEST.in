@@ -1,0 +1,9 @@
+include README.md LICENSE NOTICE THIRD_PARTY_NOTICES.md
+include CONTRIBUTING.md SECURITY.md CODE_OF_CONDUCT.md KNOWN_ISSUES.md
+include LOINC_short_license.txt
+recursive-include scripts *.py
+recursive-include tests *.py
+prune releases
+prune generated
+prune src/synthetic_population/reference
+global-exclude __pycache__ *.py[cod]

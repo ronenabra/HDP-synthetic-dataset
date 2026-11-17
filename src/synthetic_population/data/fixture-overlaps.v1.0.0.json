@@ -1,0 +1,19 @@
+{
+  "catalogVersion": "1.0.0",
+  "scope": "Conditional positive conclusions of already assigned clinical fixtures; assigned control variant stays negative",
+  "requireThreeSourceContext": true,
+  "permittedConditionalConclusions": {
+    "interacting-exposure": {
+      "scenario": "bleeding-risk",
+      "conclusions": [
+        "falling-hemoglobin"
+      ]
+    },
+    "acute-renal-precipitant": {
+      "scenario": "renal-medication-risk",
+      "conclusions": [
+        "chronic-renal-trend"
+      ]
+    }
+  }
+}

@@ -1,0 +1,373 @@
+{
+  "catalogVersion": "2.1.1",
+  "guardrails": {
+    "6298-4": {
+      "label": "Potassium",
+      "unit": "mmol/L",
+      "referenceLow": 3.5,
+      "referenceHigh": 5.1,
+      "ordinaryMin": 3.7,
+      "ordinaryMax": 5.0,
+      "abnormalLow": 3.2,
+      "abnormalHigh": 5.5,
+      "minimumOrdinaryAbnormalRate": 0.04,
+      "maximumOrdinaryAbnormalRate": 0.12,
+      "maximumUntaggedValue": 6.0,
+      "allowedStatuses": [
+        "final"
+      ],
+      "requiresInterpretation": true,
+      "requiresEventTime": true,
+      "stratification": [
+        "chronic-care",
+        "medication-intensive",
+        "age"
+      ],
+      "correlations": [
+        "renal-risk raises the probability of a high result"
+      ]
+    },
+    "718-7": {
+      "label": "Hemoglobin",
+      "unit": "g/dL",
+      "referenceLow": 12.0,
+      "referenceHigh": 16.0,
+      "ordinaryMin": 12.2,
+      "ordinaryMax": 15.8,
+      "abnormalLow": 10.8,
+      "abnormalHigh": 16.8,
+      "minimumOrdinaryAbnormalRate": 0.04,
+      "maximumOrdinaryAbnormalRate": 0.12,
+      "maximumUntaggedValue": 18.0,
+      "allowedStatuses": [
+        "final"
+      ],
+      "requiresInterpretation": true,
+      "requiresEventTime": true,
+      "stratification": [
+        "sex",
+        "oncology",
+        "age"
+      ],
+      "correlations": [
+        "oncology raises the probability of a low result"
+      ]
+    },
+    "2160-0": {
+      "label": "Creatinine",
+      "unit": "mg/dL",
+      "referenceLow": 0.5,
+      "referenceHigh": 1.2,
+      "ordinaryMin": 0.6,
+      "ordinaryMax": 1.1,
+      "abnormalLow": 0.4,
+      "abnormalHigh": 1.6,
+      "minimumOrdinaryAbnormalRate": 0.04,
+      "maximumOrdinaryAbnormalRate": 0.12,
+      "maximumUntaggedValue": 2.5,
+      "allowedStatuses": [
+        "final"
+      ],
+      "requiresInterpretation": true,
+      "requiresEventTime": true,
+      "stratification": [
+        "chronic-care",
+        "age"
+      ],
+      "correlations": [
+        "chronic-care raises the probability of a high result"
+      ]
+    },
+    "8480-6": {
+      "label": "Systolic blood pressure",
+      "unit": "mm[Hg]",
+      "referenceLow": 90,
+      "referenceHigh": 140,
+      "ordinaryMin": 110,
+      "ordinaryMax": 137,
+      "abnormalLow": 85,
+      "abnormalHigh": 158,
+      "minimumOrdinaryAbnormalRate": 0.02,
+      "maximumOrdinaryAbnormalRate": 0.15,
+      "maximumUntaggedValue": 180,
+      "allowedStatuses": [
+        "final"
+      ],
+      "requiresInterpretation": true,
+      "requiresEventTime": true,
+      "stratification": [
+        "age",
+        "chronic-care"
+      ],
+      "correlations": [
+        "chronic-care raises the probability of a high result"
+      ]
+    },
+    "8462-4": {
+      "label": "Diastolic blood pressure",
+      "unit": "mm[Hg]",
+      "referenceLow": 60,
+      "referenceHigh": 90,
+      "ordinaryMin": 68,
+      "ordinaryMax": 87,
+      "abnormalLow": 55,
+      "abnormalHigh": 98,
+      "minimumOrdinaryAbnormalRate": 0.02,
+      "maximumOrdinaryAbnormalRate": 0.15,
+      "maximumUntaggedValue": 120,
+      "allowedStatuses": [
+        "final"
+      ],
+      "requiresInterpretation": true,
+      "requiresEventTime": true,
+      "stratification": [
+        "age",
+        "chronic-care"
+      ],
+      "correlations": [
+        "chronic-care raises the probability of a high result"
+      ]
+    },
+    "4548-4": {
+      "label": "Hemoglobin A1c/Hemoglobin.total in Blood",
+      "unit": "%",
+      "referenceLow": 4.0,
+      "referenceHigh": 5.6,
+      "ordinaryMin": 4.0,
+      "ordinaryMax": 5.6,
+      "abnormalLow": 3.5,
+      "abnormalHigh": 8.0,
+      "minimumOrdinaryAbnormalRate": 0.04,
+      "maximumOrdinaryAbnormalRate": 0.12,
+      "maximumUntaggedValue": 8.0,
+      "allowedStatuses": [
+        "final"
+      ],
+      "requiresInterpretation": true,
+      "requiresEventTime": true,
+      "stratification": [
+        "age",
+        "clinical-pathway"
+      ],
+      "correlations": []
+    },
+    "2345-7": {
+      "label": "Glucose [Mass/volume] in Serum or Plasma",
+      "unit": "mg/dL",
+      "referenceLow": 70.0,
+      "referenceHigh": 99.0,
+      "ordinaryMin": 70.0,
+      "ordinaryMax": 99.0,
+      "abnormalLow": 60,
+      "abnormalHigh": 150,
+      "minimumOrdinaryAbnormalRate": 0.04,
+      "maximumOrdinaryAbnormalRate": 0.12,
+      "maximumUntaggedValue": 150,
+      "allowedStatuses": [
+        "final"
+      ],
+      "requiresInterpretation": true,
+      "requiresEventTime": true,
+      "stratification": [
+        "age",
+        "clinical-pathway"
+      ],
+      "correlations": []
+    },
+    "2093-3": {
+      "label": "Cholesterol [Mass/volume] in Serum or Plasma",
+      "unit": "mg/dL",
+      "referenceLow": 100.0,
+      "referenceHigh": 199.0,
+      "ordinaryMin": 100.0,
+      "ordinaryMax": 199.0,
+      "abnormalLow": 80,
+      "abnormalHigh": 260,
+      "minimumOrdinaryAbnormalRate": 0.04,
+      "maximumOrdinaryAbnormalRate": 0.12,
+      "maximumUntaggedValue": 260,
+      "allowedStatuses": [
+        "final"
+      ],
+      "requiresInterpretation": true,
+      "requiresEventTime": true,
+      "stratification": [
+        "age",
+        "clinical-pathway"
+      ],
+      "correlations": []
+    },
+    "2085-9": {
+      "label": "Cholesterol in HDL [Mass/volume] in Serum or Plasma",
+      "unit": "mg/dL",
+      "referenceLow": 40.0,
+      "referenceHigh": 80.0,
+      "ordinaryMin": 40.0,
+      "ordinaryMax": 80.0,
+      "abnormalLow": 30,
+      "abnormalHigh": 95,
+      "minimumOrdinaryAbnormalRate": 0.04,
+      "maximumOrdinaryAbnormalRate": 0.12,
+      "maximumUntaggedValue": 95,
+      "allowedStatuses": [
+        "final"
+      ],
+      "requiresInterpretation": true,
+      "requiresEventTime": true,
+      "stratification": [
+        "age",
+        "clinical-pathway"
+      ],
+      "correlations": []
+    },
+    "13457-7": {
+      "label": "Cholesterol in LDL [Mass/volume] in Serum or Plasma by calculation",
+      "unit": "mg/dL",
+      "referenceLow": 40.0,
+      "referenceHigh": 129.0,
+      "ordinaryMin": 40.0,
+      "ordinaryMax": 129.0,
+      "abnormalLow": 30,
+      "abnormalHigh": 180,
+      "minimumOrdinaryAbnormalRate": 0.04,
+      "maximumOrdinaryAbnormalRate": 0.12,
+      "maximumUntaggedValue": 180,
+      "allowedStatuses": [
+        "final"
+      ],
+      "requiresInterpretation": true,
+      "requiresEventTime": true,
+      "stratification": [
+        "age",
+        "clinical-pathway"
+      ],
+      "correlations": []
+    },
+    "8302-2": {
+      "label": "Body height",
+      "unit": "cm",
+      "referenceLow": 45.0,
+      "referenceHigh": 200.0,
+      "ordinaryMin": 45.0,
+      "ordinaryMax": 200.0,
+      "abnormalLow": 40,
+      "abnormalHigh": 215,
+      "maximumUntaggedValue": 215,
+      "allowedStatuses": [
+        "final"
+      ],
+      "requiresInterpretation": true,
+      "requiresEventTime": true,
+      "stratification": [
+        "age",
+        "clinical-pathway"
+      ],
+      "correlations": []
+    },
+    "29463-7": {
+      "label": "Body weight",
+      "unit": "kg",
+      "referenceLow": 3.0,
+      "referenceHigh": 120.0,
+      "ordinaryMin": 3.0,
+      "ordinaryMax": 120.0,
+      "abnormalLow": 2,
+      "abnormalHigh": 140,
+      "maximumUntaggedValue": 140,
+      "allowedStatuses": [
+        "final"
+      ],
+      "requiresInterpretation": true,
+      "requiresEventTime": true,
+      "stratification": [
+        "age",
+        "clinical-pathway"
+      ],
+      "correlations": []
+    },
+    "39156-5": {
+      "label": "Body mass index",
+      "unit": "kg/m2",
+      "referenceLow": 18.5,
+      "referenceHigh": 24.9,
+      "ordinaryMin": 18.5,
+      "ordinaryMax": 24.9,
+      "abnormalLow": 15,
+      "abnormalHigh": 35,
+      "minimumOrdinaryAbnormalRate": 0.04,
+      "maximumOrdinaryAbnormalRate": 0.12,
+      "maximumUntaggedValue": 35,
+      "allowedStatuses": [
+        "final"
+      ],
+      "requiresInterpretation": true,
+      "requiresEventTime": true,
+      "stratification": [
+        "age",
+        "clinical-pathway"
+      ],
+      "correlations": []
+    },
+    "19868-9": {
+      "label": "Forced vital capacity [Volume] Respiratory system",
+      "unit": "L",
+      "referenceLow": 2.0,
+      "referenceHigh": 5.5,
+      "ordinaryMin": 2.0,
+      "ordinaryMax": 5.5,
+      "abnormalLow": 1.5,
+      "abnormalHigh": 6.5,
+      "minimumOrdinaryAbnormalRate": 0.04,
+      "maximumOrdinaryAbnormalRate": 0.12,
+      "maximumUntaggedValue": 6.5,
+      "allowedStatuses": [
+        "final"
+      ],
+      "requiresInterpretation": true,
+      "requiresEventTime": true,
+      "stratification": [
+        "age",
+        "clinical-pathway"
+      ],
+      "correlations": []
+    },
+    "1742-6": {
+      "label": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma",
+      "unit": "U/L",
+      "referenceLow": 7.0,
+      "referenceHigh": 56.0,
+      "ordinaryMin": 7.0,
+      "ordinaryMax": 56.0,
+      "abnormalLow": 5,
+      "abnormalHigh": 80,
+      "minimumOrdinaryAbnormalRate": 0.04,
+      "maximumOrdinaryAbnormalRate": 0.12,
+      "maximumUntaggedValue": 80,
+      "allowedStatuses": [
+        "final"
+      ],
+      "requiresInterpretation": true,
+      "requiresEventTime": true,
+      "stratification": [
+        "age",
+        "clinical-pathway"
+      ],
+      "correlations": []
+    }
+  },
+  "incidentalAbnormality": {
+    "minimumRate": 0.04,
+    "maximumRate": 0.12,
+    "requiresFactTag": false,
+    "requiresInterpretation": true,
+    "classification": "true-synthetic-clinical-fact-not-data-quality-problem"
+  },
+  "scenarioValues": {
+    "renal-medication-risk": {
+      "6298-4": 5.7
+    },
+    "bleeding-risk": {
+      "718-7": 9.8
+    }
+  }
+}

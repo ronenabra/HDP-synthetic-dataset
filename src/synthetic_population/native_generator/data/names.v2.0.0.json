@@ -1,0 +1,8 @@
+{
+  "catalogVersion": "2.0.0",
+  "policy": "Curated fictional components for deterministic testing; not copied from a person registry",
+  "givenMale": ["Noam", "Ariel", "Daniel", "Eitan", "Yosef", "Omer", "Lior", "Amir", "Nadav", "Yonatan", "Itai", "Gil", "Ronen", "Tal", "Barak", "Aviv", "Adam", "Karim", "Sami", "Tareq", "Fadi", "Rami", "Ziad", "Iyad", "Nir", "Erez", "Shai", "Gal", "Ori", "Ben", "Idan", "Yair"],
+  "givenFemale": ["Yael", "Maya", "Tamar", "Noa", "Leah", "Shira", "Michal", "Dana", "Roni", "Neta", "Adi", "Liat", "Hila", "Orly", "Avital", "Rotem", "Lina", "Mariam", "Nour", "Salma", "Huda", "Rana", "Dalia", "Amal", "Eden", "Inbal", "Tali", "Sivan", "Gili", "Ayelet", "Nili", "Ruth"],
+  "families": ["Levi", "Cohen", "Mizrahi", "Peretz", "Biton", "Avraham", "Shalev", "Azoulay", "BenAmi", "Dahan", "Malka", "Ohayon", "Sharabi", "Dayan", "Gabai", "Sason", "Haddad", "Khatib", "Nassar", "Mansour", "Halabi", "Awad", "Jaber", "Saleh", "Baron", "Dekel", "Harari", "Keshet", "Lavi", "Mor", "Peled", "Raz"],
+  "sourceVariation": {"hospital-a": "transliterated-spacing", "hospital-b": "usual-name-and-case", "hmo": "official"}
+}

@@ -1,0 +1,3898 @@
+{
+  "catalogVersion": "2.4.0",
+  "status": "reviewed-technical-fixture-policy-pending-clinical-review",
+  "forbiddenOrdinarySystemPrefixes": [
+    "http://acme.org/",
+    "http://dogs.org/",
+    "http://goodhealthhospital.org/",
+    "http://somehealthcare.org/"
+  ],
+  "authoritativeSystems": [
+    {
+      "prefix": "http://fhir.health.gov.il/",
+      "provenanceClass": "pinned-il-core-or-hdp",
+      "source": "FHIR-Profiles/ilcore and FHIR-Profiles/hdp-il",
+      "status": "active"
+    },
+    {
+      "prefix": "http://hdp.fhir.health.gov.il/",
+      "provenanceClass": "pinned-il-hdp",
+      "source": "FHIR-Profiles/hdp-il",
+      "status": "active"
+    },
+    {
+      "prefix": "http://hl7.org/fhir/",
+      "provenanceClass": "pinned-fhir-r4",
+      "source": "hl7.fhir.r4.core#4.0.1",
+      "status": "active"
+    },
+    {
+      "prefix": "http://terminology.hl7.org/",
+      "provenanceClass": "pinned-hl7-terminology",
+      "source": "hl7.terminology.r4#6.2.0",
+      "status": "active"
+    },
+    {
+      "prefix": "http://snomed.info/sct",
+      "provenanceClass": "reviewed-external-clinical",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "status": "active"
+    },
+    {
+      "prefix": "http://loinc.org",
+      "provenanceClass": "reviewed-external-clinical",
+      "source": "LOINC concepts selected by versioned builders and profile examples",
+      "status": "active"
+    },
+    {
+      "prefix": "http://unitsofmeasure.org",
+      "provenanceClass": "ucum",
+      "source": "UCUM units required by generated quantitative facts",
+      "status": "active"
+    },
+    {
+      "prefix": "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "provenanceClass": "reviewed-external-medication",
+      "source": "RxNorm concepts in the clinical evidence catalog",
+      "status": "active"
+    },
+    {
+      "prefix": "http://dicom.nema.org/",
+      "provenanceClass": "dicom",
+      "source": "DICOM terminology",
+      "status": "active"
+    },
+    {
+      "prefix": "https://dicom.nema.org",
+      "provenanceClass": "dicom",
+      "source": "DICOM terminology",
+      "status": "active"
+    },
+    {
+      "prefix": "http://www.ncbi.nlm.nih.gov/",
+      "provenanceClass": "ncbi-reference",
+      "source": "NCBI reference sequence identifier",
+      "status": "active"
+    },
+    {
+      "prefix": "urn:ietf:rfc:3986",
+      "provenanceClass": "fhir-uri-coding",
+      "source": "FHIR R4 Coding URI convention",
+      "status": "active"
+    }
+  ],
+  "localSyntheticCodings": [
+    {
+      "system": "urn:hdp-test-bundle:synthetic:communication-type",
+      "code": "SolicitedAttachmentRequest",
+      "display": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Communication",
+        "CommunicationRequest"
+      ],
+      "pathSuffixes": [
+        "category[*].coding[*]"
+      ],
+      "semanticRole": "synthetic communication workflow",
+      "source": "parameterized replacement for a pedagogical example domain",
+      "provenanceClass": "approved-local-synthetic",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "urn:hdp-test-bundle:synthetic:flag-code",
+      "code": "bigdog",
+      "display": "Big dog",
+      "aliases": [],
+      "resourceTypes": [
+        "Flag"
+      ],
+      "pathSuffixes": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "synthetic safety flag",
+      "source": "parameterized replacement for a pedagogical example domain",
+      "provenanceClass": "approved-local-synthetic",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "urn:hdp-test-bundle:synthetic:diet-type",
+      "code": "1040",
+      "display": "Low Sodium Diet",
+      "aliases": [],
+      "resourceTypes": [
+        "NutritionOrder"
+      ],
+      "pathSuffixes": [
+        "oralDiet.type[*].coding[*]"
+      ],
+      "semanticRole": "synthetic therapeutic diet",
+      "source": "parameterized replacement for a pedagogical example domain",
+      "provenanceClass": "approved-local-synthetic",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "urn:hdp-test-bundle:synthetic:immunization-date-criterion",
+      "code": "earliest",
+      "display": "Earliest Date",
+      "aliases": [],
+      "resourceTypes": [
+        "ImmunizationRecommendation"
+      ],
+      "pathSuffixes": [
+        "dateCriterion[*].code.coding[*]"
+      ],
+      "semanticRole": "synthetic immunization recommendation date",
+      "source": "project-owned replacement for a pedagogical example domain",
+      "provenanceClass": "approved-local-synthetic",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "urn:hdp-test-bundle:synthetic:immunization-date-criterion",
+      "code": "recommended",
+      "display": "Recommended",
+      "aliases": [],
+      "resourceTypes": [
+        "ImmunizationRecommendation"
+      ],
+      "pathSuffixes": [
+        "dateCriterion[*].code.coding[*]"
+      ],
+      "semanticRole": "synthetic immunization recommendation date",
+      "source": "project-owned replacement for a pedagogical example domain",
+      "provenanceClass": "approved-local-synthetic",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "urn:hdp-test-bundle:synthetic:immunization-date-criterion",
+      "code": "overdue",
+      "display": "Past Due Date",
+      "aliases": [],
+      "resourceTypes": [
+        "ImmunizationRecommendation"
+      ],
+      "pathSuffixes": [
+        "dateCriterion[*].code.coding[*]"
+      ],
+      "semanticRole": "synthetic immunization recommendation date",
+      "source": "project-owned replacement for a pedagogical example domain",
+      "provenanceClass": "approved-local-synthetic",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "urn:hdp-test-bundle:synthetic:condition",
+      "version": "1.0.0",
+      "code": "HDP-COND-0001",
+      "display": "Acute upper respiratory infection",
+      "definition": "Local source label for the synthetic Condition concept acute upper respiratory infection; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Acute upper respiratory infection.",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "pathSuffixes": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Condition diagnosis source label",
+      "source": "pathway-templates.v4.2.1.json",
+      "provenanceClass": "approved-local-synthetic-condition",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "urn:hdp-test-bundle:synthetic:condition",
+      "version": "1.0.0",
+      "code": "HDP-COND-0002",
+      "display": "Gastroenteritis",
+      "definition": "Local source label for the synthetic Condition concept gastroenteritis; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Gastroenteritis.",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "pathSuffixes": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Condition diagnosis source label",
+      "source": "pathway-templates.v4.2.1.json",
+      "provenanceClass": "approved-local-synthetic-condition",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "urn:hdp-test-bundle:synthetic:condition",
+      "version": "1.0.0",
+      "code": "HDP-COND-0003",
+      "display": "Hypertensive disorder",
+      "definition": "Local source label for the synthetic Condition concept hypertensive disorder; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Hypertensive disorder.",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "pathSuffixes": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Condition diagnosis source label",
+      "source": "pathway-templates.v4.2.1.json",
+      "provenanceClass": "approved-local-synthetic-condition",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "urn:hdp-test-bundle:synthetic:condition",
+      "version": "1.0.0",
+      "code": "HDP-COND-0004",
+      "display": "Burn",
+      "definition": "Local source label for the synthetic Condition concept burn; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Burn.",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "pathSuffixes": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Condition diagnosis source label",
+      "source": "pathway-templates.v4.2.1.json",
+      "provenanceClass": "approved-local-synthetic-condition",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "urn:hdp-test-bundle:synthetic:condition",
+      "version": "1.0.0",
+      "code": "HDP-COND-0005",
+      "display": "Malignant neoplasm of breast",
+      "definition": "Local source label for the synthetic Condition concept malignant neoplasm of breast; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Malignant neoplasm of breast.",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "pathSuffixes": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Condition diagnosis source label",
+      "source": "pathway-templates.v4.2.1.json",
+      "provenanceClass": "approved-local-synthetic-condition",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "urn:hdp-test-bundle:synthetic:condition",
+      "version": "1.0.0",
+      "code": "HDP-COND-0006",
+      "display": "Malignant tumor of colon",
+      "definition": "Local source label for the synthetic Condition concept malignant tumor of colon; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Malignant tumor of colon.",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "pathSuffixes": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Condition diagnosis source label",
+      "source": "pathway-templates.v4.2.1.json",
+      "provenanceClass": "approved-local-synthetic-condition",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "urn:hdp-test-bundle:synthetic:condition",
+      "version": "1.0.0",
+      "code": "HDP-COND-0007",
+      "display": "Type 2 diabetes mellitus",
+      "definition": "Local source label for the synthetic Condition concept type 2 diabetes mellitus; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Type 2 diabetes mellitus.",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "pathSuffixes": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Condition diagnosis source label",
+      "source": "pathway-templates.v4.2.1.json",
+      "provenanceClass": "approved-local-synthetic-condition",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "urn:hdp-test-bundle:synthetic:condition",
+      "version": "1.0.0",
+      "code": "HDP-COND-0008",
+      "display": "Chronic kidney disease",
+      "definition": "Local source label for the synthetic Condition concept chronic kidney disease; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Chronic kidney disease.",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "pathSuffixes": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Condition diagnosis source label",
+      "source": "pathway-templates.v4.2.1.json",
+      "provenanceClass": "approved-local-synthetic-condition",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "urn:hdp-test-bundle:synthetic:condition",
+      "version": "1.0.0",
+      "code": "HDP-COND-0009",
+      "display": "Motor neuron disease",
+      "definition": "Local source label for the synthetic Condition concept motor neuron disease; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Motor neuron disease.",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "pathSuffixes": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Condition diagnosis source label",
+      "source": "pathway-templates.v4.2.1.json",
+      "provenanceClass": "approved-local-synthetic-condition",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "urn:hdp-test-bundle:synthetic:condition",
+      "version": "1.0.0",
+      "code": "HDP-COND-0010",
+      "display": "Dysmenorrhea",
+      "definition": "Local source label for the synthetic Condition concept dysmenorrhea; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Dysmenorrhea.",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "pathSuffixes": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Condition diagnosis source label",
+      "source": "pathway-templates.v4.2.1.json",
+      "provenanceClass": "approved-local-synthetic-condition",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "urn:hdp-test-bundle:synthetic:condition",
+      "version": "1.0.0",
+      "code": "HDP-COND-0011",
+      "display": "Systemic lupus erythematosus",
+      "definition": "Local source label for the synthetic Condition concept systemic lupus erythematosus; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Systemic lupus erythematosus.",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "pathSuffixes": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Condition diagnosis source label",
+      "source": "pathway-templates.v4.2.1.json",
+      "provenanceClass": "approved-local-synthetic-condition",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "urn:hdp-test-bundle:synthetic:condition",
+      "version": "1.0.0",
+      "code": "HDP-COND-0012",
+      "display": "Metabolic disease",
+      "definition": "Local source label for the synthetic Condition concept metabolic disease; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Metabolic disease.",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "pathSuffixes": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Condition diagnosis source label",
+      "source": "pathway-templates.v4.2.1.json",
+      "provenanceClass": "approved-local-synthetic-condition",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "urn:hdp-test-bundle:synthetic:condition",
+      "version": "1.0.0",
+      "code": "HDP-COND-0013",
+      "display": "Breast lump",
+      "definition": "Local source label for the synthetic Condition concept breast lump; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Breast lump.",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "pathSuffixes": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Condition diagnosis source label",
+      "source": "pathway-templates.v4.2.1.json",
+      "provenanceClass": "approved-local-synthetic-condition",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "urn:hdp-test-bundle:synthetic:condition",
+      "version": "1.0.0",
+      "code": "HDP-COND-0014",
+      "display": "Leukemia",
+      "definition": "Local source label for the synthetic Condition concept leukemia; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Leukemia.",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "pathSuffixes": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Condition diagnosis source label",
+      "source": "pathway-templates.v4.2.1.json",
+      "provenanceClass": "approved-local-synthetic-condition",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "urn:hdp-test-bundle:synthetic:condition",
+      "version": "1.0.0",
+      "code": "HDP-COND-0015",
+      "display": "Metabolic syndrome",
+      "definition": "Local source label for the synthetic Condition concept metabolic syndrome; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Metabolic syndrome.",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "pathSuffixes": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Condition diagnosis source label",
+      "source": "clinical-content.v4.4.1.json secondaryClinicalBranches",
+      "provenanceClass": "approved-local-synthetic-condition",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "urn:hdp-test-bundle:synthetic:condition",
+      "version": "1.0.0",
+      "code": "HDP-COND-0016",
+      "display": "Asthma",
+      "definition": "Local source label for the synthetic Condition concept asthma; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Asthma.",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "pathSuffixes": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Condition diagnosis source label",
+      "source": "clinical-content.v4.4.1.json secondaryClinicalBranches",
+      "provenanceClass": "approved-local-synthetic-condition",
+      "status": "active",
+      "problemStatus": "mixed"
+    }
+  ],
+  "approvedExternalCodings": [
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+      "code": "LAB",
+      "canonicalDisplay": "Laboratory",
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "category[*].coding[*]"
+      ],
+      "semanticRole": "Observation:category[*].coding[*]",
+      "source": "HL7 terminology laboratory diagnostic-service section",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code": "exam",
+      "canonicalDisplay": "Exam",
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "category[*].coding[*]"
+      ],
+      "semanticRole": "Observation:category[*].coding[*]",
+      "source": "FHIR R4 observation category code system",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://dicom.nema.org/resources/ontology/DCM",
+      "code": "US",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Media"
+      ],
+      "paths": [
+        "modality.coding[*]"
+      ],
+      "semanticRole": "Media:modality.coding[*]",
+      "source": "DICOM terminology",
+      "provenanceClass": "dicom",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://fhir.health.gov.il/cs/il-core-research-study-category",
+      "code": "interventional",
+      "canonicalDisplay": "Interventional study",
+      "aliases": [],
+      "resourceTypes": [
+        "ResearchStudy"
+      ],
+      "paths": [
+        "category[*].coding[*]"
+      ],
+      "semanticRole": "ResearchStudy:category[*].coding[*]",
+      "source": "FHIR-Profiles/ilcore and FHIR-Profiles/hdp-il",
+      "provenanceClass": "pinned-il-core-or-hdp",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://fhir.health.gov.il/cs/il-hdp-document-category",
+      "code": "clinical-note",
+      "canonicalDisplay": "Clinical note",
+      "aliases": [],
+      "resourceTypes": [
+        "DocumentReference"
+      ],
+      "paths": [
+        "category[*].coding[*]"
+      ],
+      "semanticRole": "DocumentReference:category[*].coding[*]",
+      "source": "FHIR-Profiles/ilcore and FHIR-Profiles/hdp-il",
+      "provenanceClass": "pinned-il-core-or-hdp",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "18842-5",
+      "canonicalDisplay": "Discharge summary",
+      "aliases": [],
+      "resourceTypes": [
+        "DocumentReference"
+      ],
+      "paths": [
+        "type.coding[*]"
+      ],
+      "semanticRole": "DocumentReference:type.coding[*]",
+      "source": "LOINC concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "2160-0",
+      "canonicalDisplay": "Creatinine [Mass/volume] in Serum or Plasma",
+      "aliases": [],
+      "resourceTypes": [
+        "Observation",
+        "ServiceRequest"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Observation:code.coding[*]; ServiceRequest:code.coding[*]",
+      "source": "LOINC concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "24323-8",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "DiagnosticReport"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "DiagnosticReport:code.coding[*]",
+      "source": "LOINC concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "30745-4",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "ServiceRequest"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "ServiceRequest:code.coding[*]",
+      "source": "LOINC concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "31044-1",
+      "canonicalDisplay": "Immunization reaction",
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Observation:code.coding[*]",
+      "source": "LOINC concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "3141-9",
+      "canonicalDisplay": "Weight Measured",
+      "aliases": [],
+      "resourceTypes": [
+        "CarePlan",
+        "Goal"
+      ],
+      "paths": [
+        "activity[*].detail.code.coding[*]",
+        "target[*].measure.coding[*]"
+      ],
+      "semanticRole": "CarePlan:activity[*].detail.code.coding[*]; CarePlan:target[*].measure.coding[*]; Goal:activity[*].detail.code.coding[*]; Goal:target[*].measure.coding[*]",
+      "source": "LOINC concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "34117-2",
+      "canonicalDisplay": "History and physical note",
+      "aliases": [],
+      "resourceTypes": [
+        "DocumentReference"
+      ],
+      "paths": [
+        "type.coding[*]"
+      ],
+      "semanticRole": "DocumentReference:type.coding[*]",
+      "source": "LOINC concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "39152-4",
+      "canonicalDisplay": "FFD mammogram Breast Diagnostic",
+      "aliases": [],
+      "resourceTypes": [
+        "ImagingStudy"
+      ],
+      "paths": [
+        "procedureCode[*].coding[*]"
+      ],
+      "semanticRole": "ImagingStudy:procedureCode[*].coding[*]",
+      "source": "LOINC concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "43148-6",
+      "canonicalDisplay": "Insulin delivery device panel",
+      "aliases": [],
+      "resourceTypes": [
+        "DeviceRequest"
+      ],
+      "paths": [
+        "codeCodeableConcept.coding[*]"
+      ],
+      "semanticRole": "DeviceRequest:codeCodeableConcept.coding[*]",
+      "source": "LOINC concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "6298-4",
+      "canonicalDisplay": "Potassium [Moles/volume] in Blood",
+      "aliases": [],
+      "resourceTypes": [
+        "Observation",
+        "ServiceRequest"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Observation:code.coding[*]; ServiceRequest:code.coding[*]",
+      "source": "LOINC concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "630-4",
+      "canonicalDisplay": "Bacteria identified in Specimen by Culture",
+      "aliases": [],
+      "resourceTypes": [
+        "Observation",
+        "ServiceRequest"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Observation:code.coding[*]; ServiceRequest:code.coding[*]",
+      "source": "LOINC concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "68961-2",
+      "canonicalDisplay": "HIV 1 Ab [Presence] in Serum or Plasma by Immunoblot",
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Observation:code.coding[*]",
+      "source": "LOINC concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "718-7",
+      "canonicalDisplay": "Hemoglobin [Mass/volume] in Blood",
+      "aliases": [],
+      "resourceTypes": [
+        "Observation",
+        "ServiceRequest"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Observation:code.coding[*]; ServiceRequest:code.coding[*]",
+      "source": "LOINC concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "8462-4",
+      "canonicalDisplay": "Diastolic blood pressure",
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "component[*].code.coding[*]"
+      ],
+      "semanticRole": "Observation:component[*].code.coding[*]",
+      "source": "LOINC concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "8480-6",
+      "canonicalDisplay": "Systolic blood pressure",
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "component[*].code.coding[*]"
+      ],
+      "semanticRole": "Observation:component[*].code.coding[*]",
+      "source": "LOINC concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "85354-9",
+      "canonicalDisplay": "Blood pressure panel with all children optional",
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Observation:code.coding[*]",
+      "source": "LOINC concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "8661-1",
+      "canonicalDisplay": "Chief complaint - Reported",
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Observation:code.coding[*]",
+      "source": "LOINC concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "LA27976-2",
+      "canonicalDisplay": "Encounter-focused care team",
+      "aliases": [],
+      "resourceTypes": [
+        "CareTeam"
+      ],
+      "paths": [
+        "category[*].coding[*]"
+      ],
+      "semanticRole": "CareTeam:category[*].coding[*]",
+      "source": "LOINC concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "103693007",
+      "canonicalDisplay": "Diagnostic procedure (procedure)",
+      "aliases": [],
+      "resourceTypes": [
+        "Procedure"
+      ],
+      "paths": [
+        "category.coding[*]"
+      ],
+      "semanticRole": "Procedure:category.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "108252007",
+      "canonicalDisplay": "Laboratory procedure",
+      "aliases": [],
+      "resourceTypes": [
+        "Observation",
+        "ServiceRequest"
+      ],
+      "paths": [
+        "category[*].coding[*]"
+      ],
+      "semanticRole": "Observation:category[*].coding[*]; ServiceRequest:category[*].coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "112283007",
+      "canonicalDisplay": "Escherichia coli",
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "valueCodeableConcept.coding[*]"
+      ],
+      "semanticRole": "Observation:valueCodeableConcept.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "119297000",
+      "canonicalDisplay": "Blood specimen",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition",
+        "Specimen"
+      ],
+      "paths": [
+        "code.coding[*]",
+        "type.coding[*]"
+      ],
+      "semanticRole": "Condition:code.coding[*]; Condition:type.coding[*]; Specimen:code.coding[*]; Specimen:type.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "125666000",
+      "canonicalDisplay": "Burn",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Condition:code.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "126788000",
+      "canonicalDisplay": "Neoplasm of parotid gland",
+      "aliases": [],
+      "resourceTypes": [
+        "ResearchStudy"
+      ],
+      "paths": [
+        "condition[*].coding[*]"
+      ],
+      "semanticRole": "ResearchStudy:condition[*].coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "14745005",
+      "canonicalDisplay": "Hepatitis A vaccine",
+      "aliases": [],
+      "resourceTypes": [
+        "ImmunizationRecommendation"
+      ],
+      "paths": [
+        "recommendation[*].vaccineCode[*].coding[*]"
+      ],
+      "semanticRole": "ImmunizationRecommendation:recommendation[*].vaccineCode[*].coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "161832001",
+      "canonicalDisplay": "Progressive weight loss",
+      "aliases": [],
+      "resourceTypes": [
+        "CarePlan"
+      ],
+      "paths": [
+        "activity[*].outcomeCodeableConcept[*].coding[*]"
+      ],
+      "semanticRole": "CarePlan:activity[*].outcomeCodeableConcept[*].coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "161891005",
+      "canonicalDisplay": "Backache",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition",
+        "Encounter"
+      ],
+      "paths": [
+        "code.coding[*]",
+        "reasonCode[*].coding[*]"
+      ],
+      "semanticRole": "Condition:code.coding[*]; Condition:reasonCode[*].coding[*]; Encounter:code.coding[*]; Encounter:reasonCode[*].coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "185349003",
+      "canonicalDisplay": "Encounter for check up",
+      "aliases": [],
+      "resourceTypes": [
+        "Encounter"
+      ],
+      "paths": [
+        "reasonCode[*].coding[*]"
+      ],
+      "semanticRole": "Encounter:reasonCode[*].coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "195662009",
+      "canonicalDisplay": "Acute upper respiratory infection",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Condition:code.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "21522001",
+      "canonicalDisplay": "Abdominal pain (finding)",
+      "aliases": [],
+      "resourceTypes": [
+        "Media"
+      ],
+      "paths": [
+        "reasonCode[*].coding[*]"
+      ],
+      "semanticRole": "Media:reasonCode[*].coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "22165008",
+      "canonicalDisplay": "Metamizole sodium (substance)",
+      "aliases": [],
+      "resourceTypes": [
+        "MedicationDispense",
+        "MedicationRequest",
+        "MedicationStatement"
+      ],
+      "paths": [
+        "medicationCodeableConcept.coding[*]"
+      ],
+      "semanticRole": "MedicationDispense:medicationCodeableConcept.coding[*]; MedicationRequest:medicationCodeableConcept.coding[*]; MedicationStatement:medicationCodeableConcept.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "226208002",
+      "canonicalDisplay": "Fluid restricted diet",
+      "aliases": [],
+      "resourceTypes": [
+        "NutritionOrder"
+      ],
+      "paths": [
+        "oralDiet.type[*].coding[*]"
+      ],
+      "semanticRole": "NutritionOrder:oralDiet.type[*].coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "227493005",
+      "canonicalDisplay": "Cashew Nut",
+      "aliases": [],
+      "resourceTypes": [
+        "AllergyIntolerance",
+        "NutritionOrder"
+      ],
+      "paths": [
+        "code.coding[*]",
+        "excludeFoodModifier[*].coding[*]"
+      ],
+      "semanticRole": "AllergyIntolerance:code.coding[*]; AllergyIntolerance:excludeFoodModifier[*].coding[*]; NutritionOrder:code.coding[*]; NutritionOrder:excludeFoodModifier[*].coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "233604007",
+      "canonicalDisplay": "Pneumonia",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Condition:code.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "260373001",
+      "canonicalDisplay": "Detected",
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "valueCodeableConcept.coding[*]"
+      ],
+      "semanticRole": "Observation:valueCodeableConcept.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "260385009",
+      "canonicalDisplay": "Negative",
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "valueCodeableConcept.coding[*]"
+      ],
+      "semanticRole": "Observation:valueCodeableConcept.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "26643006",
+      "canonicalDisplay": "Oral route",
+      "aliases": [],
+      "resourceTypes": [
+        "MedicationAdministration",
+        "MedicationDispense",
+        "MedicationRequest",
+        "MedicationStatement"
+      ],
+      "paths": [
+        "dosage.route.coding[*]",
+        "dosageInstruction[*].route.coding[*]",
+        "dosage[*].route.coding[*]"
+      ],
+      "semanticRole": "MedicationAdministration:dosage.route.coding[*]; MedicationAdministration:dosageInstruction[*].route.coding[*]; MedicationAdministration:dosage[*].route.coding[*]; MedicationDispense:dosage.route.coding[*]; MedicationDispense:dosageInstruction[*].route.coding[*]; MedicationDispense:dosage[*].route.coding[*]; MedicationRequest:dosage.route.coding[*]; MedicationRequest:dosageInstruction[*].route.coding[*]; MedicationRequest:dosage[*].route.coding[*]; MedicationStatement:dosage.route.coding[*]; MedicationStatement:dosageInstruction[*].route.coding[*]; MedicationStatement:dosage[*].route.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "27113001",
+      "canonicalDisplay": "Body weight",
+      "aliases": [],
+      "resourceTypes": [
+        "CarePlan"
+      ],
+      "paths": [
+        "activity[*].detail.code.coding[*]"
+      ],
+      "semanticRole": "CarePlan:activity[*].detail.code.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "271807003",
+      "canonicalDisplay": "Rash",
+      "aliases": [],
+      "resourceTypes": [
+        "AllergyIntolerance"
+      ],
+      "paths": [
+        "reaction[*].manifestation[*].coding[*]"
+      ],
+      "semanticRole": "AllergyIntolerance:reaction[*].manifestation[*].coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "281647001",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "valueCodeableConcept.coding[*]"
+      ],
+      "semanticRole": "Observation:valueCodeableConcept.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "309343006",
+      "canonicalDisplay": "Physician",
+      "aliases": [],
+      "resourceTypes": [
+        "PractitionerRole"
+      ],
+      "paths": [
+        "code[*].coding[*]"
+      ],
+      "semanticRole": "PractitionerRole:code[*].coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "310129007",
+      "canonicalDisplay": "Rehabilitation service",
+      "aliases": [],
+      "resourceTypes": [
+        "EpisodeOfCare"
+      ],
+      "paths": [
+        "type[*].coding[*]"
+      ],
+      "semanticRole": "EpisodeOfCare:type[*].coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "33463005",
+      "canonicalDisplay": "Fluid",
+      "aliases": [],
+      "resourceTypes": [
+        "NutritionOrder"
+      ],
+      "paths": [
+        "oralDiet.nutrient[*].modifier.coding[*]"
+      ],
+      "semanticRole": "NutritionOrder:oralDiet.nutrient[*].modifier.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "34014006",
+      "canonicalDisplay": "Viral disease",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Condition:code.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "871738001",
+      "canonicalDisplay": "Live attenuated mumps vaccine",
+      "aliases": [],
+      "resourceTypes": [
+        "Immunization"
+      ],
+      "paths": [
+        "vaccineCode.coding[*]"
+      ],
+      "semanticRole": "Immunization:vaccineCode.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "346313005",
+      "canonicalDisplay": "Allergen extract vaccines",
+      "aliases": [],
+      "resourceTypes": [
+        "Immunization"
+      ],
+      "paths": [
+        "vaccineCode.coding[*]"
+      ],
+      "semanticRole": "Immunization:vaccineCode.coding[*]",
+      "source": "SNOMED CT concept retained for historical v1/v2 deterministic specifications",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "871822003",
+      "canonicalDisplay": "Hepatitis B vaccine",
+      "aliases": [],
+      "resourceTypes": [
+        "Immunization"
+      ],
+      "paths": [
+        "vaccineCode.coding[*]"
+      ],
+      "semanticRole": "Immunization:vaccineCode.coding[*]",
+      "source": "SNOMED CT concepts selected by the reviewed pediatric vaccine pathway",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "871831003",
+      "canonicalDisplay": "Diphtheria, tetanus and pertussis vaccine",
+      "aliases": [],
+      "resourceTypes": [
+        "Immunization"
+      ],
+      "paths": [
+        "vaccineCode.coding[*]"
+      ],
+      "semanticRole": "Immunization:vaccineCode.coding[*]",
+      "source": "SNOMED CT concepts selected by the reviewed pediatric vaccine pathway",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "871839001",
+      "canonicalDisplay": "Measles, mumps and rubella vaccine",
+      "aliases": [],
+      "resourceTypes": [
+        "Immunization"
+      ],
+      "paths": [
+        "vaccineCode.coding[*]"
+      ],
+      "semanticRole": "Immunization:vaccineCode.coding[*]",
+      "source": "SNOMED CT concepts selected by the reviewed pediatric vaccine pathway",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "35489007",
+      "canonicalDisplay": "Depressive disorder",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Condition:code.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "361716006",
+      "canonicalDisplay": "Entire left breast",
+      "aliases": [],
+      "resourceTypes": [
+        "ImagingStudy"
+      ],
+      "paths": [
+        "series[*].bodySite"
+      ],
+      "semanticRole": "ImagingStudy:series[*].bodySite",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "363346000",
+      "canonicalDisplay": "Malignant neoplastic disease",
+      "aliases": [
+        "Malignant neoplastic disease (disorder)"
+      ],
+      "resourceTypes": [
+        "Condition",
+        "ResearchStudy"
+      ],
+      "paths": [
+        "code.coding[*]",
+        "focus[*].coding[*]"
+      ],
+      "semanticRole": "Condition:code.coding[*]; Condition:focus[*].coding[*]; ResearchStudy:code.coding[*]; ResearchStudy:focus[*].coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "363679005",
+      "canonicalDisplay": "Imaging",
+      "aliases": [],
+      "resourceTypes": [
+        "ServiceRequest"
+      ],
+      "paths": [
+        "category[*].coding[*]"
+      ],
+      "semanticRole": "ServiceRequest:category[*].coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "367336001",
+      "canonicalDisplay": "Chemotherapy",
+      "aliases": [],
+      "resourceTypes": [
+        "Procedure"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Procedure:code.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "368208006",
+      "canonicalDisplay": "Left arm",
+      "aliases": [
+        "Left upper arm structure (body structure)"
+      ],
+      "resourceTypes": [
+        "Immunization",
+        "Observation",
+        "Specimen"
+      ],
+      "paths": [
+        "bodySite.coding[*]",
+        "collection.bodySite.coding[*]",
+        "site.coding[*]"
+      ],
+      "semanticRole": "Immunization:bodySite.coding[*]; Immunization:collection.bodySite.coding[*]; Immunization:site.coding[*]; Observation:bodySite.coding[*]; Observation:collection.bodySite.coding[*]; Observation:site.coding[*]; Specimen:bodySite.coding[*]; Specimen:collection.bodySite.coding[*]; Specimen:site.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "373529000",
+      "canonicalDisplay": "Morphine (substance)",
+      "aliases": [],
+      "resourceTypes": [
+        "MedicationAdministration"
+      ],
+      "paths": [
+        "medicationCodeableConcept.coding[*]"
+      ],
+      "semanticRole": "MedicationAdministration:medicationCodeableConcept.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "374646004",
+      "canonicalDisplay": "Product containing precisely amoxicillin 500 milligram/1 each conventional release oral tablet (clinical drug)",
+      "aliases": [],
+      "resourceTypes": [
+        "Medication"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Medication:code.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "38341003",
+      "canonicalDisplay": "Hypertensive disorder",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition",
+        "ServiceRequest"
+      ],
+      "paths": [
+        "code.coding[*]",
+        "reasonCode[*].coding[*]"
+      ],
+      "semanticRole": "Condition:code.coding[*]; Condition:reasonCode[*].coding[*]; ServiceRequest:code.coding[*]; ServiceRequest:reasonCode[*].coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "386619000",
+      "canonicalDisplay": "Low sodium diet",
+      "aliases": [],
+      "resourceTypes": [
+        "NutritionOrder"
+      ],
+      "paths": [
+        "oralDiet.type[*].coding[*]"
+      ],
+      "semanticRole": "NutritionOrder:oralDiet.type[*].coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "386661006",
+      "canonicalDisplay": "Fever",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition",
+        "Encounter"
+      ],
+      "paths": [
+        "code.coding[*]",
+        "reasonCode[*].coding[*]"
+      ],
+      "semanticRole": "Condition:code.coding[*]; Condition:reasonCode[*].coding[*]; Encounter:code.coding[*]; Encounter:reasonCode[*].coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "387713003",
+      "canonicalDisplay": "Surgical procedure",
+      "aliases": [],
+      "resourceTypes": [
+        "Procedure",
+        "ServiceRequest"
+      ],
+      "paths": [
+        "category.coding[*]",
+        "category[*].coding[*]"
+      ],
+      "semanticRole": "Procedure:category.coding[*]; Procedure:category[*].coding[*]; ServiceRequest:category.coding[*]; ServiceRequest:category[*].coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "394814009",
+      "canonicalDisplay": "General practice",
+      "aliases": [],
+      "resourceTypes": [
+        "PractitionerRole"
+      ],
+      "paths": [
+        "specialty[*].coding[*]"
+      ],
+      "semanticRole": "PractitionerRole:specialty[*].coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "39579001",
+      "canonicalDisplay": "Anaphylaxis",
+      "aliases": [],
+      "resourceTypes": [
+        "AllergyIntolerance"
+      ],
+      "paths": [
+        "reaction[*].manifestation[*].coding[*]"
+      ],
+      "semanticRole": "AllergyIntolerance:reaction[*].manifestation[*].coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "396550006",
+      "canonicalDisplay": "Blood test (procedure)",
+      "aliases": [],
+      "resourceTypes": [
+        "Observation",
+        "Procedure"
+      ],
+      "paths": [
+        "code.coding[*]",
+        "method.coding[*]"
+      ],
+      "semanticRole": "Observation:code.coding[*]; Observation:method.coding[*]; Procedure:code.coding[*]; Procedure:method.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "399067008",
+      "canonicalDisplay": "Lateral projection",
+      "aliases": [],
+      "resourceTypes": [
+        "Media"
+      ],
+      "paths": [
+        "view.coding[*]"
+      ],
+      "semanticRole": "Media:view.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "39972003",
+      "canonicalDisplay": "Sodium",
+      "aliases": [],
+      "resourceTypes": [
+        "NutritionOrder"
+      ],
+      "paths": [
+        "oralDiet.nutrient[*].modifier.coding[*]"
+      ],
+      "semanticRole": "NutritionOrder:oralDiet.nutrient[*].modifier.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "40468003",
+      "canonicalDisplay": "Viral hepatitis, type A",
+      "aliases": [],
+      "resourceTypes": [
+        "ImmunizationRecommendation"
+      ],
+      "paths": [
+        "recommendation[*].targetDisease.coding[*]"
+      ],
+      "semanticRole": "ImmunizationRecommendation:recommendation[*].targetDisease.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "408443003",
+      "canonicalDisplay": "General medical practice",
+      "aliases": [],
+      "resourceTypes": [
+        "PractitionerRole"
+      ],
+      "paths": [
+        "specialty[*].coding[*]"
+      ],
+      "semanticRole": "PractitionerRole:specialty[*].coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "420692007",
+      "canonicalDisplay": "Oral capsule",
+      "aliases": [],
+      "resourceTypes": [
+        "Medication"
+      ],
+      "paths": [
+        "form.coding[*]"
+      ],
+      "semanticRole": "Medication:form.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "428673006",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "MedicationDispense"
+      ],
+      "paths": [
+        "quantity"
+      ],
+      "semanticRole": "MedicationDispense:quantity",
+      "source": "SNOMED CT unit of presentation used by the published IL HDP 0.5.0 MedicationDispense example",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "431857002",
+      "canonicalDisplay": "Chronic kidney disease stage 4",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Condition:code.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "44054006",
+      "canonicalDisplay": "Type 2 diabetes mellitus",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Condition:code.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "46635009",
+      "canonicalDisplay": "Type 1 diabetes mellitus",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Condition:code.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "intentional-problem"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "49727002",
+      "canonicalDisplay": "Cough",
+      "aliases": [],
+      "resourceTypes": [
+        "ServiceRequest"
+      ],
+      "paths": [
+        "reasonCode[*].coding[*]"
+      ],
+      "semanticRole": "ServiceRequest:reasonCode[*].coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "700232004",
+      "canonicalDisplay": "General medical service",
+      "aliases": [],
+      "resourceTypes": [
+        "Encounter"
+      ],
+      "paths": [
+        "serviceType.coding[*]"
+      ],
+      "semanticRole": "Encounter:serviceType.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "706172005",
+      "canonicalDisplay": "Ventilator (physical object)",
+      "aliases": [],
+      "resourceTypes": [
+        "Device"
+      ],
+      "paths": [
+        "type.coding[*]"
+      ],
+      "semanticRole": "Device:type.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "707087005",
+      "canonicalDisplay": "At risk of domestic abuse",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Condition:code.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "71651007",
+      "canonicalDisplay": "Mammography",
+      "aliases": [],
+      "resourceTypes": [
+        "Procedure"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Procedure:code.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "736373009",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "CarePlan"
+      ],
+      "paths": [
+        "category[*].coding[*]"
+      ],
+      "semanticRole": "CarePlan:category[*].coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "738995006",
+      "canonicalDisplay": "Swallow (administration method)",
+      "aliases": [],
+      "resourceTypes": [
+        "MedicationAdministration",
+        "MedicationRequest"
+      ],
+      "paths": [
+        "dosage.method.coding[*]",
+        "dosageInstruction[*].method.coding[*]"
+      ],
+      "semanticRole": "MedicationAdministration:dosage.method.coding[*]; MedicationAdministration:dosageInstruction[*].method.coding[*]; MedicationRequest:dosage.method.coding[*]; MedicationRequest:dosageInstruction[*].method.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "74262004",
+      "canonicalDisplay": "Oral cavity structure",
+      "aliases": [],
+      "resourceTypes": [
+        "MedicationAdministration",
+        "MedicationRequest"
+      ],
+      "paths": [
+        "dosage.site.coding[*]",
+        "dosageInstruction[*].site.coding[*]"
+      ],
+      "semanticRole": "MedicationAdministration:dosage.site.coding[*]; MedicationAdministration:dosageInstruction[*].site.coding[*]; MedicationRequest:dosage.site.coding[*]; MedicationRequest:dosageInstruction[*].site.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "74400008",
+      "canonicalDisplay": "Appendicitis",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition",
+        "ServiceRequest"
+      ],
+      "paths": [
+        "code.coding[*]",
+        "reasonCode[*].coding[*]"
+      ],
+      "semanticRole": "Condition:code.coding[*]; Condition:reasonCode[*].coding[*]; ServiceRequest:code.coding[*]; ServiceRequest:reasonCode[*].coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "74474003",
+      "canonicalDisplay": "Gastrointestinal hemorrhage",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Condition:code.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "78421000",
+      "canonicalDisplay": "Intramuscular route (qualifier value)",
+      "aliases": [],
+      "resourceTypes": [
+        "Immunization"
+      ],
+      "paths": [
+        "route.coding[*]"
+      ],
+      "semanticRole": "Immunization:route.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "80146002",
+      "canonicalDisplay": "Appendectomy",
+      "aliases": [],
+      "resourceTypes": [
+        "Procedure",
+        "ServiceRequest"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Procedure:code.coding[*]; ServiceRequest:code.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "818983003",
+      "canonicalDisplay": "Structure of abdominopelvic cavity and/or content of abdominopelvic cavity and/or anterior abdominal wall (body structure)",
+      "aliases": [],
+      "resourceTypes": [
+        "Media"
+      ],
+      "paths": [
+        "bodySite.coding[*]"
+      ],
+      "semanticRole": "Media:bodySite.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "87612001",
+      "canonicalDisplay": "Blood (substance)",
+      "aliases": [],
+      "resourceTypes": [
+        "Substance"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Substance:code.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "89164003",
+      "canonicalDisplay": "Breast lump",
+      "aliases": [],
+      "resourceTypes": [
+        "ImagingStudy"
+      ],
+      "paths": [
+        "reasonCode[*].coding[*]"
+      ],
+      "semanticRole": "ImagingStudy:reasonCode[*].coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "91936005",
+      "canonicalDisplay": "Allergy to penicillin",
+      "aliases": [],
+      "resourceTypes": [
+        "AllergyIntolerance"
+      ],
+      "paths": [
+        "code.coding[*]",
+        "reaction[*].substance.coding[*]"
+      ],
+      "semanticRole": "AllergyIntolerance:code.coding[*]; AllergyIntolerance:reaction[*].substance.coding[*]",
+      "source": "SNOMED CT concepts selected by versioned builders and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+      "code": "active",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "AllergyIntolerance"
+      ],
+      "paths": [
+        "clinicalStatus.coding[*]"
+      ],
+      "semanticRole": "AllergyIntolerance:clinicalStatus.coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+      "code": "confirmed",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "AllergyIntolerance"
+      ],
+      "paths": [
+        "verificationStatus.coding[*]"
+      ],
+      "semanticRole": "AllergyIntolerance:verificationStatus.coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+      "code": "encounter-diagnosis",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "category[*].coding[*]"
+      ],
+      "semanticRole": "Condition:category[*].coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+      "code": "problem-list-item",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "category[*].coding[*]"
+      ],
+      "semanticRole": "Condition:category[*].coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+      "code": "active",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "clinicalStatus.coding[*]"
+      ],
+      "semanticRole": "Condition:clinicalStatus.coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+      "code": "resolved",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "clinicalStatus.coding[*]"
+      ],
+      "semanticRole": "Condition:clinicalStatus.coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+      "code": "confirmed",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "verificationStatus.coding[*]"
+      ],
+      "semanticRole": "Condition:verificationStatus.coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+      "code": "AD",
+      "canonicalDisplay": "Admission diagnosis",
+      "aliases": [],
+      "resourceTypes": [
+        "Encounter",
+        "EpisodeOfCare"
+      ],
+      "paths": [
+        "diagnosis[*].role.coding[*]",
+        "diagnosis[*].use.coding[*]"
+      ],
+      "semanticRole": "Encounter:diagnosis[*].role.coding[*]; Encounter:diagnosis[*].use.coding[*]; EpisodeOfCare:diagnosis[*].role.coding[*]; EpisodeOfCare:diagnosis[*].use.coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+      "code": "CM",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "EpisodeOfCare"
+      ],
+      "paths": [
+        "diagnosis[*].role.coding[*]"
+      ],
+      "semanticRole": "EpisodeOfCare:diagnosis[*].role.coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+      "code": "DD",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "EpisodeOfCare"
+      ],
+      "paths": [
+        "diagnosis[*].role.coding[*]"
+      ],
+      "semanticRole": "EpisodeOfCare:diagnosis[*].role.coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/diet",
+      "code": "dairy-free",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "NutritionOrder"
+      ],
+      "paths": [
+        "foodPreferenceModifier[*].coding[*]"
+      ],
+      "semanticRole": "NutritionOrder:foodPreferenceModifier[*].coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/flag-category",
+      "code": "safety",
+      "canonicalDisplay": "Safety",
+      "aliases": [],
+      "resourceTypes": [
+        "Flag"
+      ],
+      "paths": [
+        "category[*].coding[*]"
+      ],
+      "semanticRole": "Flag:category[*].coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/goal-achievement",
+      "code": "improving",
+      "canonicalDisplay": "Improving",
+      "aliases": [],
+      "resourceTypes": [
+        "Goal"
+      ],
+      "paths": [
+        "achievementStatus.coding[*]"
+      ],
+      "semanticRole": "Goal:achievementStatus.coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/goal-category",
+      "code": "dietary",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Goal"
+      ],
+      "paths": [
+        "category[*].coding[*]"
+      ],
+      "semanticRole": "Goal:category[*].coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/goal-priority",
+      "code": "high-priority",
+      "canonicalDisplay": "High Priority",
+      "aliases": [],
+      "resourceTypes": [
+        "Goal"
+      ],
+      "paths": [
+        "priority.coding[*]"
+      ],
+      "semanticRole": "Goal:priority.coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/immunization-recommendation-status",
+      "code": "due",
+      "canonicalDisplay": "Due",
+      "aliases": [],
+      "resourceTypes": [
+        "ImmunizationRecommendation"
+      ],
+      "paths": [
+        "recommendation[*].forecastStatus.coding[*]"
+      ],
+      "semanticRole": "ImmunizationRecommendation:recommendation[*].forecastStatus.coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/measure-improvement-notation",
+      "code": "increase",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Measure"
+      ],
+      "paths": [
+        "improvementNotation.coding[*]"
+      ],
+      "semanticRole": "Measure:improvementNotation.coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+      "code": "denominator",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Measure",
+        "MeasureReport"
+      ],
+      "paths": [
+        "group[*].population[*].code.coding[*]"
+      ],
+      "semanticRole": "Measure:group[*].population[*].code.coding[*]; MeasureReport:group[*].population[*].code.coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+      "code": "denominator-exclusion",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Measure",
+        "MeasureReport"
+      ],
+      "paths": [
+        "group[*].population[*].code.coding[*]"
+      ],
+      "semanticRole": "Measure:group[*].population[*].code.coding[*]; MeasureReport:group[*].population[*].code.coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+      "code": "initial-population",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Measure",
+        "MeasureReport"
+      ],
+      "paths": [
+        "group[*].population[*].code.coding[*]"
+      ],
+      "semanticRole": "Measure:group[*].population[*].code.coding[*]; MeasureReport:group[*].population[*].code.coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+      "code": "numerator",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Measure",
+        "MeasureReport"
+      ],
+      "paths": [
+        "group[*].population[*].code.coding[*]"
+      ],
+      "semanticRole": "Measure:group[*].population[*].code.coding[*]; MeasureReport:group[*].population[*].code.coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/measure-scoring",
+      "code": "proportion",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Measure"
+      ],
+      "paths": [
+        "scoring.coding[*]"
+      ],
+      "semanticRole": "Measure:scoring.coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/measure-type",
+      "code": "process",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Measure"
+      ],
+      "paths": [
+        "type[*].coding[*]"
+      ],
+      "semanticRole": "Measure:type[*].coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/media-type",
+      "code": "image",
+      "canonicalDisplay": "Image",
+      "aliases": [],
+      "resourceTypes": [
+        "Media"
+      ],
+      "paths": [
+        "type.coding[*]"
+      ],
+      "semanticRole": "Media:type.coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+      "code": "acute",
+      "canonicalDisplay": "Short course (acute) therapy",
+      "aliases": [],
+      "resourceTypes": [
+        "MedicationRequest"
+      ],
+      "paths": [
+        "courseOfTherapyType.coding[*]"
+      ],
+      "semanticRole": "MedicationRequest:courseOfTherapyType.coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+      "code": "continuous",
+      "canonicalDisplay": "Continuous long term therapy",
+      "aliases": [],
+      "resourceTypes": [
+        "MedicationRequest",
+        "MedicationStatement"
+      ],
+      "paths": [
+        "courseOfTherapyType.coding[*]",
+        "extension[*].valueCodeableConcept.coding[*]"
+      ],
+      "semanticRole": "MedicationRequest:courseOfTherapyType.coding[*]; MedicationRequest:extension[*].valueCodeableConcept.coding[*]; MedicationStatement:courseOfTherapyType.coding[*]; MedicationStatement:extension[*].valueCodeableConcept.coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code": "survey",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "category[*].coding[*]"
+      ],
+      "semanticRole": "Observation:category[*].coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code": "vital-signs",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "category[*].coding[*]"
+      ],
+      "semanticRole": "Observation:category[*].coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/practitioner-role",
+      "code": "doctor",
+      "canonicalDisplay": "Doctor",
+      "aliases": [],
+      "resourceTypes": [
+        "PractitionerRole"
+      ],
+      "paths": [
+        "code[*].coding[*]"
+      ],
+      "semanticRole": "PractitionerRole:code[*].coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/practitioner-role",
+      "code": "nurse",
+      "canonicalDisplay": "Nurse",
+      "aliases": [],
+      "resourceTypes": [
+        "PractitionerRole"
+      ],
+      "paths": [
+        "code[*].coding[*]"
+      ],
+      "semanticRole": "PractitionerRole:code[*].coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/research-study-phase",
+      "code": "phase-3",
+      "canonicalDisplay": "Phase 3",
+      "aliases": [],
+      "resourceTypes": [
+        "ResearchStudy"
+      ],
+      "paths": [
+        "phase.coding[*]"
+      ],
+      "semanticRole": "ResearchStudy:phase.coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+      "code": "LAB",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "DiagnosticReport"
+      ],
+      "paths": [
+        "category[*].coding[*]"
+      ],
+      "semanticRole": "DiagnosticReport:category[*].coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "code": "ACSN",
+      "canonicalDisplay": "Accession ID",
+      "aliases": [],
+      "resourceTypes": [
+        "ImagingStudy"
+      ],
+      "paths": [
+        "extension[*].valueIdentifier.type.coding[*]"
+      ],
+      "semanticRole": "ImagingStudy:extension[*].valueIdentifier.type.coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+      "code": "SNO",
+      "canonicalDisplay": "Serial Number",
+      "aliases": [],
+      "resourceTypes": [
+        "CarePlan"
+      ],
+      "paths": [
+        "identifier[*].type.coding[*]"
+      ],
+      "semanticRole": "CarePlan:identifier[*].type.coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code": "AMB",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Encounter"
+      ],
+      "paths": [
+        "class"
+      ],
+      "semanticRole": "Encounter:class",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code": "EMER",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Encounter"
+      ],
+      "paths": [
+        "class"
+      ],
+      "semanticRole": "Encounter:class",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code": "HIV",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "meta.security[*]"
+      ],
+      "semanticRole": "Observation:meta.security[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code": "IMP",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Encounter"
+      ],
+      "paths": [
+        "class"
+      ],
+      "semanticRole": "Encounter:class",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code": "MH",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "meta.security[*]"
+      ],
+      "semanticRole": "Condition:meta.security[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code": "NOPAT",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "meta.security[*]"
+      ],
+      "semanticRole": "Condition:meta.security[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code": "RFP",
+      "canonicalDisplay": "Refill - Part Fill",
+      "aliases": [],
+      "resourceTypes": [
+        "MedicationDispense"
+      ],
+      "paths": [
+        "type.coding[*]"
+      ],
+      "semanticRole": "MedicationDispense:type.coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code": "SDV",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Condition"
+      ],
+      "paths": [
+        "meta.security[*]"
+      ],
+      "semanticRole": "Condition:meta.security[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+      "code": "HTEST",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "AllergyIntolerance",
+        "CarePlan",
+        "CareTeam",
+        "Communication",
+        "CommunicationRequest",
+        "Condition",
+        "Device",
+        "DeviceRequest",
+        "DiagnosticReport",
+        "DocumentReference",
+        "Encounter",
+        "EpisodeOfCare",
+        "Flag",
+        "Goal",
+        "ImagingStudy",
+        "Immunization",
+        "ImmunizationRecommendation",
+        "Location",
+        "Measure",
+        "MeasureReport",
+        "Media",
+        "Medication",
+        "MedicationAdministration",
+        "MedicationDispense",
+        "MedicationRequest",
+        "MedicationStatement",
+        "MolecularSequence",
+        "NutritionOrder",
+        "Observation",
+        "Organization",
+        "OrganizationAffiliation",
+        "Patient",
+        "Practitioner",
+        "PractitionerRole",
+        "Procedure",
+        "Questionnaire",
+        "QuestionnaireResponse",
+        "RelatedPerson",
+        "ResearchStudy",
+        "ResearchSubject",
+        "ServiceRequest",
+        "Specimen",
+        "Substance",
+        "SupplyDelivery"
+      ],
+      "paths": [
+        "meta.security[*]"
+      ],
+      "semanticRole": "AllergyIntolerance:meta.security[*]; CarePlan:meta.security[*]; CareTeam:meta.security[*]; Communication:meta.security[*]; CommunicationRequest:meta.security[*]; Condition:meta.security[*]; Device:meta.security[*]; DeviceRequest:meta.security[*]; DiagnosticReport:meta.security[*]; DocumentReference:meta.security[*]; Encounter:meta.security[*]; EpisodeOfCare:meta.security[*]; Flag:meta.security[*]; Goal:meta.security[*]; ImagingStudy:meta.security[*]; Immunization:meta.security[*]; ImmunizationRecommendation:meta.security[*]; Location:meta.security[*]; Measure:meta.security[*]; MeasureReport:meta.security[*]; Media:meta.security[*]; Medication:meta.security[*]; MedicationAdministration:meta.security[*]; MedicationDispense:meta.security[*]; MedicationRequest:meta.security[*]; MedicationStatement:meta.security[*]; MolecularSequence:meta.security[*]; NutritionOrder:meta.security[*]; Observation:meta.security[*]; Organization:meta.security[*]; OrganizationAffiliation:meta.security[*]; Patient:meta.security[*]; Practitioner:meta.security[*]; PractitionerRole:meta.security[*]; Procedure:meta.security[*]; Questionnaire:meta.security[*]; QuestionnaireResponse:meta.security[*]; RelatedPerson:meta.security[*]; ResearchStudy:meta.security[*]; ResearchSubject:meta.security[*]; ServiceRequest:meta.security[*]; Specimen:meta.security[*]; Substance:meta.security[*]; SupplyDelivery:meta.security[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+      "code": "R",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Condition",
+        "Observation"
+      ],
+      "paths": [
+        "meta.security[*]"
+      ],
+      "semanticRole": "Condition:meta.security[*]; Observation:meta.security[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+      "code": "V",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Condition",
+        "Observation"
+      ],
+      "paths": [
+        "meta.security[*]"
+      ],
+      "semanticRole": "Condition:meta.security[*]; Observation:meta.security[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+      "code": "H",
+      "canonicalDisplay": "High",
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "component[*].interpretation[*].coding[*]",
+        "interpretation[*].coding[*]"
+      ],
+      "semanticRole": "Observation:component[*].interpretation[*].coding[*]; Observation:interpretation[*].coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+      "code": "L",
+      "canonicalDisplay": "Low",
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "component[*].interpretation[*].coding[*]",
+        "interpretation[*].coding[*]"
+      ],
+      "semanticRole": "Observation:component[*].interpretation[*].coding[*]; Observation:interpretation[*].coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+      "code": "N",
+      "canonicalDisplay": "Normal",
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "component[*].interpretation[*].coding[*]",
+        "interpretation[*].coding[*]"
+      ],
+      "semanticRole": "Observation:component[*].interpretation[*].coding[*]; Observation:interpretation[*].coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+      "code": "NEG",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "interpretation[*].coding[*]"
+      ],
+      "semanticRole": "Observation:interpretation[*].coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+      "code": "POS",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "interpretation[*].coding[*]"
+      ],
+      "semanticRole": "Observation:interpretation[*].coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode",
+      "code": "WRITTEN",
+      "canonicalDisplay": "written",
+      "aliases": [],
+      "resourceTypes": [
+        "CommunicationRequest"
+      ],
+      "paths": [
+        "medium[*].coding[*]"
+      ],
+      "semanticRole": "CommunicationRequest:medium[*].coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+      "code": "ATND",
+      "canonicalDisplay": "attender",
+      "aliases": [],
+      "resourceTypes": [
+        "Encounter"
+      ],
+      "paths": [
+        "participant[*].type[*].coding[*]"
+      ],
+      "semanticRole": "Encounter:participant[*].type[*].coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+      "code": "GUARD",
+      "canonicalDisplay": "Guardian",
+      "aliases": [],
+      "resourceTypes": [
+        "RelatedPerson"
+      ],
+      "paths": [
+        "relationship[*].coding[*]"
+      ],
+      "semanticRole": "RelatedPerson:relationship[*].coding[*]",
+      "source": "hl7.terminology.r4#6.2.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+      "code": "HU",
+      "canonicalDisplay": "Hospital unit",
+      "aliases": [],
+      "resourceTypes": [
+        "Location"
+      ],
+      "paths": [
+        "type[*].coding[*]"
+      ],
+      "semanticRole": "Location:type[*].coding[*]",
+      "source": "hl7.terminology.r4#6.5.0",
+      "provenanceClass": "pinned-hl7-terminology",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://unitsofmeasure.org",
+      "code": "1",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Medication",
+        "MedicationAdministration",
+        "MedicationDispense",
+        "MedicationRequest",
+        "MedicationStatement",
+        "Observation"
+      ],
+      "paths": [
+        "dispenseRequest.quantity",
+        "dosage.dose",
+        "dosageInstruction[*].doseAndRate[*].doseQuantity",
+        "dosage[*].doseAndRate[*].doseQuantity",
+        "ingredient[*].strength.denominator",
+        "referenceRange[*].high",
+        "referenceRange[*].low"
+      ],
+      "semanticRole": "Medication:dispenseRequest.quantity; Medication:dosage.dose; Medication:dosageInstruction[*].doseAndRate[*].doseQuantity; Medication:dosage[*].doseAndRate[*].doseQuantity; Medication:ingredient[*].strength.denominator; Medication:referenceRange[*].high; Medication:referenceRange[*].low; MedicationAdministration:dispenseRequest.quantity; MedicationAdministration:dosage.dose; MedicationAdministration:dosageInstruction[*].doseAndRate[*].doseQuantity; MedicationAdministration:dosage[*].doseAndRate[*].doseQuantity; MedicationAdministration:ingredient[*].strength.denominator; MedicationAdministration:referenceRange[*].high; MedicationAdministration:referenceRange[*].low; MedicationDispense:dispenseRequest.quantity; MedicationDispense:dosage.dose; MedicationDispense:dosageInstruction[*].doseAndRate[*].doseQuantity; MedicationDispense:dosage[*].doseAndRate[*].doseQuantity; MedicationDispense:ingredient[*].strength.denominator; MedicationDispense:referenceRange[*].high; MedicationDispense:referenceRange[*].low; MedicationRequest:dispenseRequest.quantity; MedicationRequest:dosage.dose; MedicationRequest:dosageInstruction[*].doseAndRate[*].doseQuantity; MedicationRequest:dosage[*].doseAndRate[*].doseQuantity; MedicationRequest:ingredient[*].strength.denominator; MedicationRequest:referenceRange[*].high; MedicationRequest:referenceRange[*].low; MedicationStatement:dispenseRequest.quantity; MedicationStatement:dosage.dose; MedicationStatement:dosageInstruction[*].doseAndRate[*].doseQuantity; MedicationStatement:dosage[*].doseAndRate[*].doseQuantity; MedicationStatement:ingredient[*].strength.denominator; MedicationStatement:referenceRange[*].high; MedicationStatement:referenceRange[*].low; Observation:dispenseRequest.quantity; Observation:dosage.dose; Observation:dosageInstruction[*].doseAndRate[*].doseQuantity; Observation:dosage[*].doseAndRate[*].doseQuantity; Observation:ingredient[*].strength.denominator; Observation:referenceRange[*].high; Observation:referenceRange[*].low",
+      "source": "UCUM units required by generated quantitative facts",
+      "provenanceClass": "ucum",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://unitsofmeasure.org",
+      "code": "[lb_av]",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Goal"
+      ],
+      "paths": [
+        "target[*].detailRange.high",
+        "target[*].detailRange.low"
+      ],
+      "semanticRole": "Goal:target[*].detailRange.high; Goal:target[*].detailRange.low",
+      "source": "UCUM units required by generated quantitative facts",
+      "provenanceClass": "ucum",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://unitsofmeasure.org",
+      "code": "d",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "MedicationDispense"
+      ],
+      "paths": [
+        "daysSupply"
+      ],
+      "semanticRole": "MedicationDispense:daysSupply",
+      "source": "UCUM unit required by generated medication-dispense follow-up facts",
+      "provenanceClass": "ucum",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://unitsofmeasure.org",
+      "code": "g",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "NutritionOrder"
+      ],
+      "paths": [
+        "oralDiet.nutrient[*].amount"
+      ],
+      "semanticRole": "NutritionOrder:oralDiet.nutrient[*].amount",
+      "source": "UCUM units required by generated quantitative facts",
+      "provenanceClass": "ucum",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://unitsofmeasure.org",
+      "code": "g/dL",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "referenceRange[*].high",
+        "referenceRange[*].low",
+        "valueQuantity"
+      ],
+      "semanticRole": "Observation:referenceRange[*].high; Observation:referenceRange[*].low; Observation:valueQuantity",
+      "source": "UCUM units required by generated quantitative facts",
+      "provenanceClass": "ucum",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://unitsofmeasure.org",
+      "code": "mL",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Immunization",
+        "NutritionOrder",
+        "Substance"
+      ],
+      "paths": [
+        "doseQuantity",
+        "instance[*].quantity",
+        "oralDiet.nutrient[*].amount"
+      ],
+      "semanticRole": "Immunization:doseQuantity; Immunization:instance[*].quantity; Immunization:oralDiet.nutrient[*].amount; NutritionOrder:doseQuantity; NutritionOrder:instance[*].quantity; NutritionOrder:oralDiet.nutrient[*].amount; Substance:doseQuantity; Substance:instance[*].quantity; Substance:oralDiet.nutrient[*].amount",
+      "source": "UCUM units required by generated quantitative facts",
+      "provenanceClass": "ucum",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://unitsofmeasure.org",
+      "code": "mg",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Medication",
+        "MedicationAdministration",
+        "MedicationRequest"
+      ],
+      "paths": [
+        "dosage.dose",
+        "dosageInstruction[*].doseAndRate[*].doseQuantity",
+        "ingredient[*].strength.numerator"
+      ],
+      "semanticRole": "Medication:dosage.dose; Medication:dosageInstruction[*].doseAndRate[*].doseQuantity; Medication:ingredient[*].strength.numerator; MedicationAdministration:dosage.dose; MedicationAdministration:dosageInstruction[*].doseAndRate[*].doseQuantity; MedicationAdministration:ingredient[*].strength.numerator; MedicationRequest:dosage.dose; MedicationRequest:dosageInstruction[*].doseAndRate[*].doseQuantity; MedicationRequest:ingredient[*].strength.numerator",
+      "source": "UCUM units required by generated quantitative facts",
+      "provenanceClass": "ucum",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://unitsofmeasure.org",
+      "code": "mg/dL",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "referenceRange[*].high",
+        "referenceRange[*].low",
+        "valueQuantity"
+      ],
+      "semanticRole": "Observation:referenceRange[*].high; Observation:referenceRange[*].low; Observation:valueQuantity",
+      "source": "UCUM units required by generated quantitative facts",
+      "provenanceClass": "ucum",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://unitsofmeasure.org",
+      "code": "mm[Hg]",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "component[*].referenceRange[*].high",
+        "component[*].referenceRange[*].low",
+        "component[*].valueQuantity"
+      ],
+      "semanticRole": "Observation:component[*].referenceRange[*].high; Observation:component[*].referenceRange[*].low; Observation:component[*].valueQuantity",
+      "source": "UCUM units required by generated quantitative facts",
+      "provenanceClass": "ucum",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://unitsofmeasure.org",
+      "code": "mmol/L",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "referenceRange[*].high",
+        "referenceRange[*].low",
+        "valueQuantity"
+      ],
+      "semanticRole": "Observation:referenceRange[*].high; Observation:referenceRange[*].low; Observation:valueQuantity",
+      "source": "UCUM units required by generated quantitative facts",
+      "provenanceClass": "ucum",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://www.ncbi.nlm.nih.gov/nuccore",
+      "code": "NC_000009.11",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "MolecularSequence"
+      ],
+      "paths": [
+        "referenceSeq.referenceSeqId.coding[*]"
+      ],
+      "semanticRole": "MolecularSequence:referenceSeq.referenceSeqId.coding[*]",
+      "source": "NCBI reference sequence identifier",
+      "provenanceClass": "ncbi-reference",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "code": "11289",
+      "canonicalDisplay": "Warfarin",
+      "aliases": [],
+      "resourceTypes": [
+        "MedicationRequest"
+      ],
+      "paths": [
+        "medicationCodeableConcept.coding[*]"
+      ],
+      "semanticRole": "MedicationRequest:medicationCodeableConcept.coding[*]",
+      "source": "RxNorm concepts in the clinical evidence catalog",
+      "provenanceClass": "reviewed-external-medication",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "code": "161",
+      "canonicalDisplay": "Acetaminophen",
+      "aliases": [],
+      "resourceTypes": [
+        "MedicationDispense",
+        "MedicationRequest",
+        "MedicationStatement"
+      ],
+      "paths": [
+        "medicationCodeableConcept.coding[*]"
+      ],
+      "semanticRole": "MedicationDispense:medicationCodeableConcept.coding[*]; MedicationRequest:medicationCodeableConcept.coding[*]; MedicationStatement:medicationCodeableConcept.coding[*]",
+      "source": "RxNorm concepts in the clinical evidence catalog",
+      "provenanceClass": "reviewed-external-medication",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "code": "29046",
+      "canonicalDisplay": "Lisinopril",
+      "aliases": [],
+      "resourceTypes": [
+        "MedicationRequest"
+      ],
+      "paths": [
+        "medicationCodeableConcept.coding[*]"
+      ],
+      "semanticRole": "MedicationRequest:medicationCodeableConcept.coding[*]",
+      "source": "RxNorm concepts in the clinical evidence catalog",
+      "provenanceClass": "reviewed-external-medication",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "code": "723",
+      "canonicalDisplay": "Amoxicillin",
+      "aliases": [],
+      "resourceTypes": [
+        "MedicationAdministration",
+        "MedicationRequest"
+      ],
+      "paths": [
+        "medicationCodeableConcept.coding[*]"
+      ],
+      "semanticRole": "MedicationAdministration:medicationCodeableConcept.coding[*]; MedicationRequest:medicationCodeableConcept.coding[*]",
+      "source": "RxNorm concepts in the clinical evidence catalog",
+      "provenanceClass": "reviewed-external-medication",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "code": "9997",
+      "canonicalDisplay": "Spironolactone",
+      "aliases": [],
+      "resourceTypes": [
+        "MedicationRequest"
+      ],
+      "paths": [
+        "medicationCodeableConcept.coding[*]"
+      ],
+      "semanticRole": "MedicationRequest:medicationCodeableConcept.coding[*]",
+      "source": "RxNorm concepts in the clinical evidence catalog",
+      "provenanceClass": "reviewed-external-medication",
+      "status": "active",
+      "problemStatus": "mixed"
+    },
+    {
+      "system": "https://dicom.nema.org",
+      "code": "MG",
+      "canonicalDisplay": "Mammography",
+      "aliases": [],
+      "resourceTypes": [
+        "ImagingStudy"
+      ],
+      "paths": [
+        "modality[*]"
+      ],
+      "semanticRole": "ImagingStudy:modality[*]",
+      "source": "DICOM terminology",
+      "provenanceClass": "dicom",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html",
+      "code": "MG",
+      "canonicalDisplay": "Mammography",
+      "aliases": [],
+      "resourceTypes": [
+        "ImagingStudy"
+      ],
+      "paths": [
+        "series[*].modality"
+      ],
+      "semanticRole": "ImagingStudy:series[*].modality",
+      "source": "DICOM terminology",
+      "provenanceClass": "dicom",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "urn:ietf:rfc:3986",
+      "code": "http://fhir.health.org.il/fhirex/Measure/measure-exclusive-breastfeeding#PopulationGroup1",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Measure",
+        "MeasureReport"
+      ],
+      "paths": [
+        "group[*].code.coding[*]"
+      ],
+      "semanticRole": "Measure:group[*].code.coding[*]; MeasureReport:group[*].code.coding[*]",
+      "source": "FHIR R4 Coding URI convention",
+      "provenanceClass": "fhir-uri-coding",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "urn:ietf:rfc:3986",
+      "code": "http://fhir.health.org.il/fhirex/Measure/measure-exclusive-breastfeeding#PopulationGroup2",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Measure",
+        "MeasureReport"
+      ],
+      "paths": [
+        "group[*].code.coding[*]"
+      ],
+      "semanticRole": "Measure:group[*].code.coding[*]; MeasureReport:group[*].code.coding[*]",
+      "source": "FHIR R4 Coding URI convention",
+      "provenanceClass": "fhir-uri-coding",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "urn:ietf:rfc:3986",
+      "code": "urn:oid:1.2.840.10008.5.1.4.1.1.1.2",
+      "canonicalDisplay": "Digital Mammography X-Ray Image Storage - For Presentation",
+      "aliases": [],
+      "resourceTypes": [
+        "ImagingStudy"
+      ],
+      "paths": [
+        "series[*].instance[*].sopClass"
+      ],
+      "semanticRole": "ImagingStudy:series[*].instance[*].sopClass",
+      "source": "FHIR R4 Coding URI convention",
+      "provenanceClass": "fhir-uri-coding",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://unitsofmeasure.org",
+      "code": "meq/L",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "valueQuantity"
+      ],
+      "semanticRole": "Observation:valueQuantity; UCUM-convertible potassium result",
+      "source": "UCUM unit used by the R31 normalized-unit detector variant",
+      "provenanceClass": "ucum",
+      "status": "active",
+      "problemStatus": "intentional-problem"
+    },
+    {
+      "system": "http://unitsofmeasure.org",
+      "code": "g/L",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "valueQuantity"
+      ],
+      "semanticRole": "Observation:valueQuantity; UCUM-convertible hemoglobin result",
+      "source": "UCUM unit used by the R31 normalized-unit detector variant",
+      "provenanceClass": "ucum",
+      "status": "active",
+      "problemStatus": "intentional-problem"
+    },
+    {
+      "system": "http://unitsofmeasure.org",
+      "code": "umol/L",
+      "canonicalDisplay": null,
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "valueQuantity"
+      ],
+      "semanticRole": "Observation:valueQuantity; UCUM-convertible creatinine result",
+      "source": "UCUM unit used by the R31 normalized-unit detector variant",
+      "provenanceClass": "ucum",
+      "status": "active",
+      "problemStatus": "intentional-problem"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "44465007",
+      "canonicalDisplay": "Sprain of ankle",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition",
+        "Encounter"
+      ],
+      "paths": [
+        "code.coding[*]",
+        "reasonCode[*].coding[*]"
+      ],
+      "semanticRole": "Condition:code.coding[*]; Condition:reasonCode[*].coding[*]; Encounter:code.coding[*]; Encounter:reasonCode[*].coding[*]",
+      "source": "SNOMED International SNOMED Expo concept 44465007: active Sprain of ankle (disorder), https://termhub.atlassian.net/wiki/spaces/SnomedExpo/pages/28619330",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "125643001",
+      "canonicalDisplay": "Open wound",
+      "aliases": [],
+      "resourceTypes": [
+        "Condition",
+        "Encounter"
+      ],
+      "paths": [
+        "code.coding[*]",
+        "reasonCode[*].coding[*]"
+      ],
+      "semanticRole": "Condition:code.coding[*]; Condition:reasonCode[*].coding[*]; Encounter:code.coding[*]; Encounter:reasonCode[*].coding[*]",
+      "source": "HL7 IPS SNOMED CT IPS Free Set, https://www.hl7.org/fhir/uv/ips/STU1.1/ValueSet-problems-snomed-ct-ips-free-set.html",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "54885007",
+      "canonicalDisplay": "Cataract extraction",
+      "aliases": [],
+      "resourceTypes": [
+        "ServiceRequest"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "ServiceRequest:code.coding[*]",
+      "source": "SNOMED CT concept selected by versioned pathway builder and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "32485007",
+      "canonicalDisplay": "Hospital admission",
+      "aliases": [],
+      "resourceTypes": [
+        "ServiceRequest"
+      ],
+      "paths": [
+        "reasonCode[*].coding[*]"
+      ],
+      "semanticRole": "ServiceRequest:reasonCode[*].coding[*]",
+      "source": "SNOMED CT concept selected by versioned pathway builder and profile examples",
+      "provenanceClass": "reviewed-external-clinical",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "82675-0",
+      "canonicalDisplay": "Human papilloma virus 16+18+31+33+35+39+45+51+52+56+58+59+66+68 DNA [Presence] in Cervix by NAA with probe detection",
+      "aliases": [],
+      "resourceTypes": [
+        "ServiceRequest"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "ServiceRequest.code",
+      "source": "https://loinc.org/82675-0 (accessed 2026-09-25)",
+      "provenanceClass": "reviewed-s14a-branch-concept",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "82675-0",
+      "canonicalDisplay": "Human papilloma virus 16+18+31+33+35+39+45+51+52+56+58+59+66+68 DNA [Presence] in Cervix by NAA with probe detection",
+      "aliases": [],
+      "resourceTypes": [
+        "Observation"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Observation.code",
+      "source": "https://loinc.org/82675-0 (accessed 2026-09-25)",
+      "provenanceClass": "reviewed-s14a-branch-concept",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "174041007",
+      "canonicalDisplay": "Laparoscopic emergency appendectomy",
+      "aliases": [],
+      "resourceTypes": [
+        "Procedure"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "Procedure.code",
+      "source": "https://docs.snomed.org/snomed-ct-practical-guides/snomed-ct-starter-guide/7-snomed-ct-expressions (accessed 2026-09-25)",
+      "provenanceClass": "reviewed-s14a-branch-concept",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "373942005",
+      "canonicalDisplay": "Discharge summary",
+      "aliases": [],
+      "resourceTypes": [
+        "DocumentReference"
+      ],
+      "paths": [
+        "type.coding[*]"
+      ],
+      "semanticRole": "DocumentReference:type.coding[*]",
+      "source": "NHS eDischarge vocabulary SNOMED CT 373942005; accessed 2026-09-25",
+      "provenanceClass": "reviewed-s14a-branch-concept",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "code": "6809",
+      "canonicalDisplay": "Metformin",
+      "aliases": [],
+      "resourceTypes": [
+        "MedicationStatement"
+      ],
+      "paths": [
+        "medicationCodeableConcept.coding[*]"
+      ],
+      "semanticRole": "MedicationStatement:medicationCodeableConcept.coding[*]",
+      "source": "S14A reviewed metformin reconciliation; accessed 2026-09-25",
+      "provenanceClass": "reviewed-s14a-branch-concept",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "428673006",
+      "canonicalDisplay": "Tablet",
+      "aliases": [],
+      "resourceTypes": [
+        "MedicationRequest"
+      ],
+      "paths": [
+        "dispenseRequest.quantity"
+      ],
+      "semanticRole": "MedicationRequest:dispenseRequest.quantity",
+      "source": "S14A reviewed 30-tablet supply; accessed 2026-09-25",
+      "provenanceClass": "reviewed-s14a-branch-concept",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://unitsofmeasure.org",
+      "code": "d",
+      "canonicalDisplay": "day",
+      "aliases": [],
+      "resourceTypes": [
+        "MedicationRequest"
+      ],
+      "paths": [
+        "dispenseRequest.expectedSupplyDuration"
+      ],
+      "semanticRole": "MedicationRequest:dispenseRequest.expectedSupplyDuration",
+      "source": "UCUM day for reviewed 30-day supply; accessed 2026-09-25",
+      "provenanceClass": "reviewed-s14a-branch-concept",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://unitsofmeasure.org",
+      "code": "d",
+      "canonicalDisplay": "day",
+      "aliases": [],
+      "resourceTypes": [
+        "MedicationDispense"
+      ],
+      "paths": [
+        "daysSupply"
+      ],
+      "semanticRole": "MedicationDispense:daysSupply",
+      "source": "UCUM day for reviewed 30-day supply; accessed 2026-09-25",
+      "provenanceClass": "reviewed-s14a-branch-concept",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "44054006",
+      "canonicalDisplay": "Type 2 diabetes mellitus",
+      "aliases": [],
+      "resourceTypes": [
+        "ServiceRequest"
+      ],
+      "paths": [
+        "reasonCode[*].coding[*]"
+      ],
+      "semanticRole": "ServiceRequest.reasonCode for diabetic eye assessment",
+      "source": "U02 approved established type-2 diabetes indication; accessed 2026-09-25",
+      "provenanceClass": "reviewed-s14a-branch-concept",
+      "status": "active",
+      "problemStatus": "ordinary"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "390906007",
+      "canonicalDisplay": "Follow-up encounter",
+      "aliases": [],
+      "resourceTypes": [
+        "ServiceRequest"
+      ],
+      "paths": [
+        "code.coding[*]"
+      ],
+      "semanticRole": "ServiceRequest:follow-up-order",
+      "source": "U02 existing reviewed follow-up concept; SNOMED CT 390906007",
+      "provenanceClass": "reviewed-u02-follow-up-order",
+      "status": "active",
+      "problemStatus": "ordinary",
+      "accessDate": "2026-09-25",
+      "eligibility": "HMO diet counselling follow-up order only"
+    }
+  ],
+  "projectControlPrefixes": [
+    "urn:hdp-test-bundle:synthetic-",
+    "urn:hdp-test-bundle:synthetic:"
+  ],
+  "displayPolicy": "Approved local and external codes are exact system/code rows with bounded resource/path roles. When a display is supplied it must equal the canonical display or an explicit alias. Pinned local CodeSystem displays are checked when present; unknown external codes are rejected even when their system is recognized.",
+  "localConditionCodeSystem": {
+    "url": "urn:hdp-test-bundle:synthetic:condition",
+    "version": "1.0.0",
+    "name": "HDPTestBundleSyntheticCondition",
+    "title": "HDP Test Bundle Synthetic Condition",
+    "status": "active",
+    "content": "complete",
+    "publisher": "HDP Test Bundle project",
+    "description": "Project-owned simulated source diagnosis labels for the S18 clinical mix; not a SNOMED CT or ICD release. Local-only use is an intentional quality problem with a visible il-condition-sct warning.",
+    "resourceType": "CodeSystem",
+    "id": "hdp-test-bundle-synthetic-condition",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "HDP-COND-0001",
+        "display": "Acute upper respiratory infection",
+        "definition": "Local source label for the synthetic Condition concept acute upper respiratory infection; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Acute upper respiratory infection."
+      },
+      {
+        "code": "HDP-COND-0002",
+        "display": "Gastroenteritis",
+        "definition": "Local source label for the synthetic Condition concept gastroenteritis; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Gastroenteritis."
+      },
+      {
+        "code": "HDP-COND-0003",
+        "display": "Hypertensive disorder",
+        "definition": "Local source label for the synthetic Condition concept hypertensive disorder; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Hypertensive disorder."
+      },
+      {
+        "code": "HDP-COND-0004",
+        "display": "Burn",
+        "definition": "Local source label for the synthetic Condition concept burn; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Burn."
+      },
+      {
+        "code": "HDP-COND-0005",
+        "display": "Malignant neoplasm of breast",
+        "definition": "Local source label for the synthetic Condition concept malignant neoplasm of breast; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Malignant neoplasm of breast."
+      },
+      {
+        "code": "HDP-COND-0006",
+        "display": "Malignant tumor of colon",
+        "definition": "Local source label for the synthetic Condition concept malignant tumor of colon; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Malignant tumor of colon."
+      },
+      {
+        "code": "HDP-COND-0007",
+        "display": "Type 2 diabetes mellitus",
+        "definition": "Local source label for the synthetic Condition concept type 2 diabetes mellitus; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Type 2 diabetes mellitus."
+      },
+      {
+        "code": "HDP-COND-0008",
+        "display": "Chronic kidney disease",
+        "definition": "Local source label for the synthetic Condition concept chronic kidney disease; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Chronic kidney disease."
+      },
+      {
+        "code": "HDP-COND-0009",
+        "display": "Motor neuron disease",
+        "definition": "Local source label for the synthetic Condition concept motor neuron disease; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Motor neuron disease."
+      },
+      {
+        "code": "HDP-COND-0010",
+        "display": "Dysmenorrhea",
+        "definition": "Local source label for the synthetic Condition concept dysmenorrhea; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Dysmenorrhea."
+      },
+      {
+        "code": "HDP-COND-0011",
+        "display": "Systemic lupus erythematosus",
+        "definition": "Local source label for the synthetic Condition concept systemic lupus erythematosus; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Systemic lupus erythematosus."
+      },
+      {
+        "code": "HDP-COND-0012",
+        "display": "Metabolic disease",
+        "definition": "Local source label for the synthetic Condition concept metabolic disease; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Metabolic disease."
+      },
+      {
+        "code": "HDP-COND-0013",
+        "display": "Breast lump",
+        "definition": "Local source label for the synthetic Condition concept breast lump; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Breast lump."
+      },
+      {
+        "code": "HDP-COND-0014",
+        "display": "Leukemia",
+        "definition": "Local source label for the synthetic Condition concept leukemia; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Leukemia."
+      },
+      {
+        "code": "HDP-COND-0015",
+        "display": "Metabolic syndrome",
+        "definition": "Local source label for the synthetic Condition concept metabolic syndrome; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Metabolic syndrome."
+      },
+      {
+        "code": "HDP-COND-0016",
+        "display": "Asthma",
+        "definition": "Local source label for the synthetic Condition concept asthma; its intended clinical meaning is the pinned pathway or secondary-branch diagnosis named Asthma."
+      }
+    ]
+  }
+}

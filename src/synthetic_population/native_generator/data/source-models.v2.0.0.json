@@ -1,0 +1,31 @@
+{
+  "catalogVersion": "2.0.0",
+  "utilizationAllocation": {
+    "denominator": "canonical synthetic persons before archetype and declared-problem prerequisites",
+    "hmoOnlyPercent": 35,
+    "hmoPlusHospitalAPercent": 20,
+    "hmoPlusHospitalBPercent": 20,
+    "multiHospitalPercent": 25,
+    "method": "seeded SHA-256 percentile slot; archetype and problem prerequisites may add a source"
+  },
+  "sources": {
+    "hmo": {
+      "eventOffsetDays": -400,
+      "documentationLagMinutes": 30,
+      "condition": {"system": "http://snomed.info/sct", "code": "38341003", "display": "Hypertensive disorder"},
+      "observation": {"system": "http://loinc.org", "code": "6298-4", "display": "Potassium [Moles/volume] in Blood", "unit": "mmol/L", "low": 3.5, "high": 5.1}
+    },
+    "hospital-a": {
+      "eventOffsetDays": -35,
+      "documentationLagMinutes": 90,
+      "condition": {"system": "http://snomed.info/sct", "code": "161891005", "display": "Backache"},
+      "observation": {"system": "http://loinc.org", "code": "718-7", "display": "Hemoglobin [Mass/volume] in Blood", "unit": "g/dL", "low": 12.0, "high": 16.0}
+    },
+    "hospital-b": {
+      "eventOffsetDays": 0,
+      "documentationLagMinutes": 180,
+      "condition": {"system": "http://snomed.info/sct", "code": "386661006", "display": "Fever"},
+      "observation": {"system": "http://loinc.org", "code": "2160-0", "display": "Creatinine [Mass/volume] in Serum or Plasma", "unit": "mg/dL", "low": 0.5, "high": 1.2}
+    }
+  }
+}

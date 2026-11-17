@@ -1,0 +1,24 @@
+{
+  "catalogVersion": "2.1.0",
+  "primaryDistribution": [
+    {"id": "generally-healthy", "count": 300, "minimumDates": 2, "minimumSpanDays": 30},
+    {"id": "chronic-care", "count": 250, "minimumDates": 3, "minimumSpanDays": 365},
+    {"id": "pediatric", "count": 150, "minimumDates": 2, "minimumSpanDays": 180},
+    {"id": "medication-intensive", "count": 100, "minimumDates": 3, "minimumSpanDays": 365},
+    {"id": "womens-health", "count": 100, "minimumDates": 2, "minimumSpanDays": 180},
+    {"id": "perioperative-surgical", "count": 50, "minimumDates": 3, "minimumSpanDays": 30},
+    {"id": "oncology", "count": 30, "minimumDates": 3, "minimumSpanDays": 365},
+    {"id": "rare-complex", "count": 20, "minimumDates": 3, "minimumSpanDays": 365}
+  ],
+  "grammars": {
+    "generally-healthy": {"prerequisites": ["no severe chronic diagnosis by default"], "requiredEvents": ["preventive-community-visit", "resolved-minor-condition"], "optionalBranches": ["plausible acute hospital episode"], "ordering": ["onset", "visit", "resolution"], "forbidden": ["unexplained stage-4 renal disease", "unexplained active anticoagulation"]},
+    "chronic-care": {"prerequisites": ["active chronic diagnosis"], "requiredEvents": ["historical-onset", "serial-monitoring", "follow-up"], "optionalBranches": ["referral", "medication-change"], "ordering": ["diagnosis", "monitoring", "follow-up"], "forbidden": ["single-date history"]},
+    "pediatric": {"prerequisites": ["age under 18", "guardian"], "requiredEvents": ["age-appropriate-community-care", "growth-or-vital-measurement", "immunization-history"], "optionalBranches": ["common acute episode"], "ordering": ["birth", "immunization", "follow-up"], "forbidden": ["adult-only routine screening"]},
+    "medication-intensive": {"prerequisites": ["coded medication exposure"], "requiredEvents": ["prescription", "complete-dosage", "status-follow-up", "monitoring"], "optionalBranches": ["dispense", "adverse-effect-context"], "ordering": ["prescription", "exposure", "follow-up"], "forbidden": ["continuous treatment coded as acute"]},
+    "womens-health": {"prerequisites": ["female synthetic sex context"], "requiredEvents": ["risk-aware-preventive-assessment"], "optionalBranches": ["routine-mammography-age-50-74", "high-risk-screening-with-rationale"], "ordering": ["risk-assessment", "screening-if-eligible", "follow-up"], "forbidden": ["mammography solely from archetype membership"]},
+    "perioperative-surgical": {"prerequisites": ["surgical condition"], "requiredEvents": ["referral", "pre-op", "admission-or-procedure", "post-op-follow-up"], "optionalBranches": ["anesthesia-or-medication-context"], "ordering": ["referral", "procedure", "discharge", "follow-up"], "forbidden": ["procedure preceding referral"]},
+    "oncology": {"prerequisites": ["active malignant diagnosis"], "requiredEvents": ["diagnosis", "pathology-or-characterization", "treatment-event", "monitoring", "surveillance"], "optionalBranches": ["supportive-care", "toxicity-monitoring"], "ordering": ["diagnosis", "treatment", "surveillance"], "forbidden": ["treatment without diagnosis"]},
+    "rare-complex": {"prerequisites": ["internally consistent complex condition"], "requiredEvents": ["complex-diagnosis", "multi-specialty-follow-up", "distributed-rare-profile-coverage"], "optionalBranches": ["research", "genetics"], "ordering": ["diagnosis", "specialty-evaluation", "follow-up"], "forbidden": ["unparameterized compact-example metadata"]}
+  },
+  "secondaryTraitsAllowed": ["adult-hiv", "minor-hiv", "negative-hiv-test", "mental-health", "violence-protected-content"]
+}

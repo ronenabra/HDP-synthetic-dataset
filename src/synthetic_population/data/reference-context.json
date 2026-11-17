@@ -1,0 +1,323 @@
+{
+  "fhirVersion": "4.0.1",
+  "packages": {
+    "il.core.fhir.r4": "0.22.0",
+    "il.hdp.fhir.r4": "0.6.0"
+  },
+  "profiles": [
+    {
+      "path": "reference/ilcore",
+      "package": "il.core.fhir.r4",
+      "version": "0.22.0",
+      "fileCount": 156,
+      "contentSha256": "59a9180008f39d810cea07e2de8abb9a38a1266f8784d7542c746b6fb30ccd52"
+    },
+    {
+      "path": "reference/hdp-il",
+      "package": "il.hdp.fhir.r4",
+      "version": "0.6.0",
+      "fileCount": 45,
+      "contentSha256": "f6478fc8d62f9e0b307d368cffeed459a2e174eeed4b370a269c93788a6279f6"
+    }
+  ],
+  "coverageSeed": {
+    "path": "reference/coverage-seed.json",
+    "bytes": 209258,
+    "sha256": "625eead8e3dac1b5d29f29a501984e127c51bdaf980afc3e291e720ad5344a04",
+    "source": {
+      "path": "native_generator/data/coverage-seed.original.json",
+      "sha256": "b1c08abd48316dd4fd96008aeecdfec6239b3d1b3aa6a951371740063231a238"
+    },
+    "migration": "synthetic-business-identifiers-v1"
+  },
+  "nativeGenerator": {
+    "root": "native_generator",
+    "modulePath": "",
+    "revision": "d2af10e548257c5df286d49338986beea2dd1b9d",
+    "citySource": {
+      "path": "reference/city-symbol-0.21.0.json",
+      "package": "il.core.fhir.r4",
+      "version": "0.21.0",
+      "filename": "CodeSystem-city-symbol.json",
+      "bytes": 278509,
+      "sha256": "1e629c5e2f07fb3a37c52b90e1ed2372403de3652a29563430776dd57c874198"
+    },
+    "files": [
+      {
+        "path": "__init__.py",
+        "bytes": 79,
+        "sha256": "264601196867eabda0588b9e52338cc62973472295db1f56534ceeb9a5773563"
+      },
+      {
+        "path": "archetypes.py",
+        "bytes": 3819,
+        "sha256": "87def688ac1cdeb2a08bde58b9baaab67d80cd79b88568d3c10cfce61937ba57"
+      },
+      {
+        "path": "buckets.py",
+        "bytes": 1705,
+        "sha256": "5769915a6eec425395d1590399362f162f48538914c2a6465ce49f432a82e56b"
+      },
+      {
+        "path": "bundle.py",
+        "bytes": 188584,
+        "sha256": "ba63d9318787f7640cc0975f294a729ff4f930cf4638871ac37a4b27de26dfce"
+      },
+      {
+        "path": "capture.py",
+        "bytes": 19782,
+        "sha256": "f065df52f84eae0d7678629e8eaae8c86fa2edf3be3fd4686e395e23dbc5797c"
+      },
+      {
+        "path": "capture_class.py",
+        "bytes": 1321,
+        "sha256": "6bdc3fe52f7e2e0b38300eed7a408d4b11e23423a011e683e54e6353bab8fdf5"
+      },
+      {
+        "path": "care_pathway.py",
+        "bytes": 92777,
+        "sha256": "03901eea9e426f0c1c98e6945188951ee4314866add5bc4c5b389ec898443cdb"
+      },
+      {
+        "path": "catalogs.py",
+        "bytes": 1160,
+        "sha256": "07266ea7da7031691a91d21e72d6868c00ee6981821e0aa38420f3c3df2a6d2e"
+      },
+      {
+        "path": "clinical_data.py",
+        "bytes": 7654,
+        "sha256": "b9bbc861092e3af1f9d8b159e293b19f3fcbc96d4c087424fd0c1346f6a0265a"
+      },
+      {
+        "path": "clinical_policy.py",
+        "bytes": 8432,
+        "sha256": "16254b40414282fe69e676501644b6aa51f8de6e5963bb59fe550f11c22262d5"
+      },
+      {
+        "path": "clinical_semantics.py",
+        "bytes": 12610,
+        "sha256": "92fa3048ccb1f4a8c5b77ef69f6fd8a39c45b23eb7885e55e90d366e9128fa24"
+      },
+      {
+        "path": "clinical_state.py",
+        "bytes": 17855,
+        "sha256": "f7a2a7c12008757a66187269fb7e1fd330d060c695ab13bc91279ce549b2bfc9"
+      },
+      {
+        "path": "condition_allocation.py",
+        "bytes": 8839,
+        "sha256": "5d5fed0d6ca9b88c1ec45584e3a66d6c972ae377e5e6b2a1c70ea24b4969e7e1"
+      },
+      {
+        "path": "condition_coding.py",
+        "bytes": 9413,
+        "sha256": "6ff8f9b6d4a3b4f2d4b079e304afcb1559ff551d2ec735d1cb948bf6ed31878b"
+      },
+      {
+        "path": "data/CodeSystem-capture-class.v1.0.0.json",
+        "bytes": 2234,
+        "sha256": "f16b39cfb927d38108db09ad786b3600fdec42dd3bcb3d07a7404e9c681e67ae"
+      },
+      {
+        "path": "data/archetypes.v2.0.0.json",
+        "bytes": 3602,
+        "sha256": "466af1f1cf0b7956d9bf60f9b8c49148f0449b2f00d70d3158222bbf1edb8766"
+      },
+      {
+        "path": "data/bucket-semantics.v2.0.1.json",
+        "bytes": 4468,
+        "sha256": "5725daf22c4dc7c710ddb300ebaadc741ef322fb7bcd86e361349ca29c7119e8"
+      },
+      {
+        "path": "data/clinical-content.v4.5.0.json",
+        "bytes": 63333,
+        "sha256": "6c55d52b2c66c60fbf12377bb0c96431a5f70af85661f8570b195f94f6a198ac"
+      },
+      {
+        "path": "data/clinical-content.v4.5.1.json",
+        "bytes": 64084,
+        "sha256": "dcecda076e3f94af42966000bb2c48ff9af90f1c85c17c523b780c3a0d0a2cdd"
+      },
+      {
+        "path": "data/clinical-distributions.v2.1.1.json",
+        "bytes": 9658,
+        "sha256": "ea312cc81ab5ba46422bc5791a17d0e7dc463ba96ae1dff1234e08b916e194a2"
+      },
+      {
+        "path": "data/clinical-realism.v4.0.2.json",
+        "bytes": 27823,
+        "sha256": "92569b886dac0db43d01add2421cae676eb1a310bce4aef3f206824b64ac44c9"
+      },
+      {
+        "path": "data/clinical-state-contract.v1.0.0.json",
+        "bytes": 3591,
+        "sha256": "a55b231858d03e1f8edde32fc5caaaa4b51bbf1c224d21cfeb4cfbd8e93ff8e8"
+      },
+      {
+        "path": "data/coverage-seed.original.json",
+        "bytes": 209250,
+        "sha256": "b1c08abd48316dd4fd96008aeecdfec6239b3d1b3aa6a951371740063231a238"
+      },
+      {
+        "path": "data/demographic-lifecycle.v1.0.0.json",
+        "bytes": 250,
+        "sha256": "3370bb02a4666cf235561a4f69d7ea27a104b819f595180b9912c39320684ab9"
+      },
+      {
+        "path": "data/detector-semantics.v1.2.0.json",
+        "bytes": 2054,
+        "sha256": "38b1f653eb6a902721806fde7e84e1d49e914670c8a3dfd0134798ac52e27b2c"
+      },
+      {
+        "path": "data/fixture-overlaps.v1.0.0.json",
+        "bytes": 482,
+        "sha256": "cac5930ed4c326681b5f73ff728ceb113edd81167b7156f8a540c1cb496f9bb7"
+      },
+      {
+        "path": "data/identity-policy.v3.0.0.json",
+        "bytes": 834,
+        "sha256": "1ad54d51a09639baffdb1510b4cf4c0b36379ddd6c8afe521f68212f2914a1ab"
+      },
+      {
+        "path": "data/localities.v1.0.0.json",
+        "bytes": 5287,
+        "sha256": "136319f17377ef6ef608f0180635c401e7ab17629474ff4edabc1bc627fd50f8"
+      },
+      {
+        "path": "data/medication-safety-contract.v1.0.0.json",
+        "bytes": 2614,
+        "sha256": "d959e835206cdcc2c06f37ec5b02ceed5cd3ea6059e9bd990f19ed4646aeaa4e"
+      },
+      {
+        "path": "data/names.v2.0.0.json",
+        "bytes": 1141,
+        "sha256": "bbc0328330f7f17a118147e0190e944ca270c3cb9f15bbeb760e77c3271cb7e0"
+      },
+      {
+        "path": "data/observable-clinical-contract.v1.0.0.json",
+        "bytes": 46040,
+        "sha256": "d3adfe88a5a377bbc1af8a80e303ee907b66399ce6a367d187add9a7f5ff010d"
+      },
+      {
+        "path": "data/pathway-templates.v4.2.2.json",
+        "bytes": 53832,
+        "sha256": "677f11afd97a42747619c7a1949c8c5f8eeceae0bea64d11d9b8ff62cfc4ba42"
+      },
+      {
+        "path": "data/scenario-timing.v4.0.0.json",
+        "bytes": 7070,
+        "sha256": "a9dd5ef47a617b8ecaf6daff6d60f1a7b1c176a674d3777da5ce5e2d5a3526ef"
+      },
+      {
+        "path": "data/sensitivity-rules.v3.0.0.json",
+        "bytes": 3139,
+        "sha256": "382e9920ee7d447175b7d9c44439f823075a26d3926a3aade5d8da9ff3c83ec6"
+      },
+      {
+        "path": "data/source-capture.v1.0.0.json",
+        "bytes": 5591,
+        "sha256": "087d7f72382349650e7d1bdfce30f60e61dce64790c67eb675f335a2420757c3"
+      },
+      {
+        "path": "data/source-capture.v4.2.2.json",
+        "bytes": 7355,
+        "sha256": "aff096297fe06cf4ac40ff50a05082dc584bb657f7c71daa7209f14339e4f4ca"
+      },
+      {
+        "path": "data/source-models.v2.0.0.json",
+        "bytes": 1494,
+        "sha256": "4a6e4a3eaedbd1fbdfee162e42f22d010337b6a2a3e543cfa289e183dd9b0fef"
+      },
+      {
+        "path": "data/terminology.v2.4.0.json",
+        "bytes": 132434,
+        "sha256": "f8b8e344300418dab7304f2009bf28241776873c45b33358aabef429d0e0c794"
+      },
+      {
+        "path": "demographics.py",
+        "bytes": 12554,
+        "sha256": "bfccaae54105236fc1d46194510faaa44e077fe84d84694ecff4240c329ec5bb"
+      },
+      {
+        "path": "fhir_projection.py",
+        "bytes": 44599,
+        "sha256": "0cb24d8fd7bacd8bd4f313a10cde3f6c46c2c05b57ba893235a5952d99624405"
+      },
+      {
+        "path": "geography.py",
+        "bytes": 2292,
+        "sha256": "16fd4775633633295d54629a694c43b65bce205cb97e1d69b39d42eae727f2ee"
+      },
+      {
+        "path": "ids.py",
+        "bytes": 871,
+        "sha256": "f145f5f4b52d712681e7125a65239ac29b443afabc469f874635cb47b8bebaaa"
+      },
+      {
+        "path": "lifecycle.py",
+        "bytes": 11263,
+        "sha256": "7341a788e9faef7c6c279ec0c0a9a6397fb5e333b2a5d165c9d5132f91652747"
+      },
+      {
+        "path": "medication_safety.py",
+        "bytes": 15720,
+        "sha256": "d4762d99e9207ef9a8e9830a6e8607db861af4c8883d318602bf3c39c4dd1236"
+      },
+      {
+        "path": "metadata.py",
+        "bytes": 2155,
+        "sha256": "39d4affb4af35c33269c238707edf71c6115af3675667f571f21e6bc2c07387e"
+      },
+      {
+        "path": "nested_allocation.py",
+        "bytes": 1597,
+        "sha256": "b1e8a7abd16f4846d78fd7f55ee3e1f6e8fcac8f5f91b0534e76783a216a23b5"
+      },
+      {
+        "path": "observable.py",
+        "bytes": 5599,
+        "sha256": "705bd52b5441680758c3a632e655fbea36781a7b7e9b4cb4590100a34b94af1d"
+      },
+      {
+        "path": "pathways.py",
+        "bytes": 9215,
+        "sha256": "ff0ba92ccc22887473f7b0ce5cae5a8584721b1ca6064ed3882fef231e7d2152"
+      },
+      {
+        "path": "predicates.py",
+        "bytes": 18427,
+        "sha256": "5b245f55bacf9d61aa6ecfc592c25d57f83982c37ea7c252bd7270dd7798b04c"
+      },
+      {
+        "path": "problems.py",
+        "bytes": 14162,
+        "sha256": "79c84c5f07de9306fa04517a9f8b77b1e3f4f19b8123acdc61ca5b2f7aff693c"
+      },
+      {
+        "path": "profiles.py",
+        "bytes": 6077,
+        "sha256": "fd509ae5b7d7429e4f6dd367b51ae52cac0547c7a592667611c113315c841924"
+      },
+      {
+        "path": "sensitivity.py",
+        "bytes": 9377,
+        "sha256": "baff7d50973a744e5f15464bf4cae61538967587a9c1b726f0a29045907ce3ff"
+      },
+      {
+        "path": "temporal.py",
+        "bytes": 9708,
+        "sha256": "b98d27f9660a83c0e217540dd640ac7ea5d2c7e651170eac3d666f2b053b9528"
+      },
+      {
+        "path": "terminology.py",
+        "bytes": 579,
+        "sha256": "8d67e4e60404d27e28fcc9559b65f1c968ecfb4bbf45076e4dcc389f65048d99"
+      },
+      {
+        "path": "utils.py",
+        "bytes": 4744,
+        "sha256": "237982eb597bbc6737729c2410982f8b52239f169537fe25e75f5177951fdb1a"
+      }
+    ]
+  }
+}

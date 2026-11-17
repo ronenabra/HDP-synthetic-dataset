@@ -1,0 +1,91 @@
+{
+  "catalogVersion": "1.2.0",
+  "status": "frozen-before-canonical-generation",
+  "snomedSemanticFamilies": {
+    "119297000": "specimen",
+    "368208006": "body-structure",
+    "396550006": "procedure",
+    "46635009": "disorder",
+    "44054006": "disorder",
+    "38341003": "disorder",
+    "195662009": "disorder",
+    "431857002": "disorder",
+    "363346000": "disorder",
+    "237602007": "disorder",
+    "195967001": "disorder"
+  },
+  "resourceAllowedSemanticFamilies": {
+    "Condition": [
+      "disorder",
+      "finding",
+      "situation"
+    ]
+  },
+  "mutuallyExclusiveDiagnosisFamilies": [
+    [
+      "46635009",
+      "44054006"
+    ]
+  ],
+  "analytes": {
+    "6298-4": {
+      "discordanceThreshold": 0.8,
+      "canonicalUnits": {
+        "mmol/L": 1.0,
+        "meq/L": 1.0
+      }
+    },
+    "718-7": {
+      "discordanceThreshold": 0.8,
+      "canonicalUnits": {
+        "g/dL": 1.0,
+        "g/L": 0.1
+      }
+    },
+    "2160-0": {
+      "discordanceThreshold": 0.25,
+      "canonicalUnits": {
+        "mg/dL": 1.0,
+        "umol/L": 0.0113122172
+      }
+    }
+  },
+  "rationale": "Observable-FHIR detector semantics independent of project metadata and hidden truth.",
+  "unitAliases": {
+    "g per dL": "g/dL",
+    "grams per deciliter": "g/dL",
+    "millimoles per liter": "mmol/L",
+    "mg per dL": "mg/dL"
+  },
+  "labComparisonMaximumHours": 3,
+  "fixtureAdditionalConclusions": {
+    "positive": {
+      "falling-hemoglobin": [
+        "overt-bleeding"
+      ],
+      "interacting-exposure": [
+        "overt-bleeding"
+      ],
+      "administration-after-allergy": [
+        "prescribing-after-allergy"
+      ],
+      "culture-informed-treatment": [
+        "prescribing-after-allergy"
+      ]
+    },
+    "control": {
+      "falling-hemoglobin": [
+        "overt-bleeding"
+      ],
+      "interacting-exposure": [
+        "overt-bleeding"
+      ],
+      "administration-after-allergy": [
+        "prescribing-after-allergy"
+      ],
+      "culture-informed-treatment": [
+        "prescribing-after-allergy"
+      ]
+    }
+  }
+}

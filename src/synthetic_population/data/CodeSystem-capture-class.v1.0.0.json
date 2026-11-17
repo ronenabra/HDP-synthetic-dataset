@@ -1,0 +1,84 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "capture-class",
+  "url": "urn:hdp-test-bundle:synthetic:capture-class",
+  "version": "1.0.0",
+  "name": "HdpSyntheticCaptureClass",
+  "title": "HDP Synthetic Source Capture Class",
+  "status": "active",
+  "experimental": true,
+  "description": "Source acquisition disposition for synthetic resources. Codes are bookkeeping tags and do not assert clinical category or performance.",
+  "content": "complete",
+  "caseSensitive": true,
+  "count": 17,
+  "concept": [
+    {
+      "code": "hmo-performed",
+      "display": "hmo performed source capture"
+    },
+    {
+      "code": "hmo-authored",
+      "display": "hmo authored source capture"
+    },
+    {
+      "code": "hmo-received",
+      "display": "hmo received source capture"
+    },
+    {
+      "code": "hmo-summarized",
+      "display": "hmo summarized source capture"
+    },
+    {
+      "code": "hmo-absent",
+      "display": "hmo absent source capture"
+    },
+    {
+      "code": "hospital-a-performed",
+      "display": "hospital-a performed source capture"
+    },
+    {
+      "code": "hospital-a-authored",
+      "display": "hospital-a authored source capture"
+    },
+    {
+      "code": "hospital-a-received",
+      "display": "hospital-a received source capture"
+    },
+    {
+      "code": "hospital-a-summarized",
+      "display": "hospital-a summarized source capture"
+    },
+    {
+      "code": "hospital-a-referral-only",
+      "display": "hospital-a referral-only source capture"
+    },
+    {
+      "code": "hospital-a-absent",
+      "display": "hospital-a absent source capture"
+    },
+    {
+      "code": "hospital-b-performed",
+      "display": "hospital-b performed source capture"
+    },
+    {
+      "code": "hospital-b-authored",
+      "display": "hospital-b authored source capture"
+    },
+    {
+      "code": "hospital-b-received",
+      "display": "hospital-b received source capture"
+    },
+    {
+      "code": "hospital-b-summarized",
+      "display": "hospital-b summarized source capture"
+    },
+    {
+      "code": "hospital-b-referral-only",
+      "display": "hospital-b referral-only source capture"
+    },
+    {
+      "code": "hospital-b-absent",
+      "display": "hospital-b absent source capture"
+    }
+  ]
+}

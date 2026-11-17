@@ -1,0 +1,11 @@
+{
+  "policyVersion": "3.0.0",
+  "decision": "formal-profile-document-exception",
+  "owner": "HDP profile maintainers and certification policy owners",
+  "profile": "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-patient",
+  "issue": "The Patient profile requires an IL-ID/passport slice, while safe synthetic fixtures must not emit production-shaped national identifiers.",
+  "safeRepresentation": {"system": "http://fhir.health.gov.il/identifier/il-hdp-test-id", "valuePolicy": "HTEST UUID token", "security": "HTEST"},
+  "forbidden": ["checksum-valid Israeli national ID", "production passport system", "production-shaped identity token"],
+  "reviewCondition": "Expire when the HDP profiles or an approved test policy define an explicit non-production identifier slice.",
+  "status": "pending-profile-policy-resolution"
+}
