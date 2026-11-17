@@ -171,6 +171,9 @@ exact test, affected records, and the limits of the recorded test results.
 
 ## Scope and limitations
 
+- Patient sandbox identifiers differ across sources for the same person. For consent
+  tests requiring shared identity, only test anchors `1` and `2` supply a shared
+  identifier; see the [known issue](KNOWN_ISSUES.md#patient-identifiers-differ-across-sources-for-the-same-person).
 - The records are synthetic fixtures, not a representative sample of Israeli
   patients. They are unsuitable for estimating prevalence or making clinical decisions.
 - Intentional data-quality problems and inherited clinical limitations are part
